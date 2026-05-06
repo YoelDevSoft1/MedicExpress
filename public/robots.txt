@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /_astro/
+Allow: /img/
+Allow: /favicon.svg
+Disallow: /search/
+Disallow: /search/portal.php
+Disallow: /caf/
+Disallow: /parking.php
+
+Sitemap: https://medicexpress.com.co/sitemap.xml

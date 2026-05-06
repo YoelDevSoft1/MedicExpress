@@ -1,0 +1,50 @@
+﻿---
+import { Phone } from '@lucide/astro';
+import WhatsAppButton from './WhatsAppButton.astro';
+import { getSmdReferralUrl, siteConfig } from '../data/services';
+---
+
+<header class="sticky top-0 z-40 border-b border-indigo-950/10 bg-white/86 backdrop-blur-xl">
+  <div class="container flex min-h-20 items-center justify-between gap-6">
+    <a href="/" class="focus-ring flex items-center gap-3 rounded-full" aria-label="Ir al inicio de MedicExpress">
+      <img
+        src={siteConfig.logoPath}
+        alt="Logo MedicExpress"
+        width="52"
+        height="52"
+        class="h-[52px] w-[52px] shrink-0 object-contain"
+        loading="eager"
+      />
+      <span class="leading-tight">
+        <strong class="block text-[17px] font-black text-slate-950">MedicExpress</strong>
+        <span class="block text-[12px] font-semibold text-slate-500">Atención coordinada por SMD Vital</span>
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-7 text-[14px] font-bold text-slate-700 lg:flex" aria-label="Navegacion principal">
+      <a class="hover:text-indigo-700" href="/#servicios">Servicios</a>
+      <a class="hover:text-indigo-700" href="/#proceso">Proceso</a>
+      <a class="hover:text-indigo-700" href="/#confianza">Confianza</a>
+      <a
+        class="hover:text-indigo-700"
+        href={getSmdReferralUrl('/', 'header_smd_vital')}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        SMD Vital
+      </a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        class="focus-ring hidden min-h-11 items-center gap-2 rounded-full border border-slate-200 px-4 text-[14px] font-extrabold text-slate-800 transition hover:border-indigo-200 hover:text-indigo-700 md:inline-flex"
+        href={`tel:${siteConfig.phone.replaceAll(' ', '')}`}
+      >
+        <Phone size={16} stroke-width={2.4} />
+        <span>{siteConfig.phone}</span>
+      </a>
+      <WhatsAppButton label="Consultar con SMD Vital" class="min-w-28" />
+    </div>
+  </div>
+</header>
+

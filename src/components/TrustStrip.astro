@@ -1,0 +1,25 @@
+﻿---
+import { Clock3, MapPin, ShieldCheck, Sparkles } from '@lucide/astro';
+
+const items = [
+  { icon: Clock3, label: 'Respuesta ágil', text: 'Orientación inicial por WhatsApp.' },
+  { icon: ShieldCheck, label: 'Criterio responsable', text: 'Sin promesas clínicas ni mensajes alarmistas.' },
+  { icon: MapPin, label: 'Atención local', text: 'Servicios coordinados inicialmente para Bogotá.' },
+  { icon: Sparkles, label: 'Canal satélite', text: 'Conectado con la operación de SMD Vital.' }
+];
+---
+
+<section id="confianza" class="container -mt-8 relative z-10">
+  <div class="surface grid gap-1 rounded-[28px] p-3 md:grid-cols-4">
+    {
+      items.map(({ icon: Icon, label, text }) => (
+        <div class="rounded-3xl px-5 py-5 transition hover:bg-indigo-50">
+          <Icon class="mb-4 text-indigo-700" size={24} stroke-width={2.2} />
+          <h2 class="text-[15px] font-black text-slate-950">{label}</h2>
+          <p class="mt-2 text-sm leading-6 text-slate-600">{text}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
+

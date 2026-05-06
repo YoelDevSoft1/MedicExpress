@@ -1,0 +1,207 @@
+---
+import { MessageCircle } from '@lucide/astro';
+import { getWhatsappUrl } from '../data/services';
+---
+
+<a
+  href={getWhatsappUrl()}
+  class="whatsapp-orbit focus-ring"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Consultar por WhatsApp con SMD Vital"
+>
+  <span class="whatsapp-orbit__halo" aria-hidden="true"></span>
+  <span class="whatsapp-orbit__shine" aria-hidden="true"></span>
+  <span class="whatsapp-orbit__icon">
+    <MessageCircle size={22} stroke-width={2.6} />
+  </span>
+  <span class="whatsapp-orbit__copy">
+    <strong>WhatsApp</strong>
+    <small>Atención por SMD Vital</small>
+  </span>
+</a>
+
+<style>
+  .whatsapp-orbit {
+    position: fixed;
+    right: max(18px, env(safe-area-inset-right));
+    bottom: max(18px, env(safe-area-inset-bottom));
+    z-index: 60;
+    isolation: isolate;
+    display: inline-flex;
+    min-height: 58px;
+    align-items: center;
+    gap: 11px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.44);
+    border-radius: 999px;
+    background:
+      linear-gradient(135deg, rgba(67, 56, 202, 0.98), rgba(49, 46, 129, 0.98)),
+      radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.32), transparent 36%);
+    padding: 9px 16px 9px 9px;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow:
+      0 22px 48px rgba(49, 46, 129, 0.32),
+      0 8px 18px rgba(15, 23, 42, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.28);
+    transform: translateZ(0);
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      border-color 220ms ease;
+  }
+
+  .whatsapp-orbit::before {
+    position: absolute;
+    inset: -2px;
+    z-index: -2;
+    border-radius: inherit;
+    background: conic-gradient(from 120deg, #4338ca, #8b5cf6, #25d366, #4338ca);
+    content: '';
+    opacity: 0.72;
+    animation: whatsapp-aurora 7s linear infinite;
+  }
+
+  .whatsapp-orbit::after {
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #4338ca, #312e81 72%, #1e1b4b);
+    content: '';
+  }
+
+  .whatsapp-orbit:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow:
+      0 28px 60px rgba(49, 46, 129, 0.38),
+      0 10px 24px rgba(15, 23, 42, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.32);
+    transform: translateY(-3px) scale(1.015);
+  }
+
+  .whatsapp-orbit__halo {
+    position: absolute;
+    inset: 6px;
+    z-index: -1;
+    border-radius: inherit;
+    background: radial-gradient(circle at 28% 24%, rgba(255, 255, 255, 0.26), transparent 42%);
+    pointer-events: none;
+  }
+
+  .whatsapp-orbit__shine {
+    position: absolute;
+    top: -58%;
+    bottom: -58%;
+    left: -44%;
+    width: 34%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.34), transparent);
+    filter: blur(1px);
+    pointer-events: none;
+    transform: rotate(18deg);
+    animation: whatsapp-shine 4.8s ease-in-out infinite;
+  }
+
+  .whatsapp-orbit__icon {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    place-items: center;
+    border-radius: 999px;
+    background:
+      linear-gradient(135deg, #25d366, #12b76a),
+      #25d366;
+    box-shadow:
+      0 10px 22px rgba(18, 183, 106, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.38);
+    color: #ffffff;
+    animation: whatsapp-breathe 2.9s ease-in-out infinite;
+  }
+
+  .whatsapp-orbit__copy {
+    display: grid;
+    gap: 1px;
+    padding-right: 2px;
+    line-height: 1;
+  }
+
+  .whatsapp-orbit__copy strong {
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0;
+  }
+
+  .whatsapp-orbit__copy small {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 11px;
+    font-weight: 750;
+    white-space: nowrap;
+  }
+
+  @keyframes whatsapp-aurora {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes whatsapp-shine {
+    0%,
+    58% {
+      transform: translateX(0) rotate(18deg);
+      opacity: 0;
+    }
+    68% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(520%) rotate(18deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes whatsapp-breathe {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.08);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .whatsapp-orbit {
+      right: max(14px, env(safe-area-inset-right));
+      bottom: max(14px, env(safe-area-inset-bottom));
+      min-height: 56px;
+      padding: 8px;
+    }
+
+    .whatsapp-orbit__copy {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .whatsapp-orbit__icon {
+      width: 42px;
+      height: 42px;
+      flex-basis: 42px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .whatsapp-orbit,
+    .whatsapp-orbit::before,
+    .whatsapp-orbit__shine,
+    .whatsapp-orbit__icon {
+      animation: none;
+      transition: none;
+    }
+  }
+</style>

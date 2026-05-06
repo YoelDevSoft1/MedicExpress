@@ -1,0 +1,52 @@
+﻿---
+import { ArrowRight, CheckCircle2 } from '@lucide/astro';
+import WhatsAppButton from './WhatsAppButton.astro';
+import type { Service } from '../data/services';
+
+type Props = {
+  service?: Service;
+  title?: string;
+  text?: string;
+};
+
+const { service, title, text } = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="medical-gradient overflow-hidden rounded-[34px] p-8 text-white shadow-2xl shadow-indigo-950/20 md:p-12">
+      <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div>
+          <h2 class="text-3xl font-black tracking-tight md:text-5xl">
+            {title ?? 'Cuéntanos que necesitas y te orientamos el siguiente paso'}
+          </h2>
+          <p class="mt-5 max-w-2xl text-base leading-8 text-indigo-50">
+            {
+              text ??
+                'MedicExpress convierte la búsqueda digital en una conversación clara: servicio requerido, ubicación, horario, datos básicos del paciente y canal de atención adecuado.'
+            }
+          </p>
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <WhatsAppButton label="Solicitar orientacion" serviceName={service?.title} />
+            <a class="btn-secondary bg-white text-indigo-950" href="/#servicios">
+              <span>Ver servicios</span>
+              <ArrowRight size={18} stroke-width={2.4} />
+            </a>
+          </div>
+        </div>
+        <div class="rounded-[28px] bg-white/10 p-5 ring-1 ring-white/15">
+          <h3 class="text-lg font-black">Datos que agilizan la atención</h3>
+          <ul class="mt-5 space-y-4 text-sm leading-6 text-indigo-50">
+            {['Nombre y edad del paciente', 'Dirección o localidad', 'Servicio requerido', 'Motivo de consulta y tiempo de evolución'].map((item) => (
+              <li class="flex gap-3">
+                <CheckCircle2 class="mt-0.5 shrink-0 text-indigo-200" size={18} stroke-width={2.4} />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

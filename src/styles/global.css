@@ -1,0 +1,139 @@
+﻿@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --brand: #4338ca;
+  --brand-dark: #312e81;
+  --ink: #102022;
+  --muted: #5e7175;
+  --line: #dce8e7;
+  --soft: #f4faf9;
+  --accent: #e04f5f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ffffff;
+  color: var(--ink);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(67, 56, 202, 0.18);
+}
+
+.page-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(67, 56, 202, 0.12), transparent 34rem),
+    linear-gradient(180deg, #f8f8ff 0%, #ffffff 36rem);
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 999px;
+  padding: 0 18px;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.btn-primary {
+  background: #4338ca;
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(67, 56, 202, 0.24);
+}
+
+.btn-primary:hover {
+  background: #3730a3;
+  transform: translateY(-1px);
+  box-shadow: 0 18px 38px rgba(67, 56, 202, 0.28);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(49, 46, 129, 0.16);
+  background: rgba(255, 255, 255, 0.76);
+  color: #312e81;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(67, 56, 202, 0.38);
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.surface {
+  border: 1px solid rgba(49, 46, 129, 0.1);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 24px 80px rgba(16, 32, 34, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.section {
+  padding-block: 72px;
+}
+
+.kicker {
+  color: #4338ca;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.medical-gradient {
+  background:
+    linear-gradient(135deg, rgba(67, 56, 202, 0.96), rgba(49, 46, 129, 0.98)),
+    radial-gradient(circle at 76% 28%, rgba(129, 140, 248, 0.36), transparent 28rem);
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid rgba(67, 56, 202, 0.35);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+

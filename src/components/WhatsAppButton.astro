@@ -1,0 +1,29 @@
+﻿---
+import { MessageCircle } from '@lucide/astro';
+import { getWhatsappUrl } from '../data/services';
+
+type Props = {
+  label?: string;
+  serviceName?: string;
+  variant?: 'primary' | 'secondary';
+  class?: string;
+};
+
+const {
+  label = 'Consultar por WhatsApp',
+  serviceName,
+  variant = 'primary',
+  class: className = ''
+} = Astro.props;
+---
+
+<a
+  class:list={[variant === 'primary' ? 'btn-primary' : 'btn-secondary', 'focus-ring', className]}
+  href={getWhatsappUrl(serviceName)}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <MessageCircle size={18} stroke-width={2.4} />
+  <span>{label}</span>
+</a>
+

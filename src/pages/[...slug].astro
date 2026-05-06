@@ -1,0 +1,161 @@
+﻿---
+import { ArrowLeft, CheckCircle2, Clock3, ShieldCheck } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ConversionPanel from '../components/ConversionPanel.astro';
+import FAQSection from '../components/FAQSection.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { absoluteUrl, getRelatedServices, services, siteConfig, type Service } from '../data/services';
+
+type Props = {
+  service: Service;
+};
+
+export function getStaticPaths() {
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service }
+  }));
+}
+
+const { service } = Astro.props;
+const relatedServices = getRelatedServices(service);
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalProcedure',
+  name: service.title,
+  description: service.metaDescription,
+  url: absoluteUrl(`/${service.slug}/`),
+  provider: {
+    '@type': 'MedicalBusiness',
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: absoluteUrl(siteConfig.logoPath),
+    telephone: siteConfig.phone
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'Bogotá'
+  }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: service.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer
+    }
+  }))
+};
+---
+
+<BaseLayout
+  title={service.metaTitle}
+  description={service.metaDescription}
+  canonicalPath={`/${service.slug}/`}
+  jsonLd={[serviceSchema, faqSchema]}
+>
+  <section class="container py-10 md:py-16">
+    <a href="/" class="focus-ring inline-flex items-center gap-2 rounded-full text-sm font-black text-indigo-700 hover:text-indigo-900">
+      <ArrowLeft size={17} stroke-width={2.4} />
+      Volver a servicios
+    </a>
+
+    <div class="mt-8 grid gap-10 lg:grid-cols-[1fr_0.82fr] lg:items-center">
+      <div>
+        <p class="kicker">{service.category}</p>
+        <h1 class="text-balance mt-3 text-5xl font-black tracking-tight text-slate-950 md:text-7xl">
+          {service.h1}
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{service.summary}</p>
+        <p class="mt-4 inline-flex max-w-2xl rounded-full bg-indigo-50 px-4 py-2 text-sm font-black text-indigo-800 ring-1 ring-indigo-100">
+          {siteConfig.referralMessage}
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <WhatsAppButton label="Consultar con SMD Vital" serviceName={service.title} />
+          <a class="btn-secondary" href="#detalles">Ver detalles</a>
+        </div>
+      </div>
+
+      <aside class="surface rounded-[34px] p-6">
+        <div class="rounded-[26px] bg-indigo-950 p-6 text-white">
+          <p class="text-sm font-bold text-indigo-100">Servicio solicitado</p>
+          <h2 class="mt-2 text-2xl font-black">{service.shortTitle}</h2>
+          <p class="mt-4 text-sm leading-7 text-indigo-50">{service.intent}</p>
+          <div class="mt-5 rounded-2xl bg-white/10 p-4">
+            <span class="text-xs font-bold uppercase text-indigo-100">Referencia comercial</span>
+            <p class="mt-1 text-xl font-black">{service.price ?? 'Consultar disponibilidad'}</p>
+          </div>
+        </div>
+
+        <div class="mt-5 grid gap-3">
+          {service.highlights.map((highlight) => (
+            <div class="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm">
+              <CheckCircle2 class="text-indigo-700" size={19} stroke-width={2.4} />
+              <span class="text-sm font-bold text-slate-700">{highlight}</span>
+            </div>
+          ))}
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="detalles" class="section bg-white">
+    <div class="container grid gap-10 lg:grid-cols-3">
+      <div class="rounded-[28px] border border-slate-200 p-6">
+        <ShieldCheck class="text-indigo-700" size={28} stroke-width={2.4} />
+        <h2 class="mt-5 text-2xl font-black text-slate-950">Cuándo puede servir</h2>
+        <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-600">
+          {service.suitableFor.map((item) => (
+            <li class="flex gap-3">
+              <CheckCircle2 class="mt-0.5 shrink-0 text-indigo-700" size={17} stroke-width={2.4} />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="rounded-[28px] border border-slate-200 p-6 lg:col-span-2">
+        <Clock3 class="text-indigo-700" size={28} stroke-width={2.4} />
+        <h2 class="mt-5 text-2xl font-black text-slate-950">Cómo funciona</h2>
+        <ol class="mt-5 grid gap-4 md:grid-cols-2">
+          {service.process.map((step, index) => (
+            <li class="rounded-2xl bg-slate-50 p-5">
+              <span class="text-xs font-black text-indigo-700">Paso {index + 1}</span>
+              <p class="mt-2 text-sm font-semibold leading-6 text-slate-700">{step}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {
+    relatedServices.length > 0 && (
+      <section class="section">
+        <div class="container">
+          <div class="max-w-2xl">
+            <p class="kicker">Servicios relacionados</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 md:text-4xl">
+              Otras paginas que pueden ayudar al paciente
+            </h2>
+          </div>
+          <div class="mt-8 grid gap-5 md:grid-cols-3">
+            {relatedServices.map((related) => (
+              <ServiceCard service={related} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <FAQSection faqs={service.faqs} />
+  <ConversionPanel service={service} title={`Consulta ${service.shortTitle.toLowerCase()} por WhatsApp`} />
+</BaseLayout>
+
