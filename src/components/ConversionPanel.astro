@@ -18,7 +18,7 @@ const { service, title, text } = Astro.props;
       <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div>
           <h2 class="text-3xl font-black tracking-tight md:text-5xl">
-            {title ?? 'Cuéntanos que necesitas y te orientamos el siguiente paso'}
+            {title ?? 'Cuéntanos qué necesitas y te orientamos el siguiente paso'}
           </h2>
           <p class="mt-5 max-w-2xl text-base leading-8 text-indigo-50">
             {
@@ -27,7 +27,7 @@ const { service, title, text } = Astro.props;
             }
           </p>
           <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-            <WhatsAppButton label="Solicitar orientacion" serviceName={service?.title} />
+            <WhatsAppButton label="Solicitar orientación" serviceName={service?.title} />
             <a class="btn-secondary bg-white text-indigo-950" href="/#servicios">
               <span>Ver servicios</span>
               <ArrowRight size={18} stroke-width={2.4} />
