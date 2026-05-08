@@ -11,6 +11,7 @@ import { categories, getServicesByCategory, services, siteConfig, absoluteUrl } 
 const title = 'MedicExpress | Servicios médicos a domicilio conectados con SMD Vital';
 const description =
   'MedicExpress orienta solicitudes de servicios médicos a domicilio, enfermería, laboratorio y teleconsulta con agendamiento por WhatsApp.';
+const nationalPages = getServicesByCategory('Cobertura nacional');
 
 const homeSchema = {
   '@context': 'https://schema.org',
@@ -21,8 +22,8 @@ const homeSchema = {
   logo: absoluteUrl(siteConfig.logoPath),
   telephone: siteConfig.phone,
   areaServed: {
-    '@type': 'City',
-    name: 'Bogotá'
+    '@type': 'Country',
+    name: 'Colombia'
   },
   sameAs: [siteConfig.mainBrandUrl]
 };
@@ -101,6 +102,28 @@ const faqs = [
   </section>
 
   <TrustStrip />
+
+  <section id="colombia" class="section bg-white">
+    <div class="container grid gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-start">
+      <div>
+        <p class="kicker">Gancho nacional</p>
+        <h2 class="mt-3 text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
+          MedicExpress ahora capta demanda médica en Colombia
+        </h2>
+        <p class="mt-5 text-lg leading-8 text-slate-600">
+          La estrategia nacional es responsable: recibir solicitudes, clasificar ciudad y necesidad, orientar el siguiente paso y convertir los casos de Bogotá hacia SMD Vital.
+        </p>
+        <p class="mt-4 rounded-3xl bg-indigo-50 p-5 text-sm font-bold leading-7 text-indigo-900 ring-1 ring-indigo-100">
+          No prometemos cobertura presencial donde no esté validada. Captamos la intención nacional y convertimos lo posible en teleconsulta, orientación o atención coordinada por SMD Vital Bogotá.
+        </p>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
+        {nationalPages.map((service) => (
+          <ServiceCard service={service} />
+        ))}
+      </div>
+    </div>
+  </section>
 
   <section id="servicios" class="section">
     <div class="container">

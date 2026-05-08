@@ -11,7 +11,7 @@ export const siteConfig = {
     'Servicios médicos a domicilio, teleconsulta, enfermería y laboratorio en casa con orientación humana y agendamiento por WhatsApp.'
 };
 
-export type ServiceCategory = 'Servicios médicos' | 'Enfermería' | 'Laboratorio clínico';
+export type ServiceCategory = 'Cobertura nacional' | 'Servicios médicos' | 'Enfermería' | 'Laboratorio clínico';
 
 export type Service = {
   slug: string;
@@ -38,7 +38,188 @@ const commonProcess = [
   'Si el caso es apto para atención domiciliaria o teleconsulta, coordinamos el agendamiento.'
 ];
 
+const nationalProcess = [
+  'Escribes por WhatsApp e indicas ciudad, servicio requerido y motivo de consulta.',
+  'Clasificamos si la solicitud puede orientarse por teleconsulta, atención presencial o ruta local responsable.',
+  'En Bogotá, la atención operativa será coordinada por SMD Vital Bogotá según disponibilidad y alcance del servicio.',
+  'En otras ciudades, MedicExpress registra la solicitud, orienta el siguiente paso y prioriza opciones remotas cuando aplique.'
+];
+
 export const services: Service[] = [
+  {
+    slug: 'colombia',
+    category: 'Cobertura nacional',
+    title: 'Servicios médicos en casa Colombia',
+    shortTitle: 'MedicExpress Colombia',
+    h1: 'Servicios médicos en casa y orientación de salud para Colombia',
+    metaTitle: 'Servicios médicos en casa Colombia | MedicExpress y SMD Vital',
+    metaDescription:
+      'MedicExpress orienta solicitudes de médico a domicilio, teleconsulta, enfermería y laboratorio en Colombia. En Bogotá, la atención se coordina con SMD Vital.',
+    summary:
+      'MedicExpress funciona como puerta de entrada nacional para pacientes y familias que buscan servicios médicos en casa, teleconsulta u orientación inicial. La cobertura presencial depende de ciudad, servicio y disponibilidad; en Bogotá la coordinación operativa se realiza con SMD Vital Bogotá.',
+    intent: 'Usuarios en Colombia que buscan una ruta clara para atención médica domiciliaria, teleconsulta o servicios de salud en casa.',
+    highlights: ['Entrada nacional de solicitudes', 'Bogotá coordinado por SMD Vital', 'Teleconsulta y orientación inicial'],
+    suitableFor: [
+      'Personas que buscan servicios médicos en casa en Colombia',
+      'Familias que necesitan orientación rápida antes de desplazarse',
+      'Pacientes en Bogotá que quieren coordinar atención con SMD Vital'
+    ],
+    process: nationalProcess,
+    faqs: [
+      {
+        question: '¿MedicExpress atiende presencialmente en toda Colombia?',
+        answer:
+          'MedicExpress recibe y orienta solicitudes a nivel nacional. La atención presencial depende de ciudad, servicio, disponibilidad y validación del caso. En Bogotá, la coordinación será realizada por SMD Vital Bogotá.'
+      },
+      {
+        question: '¿Qué pasa si estoy fuera de Bogotá?',
+        answer:
+          'Podemos orientar el siguiente paso, evaluar si aplica teleconsulta y registrar la solicitud para priorizar cobertura futura. No prometemos atención presencial donde no exista disponibilidad confirmada.'
+      },
+      {
+        question: '¿MedicExpress reemplaza urgencias?',
+        answer:
+          'No. Si hay dificultad respiratoria severa, dolor fuerte en el pecho, pérdida de conciencia, sangrado abundante o deterioro importante, se debe acudir a urgencias o llamar a la línea local de emergencias.'
+      }
+    ],
+    related: ['teleconsulta-medica-colombia', 'medico-a-domicilio-colombia', 'enfermeria-a-domicilio-colombia']
+  },
+  {
+    slug: 'teleconsulta-medica-colombia',
+    category: 'Cobertura nacional',
+    title: 'Teleconsulta médica Colombia',
+    shortTitle: 'Teleconsulta Colombia',
+    h1: 'Teleconsulta médica en Colombia para orientación inicial',
+    metaTitle: 'Teleconsulta médica Colombia | Orientación por WhatsApp',
+    metaDescription:
+      'Consulta orientación por teleconsulta médica en Colombia. MedicExpress conecta solicitudes con el canal de atención de SMD Vital cuando aplica.',
+    summary:
+      'Una página nacional para captar pacientes que necesitan hablar con un profesional, resolver dudas no urgentes o definir si conviene atención domiciliaria, consulta presencial o una ruta de urgencias.',
+    intent: 'Personas en Colombia que buscan consulta médica virtual, médico online u orientación médica por WhatsApp.',
+    highlights: ['Orientación sin desplazamiento', 'Útil para dudas no urgentes', 'Derivación responsable si hay alarma'],
+    suitableFor: ['Dudas médicas no urgentes', 'Seguimiento de síntomas leves o moderados', 'Familias que necesitan saber qué paso tomar'],
+    process: nationalProcess,
+    faqs: [
+      {
+        question: '¿La teleconsulta sirve para cualquier caso?',
+        answer:
+          'No. Algunos casos requieren examen físico, pruebas o atención presencial. Si existen signos de alarma, se debe acudir a urgencias.'
+      },
+      {
+        question: '¿Puedo iniciar por WhatsApp?',
+        answer:
+          'Sí. Por WhatsApp se solicita ciudad, edad, motivo de consulta, tiempo de evolución y datos básicos para orientar el canal adecuado.'
+      },
+      {
+        question: '¿Puede terminar en atención domiciliaria?',
+        answer:
+          'Cuando el caso es apto y existe disponibilidad en la ciudad, puede orientarse hacia atención presencial. En Bogotá, la coordinación se realiza con SMD Vital Bogotá.'
+      }
+    ],
+    related: ['colombia', 'servicios-medicos/teleconsulta-medica', 'servicios-medicos/valoracion-medica-a-domicilio']
+  },
+  {
+    slug: 'medico-a-domicilio-colombia',
+    category: 'Cobertura nacional',
+    title: 'Médico a domicilio Colombia',
+    shortTitle: 'Médico Colombia',
+    h1: 'Médico a domicilio en Colombia: orientación y disponibilidad por ciudad',
+    metaTitle: 'Médico a domicilio Colombia | MedicExpress',
+    metaDescription:
+      'Busca médico a domicilio en Colombia con orientación por WhatsApp. En Bogotá, la atención será coordinada por SMD Vital Bogotá.',
+    summary:
+      'MedicExpress capta solicitudes nacionales de médico a domicilio y ayuda a clasificar ciudad, necesidad, urgencia relativa y disponibilidad. La prioridad es orientar con claridad y convertir los casos aptos hacia atención real.',
+    intent: 'Usuarios que buscan médico a domicilio Colombia, doctor en casa o consulta médica domiciliaria.',
+    highlights: ['Clasificación por ciudad', 'Bogotá con SMD Vital', 'Orientación antes de agendar'],
+    suitableFor: ['Pacientes que necesitan valoración médica en casa', 'Adultos mayores o personas con movilidad limitada', 'Familias que quieren evitar desplazamientos innecesarios'],
+    process: nationalProcess,
+    faqs: [
+      {
+        question: '¿En qué ciudades hay médico a domicilio?',
+        answer:
+          'La disponibilidad debe confirmarse por WhatsApp. Bogotá es el centro operativo principal con coordinación de SMD Vital. Otras ciudades se validan según capacidad, servicio y oportunidad de cobertura.'
+      },
+      {
+        question: '¿Qué datos debo enviar?',
+        answer:
+          'Ciudad, localidad o barrio, nombre y edad del paciente, motivo de consulta, tiempo de evolución, horario deseado y número de contacto.'
+      },
+      {
+        question: '¿Puedo pedir atención urgente por esta vía?',
+        answer:
+          'MedicExpress no reemplaza una ruta de urgencias. Ante signos graves, se debe acudir a emergencias. Para casos no vitales, WhatsApp ayuda a orientar el siguiente paso.'
+      }
+    ],
+    related: ['colombia', 'teleconsulta-medica-colombia', 'servicios-medicos/servicio-medico-a-domicilio']
+  },
+  {
+    slug: 'enfermeria-a-domicilio-colombia',
+    category: 'Cobertura nacional',
+    title: 'Enfermería a domicilio Colombia',
+    shortTitle: 'Enfermería Colombia',
+    h1: 'Enfermería a domicilio en Colombia para cuidados y procedimientos programados',
+    metaTitle: 'Enfermería a domicilio Colombia | MedicExpress',
+    metaDescription:
+      'Consulta enfermería a domicilio en Colombia para adultos mayores, inyectología, signos vitales y cuidados programados. Bogotá coordinado por SMD Vital.',
+    summary:
+      'Página nacional para solicitudes de enfermería en casa: adultos mayores, procedimientos programados, aplicación de medicamentos formulados, signos vitales y apoyo familiar. La disponibilidad presencial se valida por ciudad.',
+    intent: 'Familias en Colombia que buscan enfermera a domicilio, cuidados en casa o apoyo para adulto mayor.',
+    highlights: ['Adulto mayor y cuidadores', 'Procedimientos programados', 'Validación de ciudad y servicio'],
+    suitableFor: ['Adultos mayores que necesitan apoyo en casa', 'Aplicación de medicamentos con fórmula', 'Seguimiento básico y toma de signos vitales'],
+    process: nationalProcess,
+    faqs: [
+      {
+        question: '¿La enfermería puede ser recurrente?',
+        answer:
+          'Puede consultarse disponibilidad para visitas programadas o seguimiento. El alcance depende de ciudad, horario, tipo de cuidado y condiciones del paciente.'
+      },
+      {
+        question: '¿Aplican medicamentos sin fórmula?',
+        answer:
+          'No se debe aplicar medicación sin indicación profesional. Para inyectología se valida fórmula o soporte médico cuando corresponda.'
+      },
+      {
+        question: '¿Cómo se coordina en Bogotá?',
+        answer:
+          'En Bogotá, la solicitud será orientada hacia el canal operativo de SMD Vital Bogotá para validar disponibilidad, precio y alcance.'
+      }
+    ],
+    related: ['colombia', 'servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario', 'servicios-de-enfermeria/inyectologia-a-domicilio']
+  },
+  {
+    slug: 'laboratorio-a-domicilio-colombia',
+    category: 'Cobertura nacional',
+    title: 'Laboratorio a domicilio Colombia',
+    shortTitle: 'Laboratorio Colombia',
+    h1: 'Laboratorio a domicilio en Colombia y toma de muestras en casa',
+    metaTitle: 'Laboratorio a domicilio Colombia | MedicExpress',
+    metaDescription:
+      'Consulta toma de muestras y laboratorio a domicilio en Colombia. MedicExpress orienta requisitos, disponibilidad y coordinación por WhatsApp.',
+    summary:
+      'MedicExpress capta solicitudes nacionales de laboratorio a domicilio, toma de muestras y preparación de exámenes. La disponibilidad depende de ciudad, tipo de prueba, horario y requisitos técnicos.',
+    intent: 'Usuarios que buscan laboratorio clínico a domicilio, toma de muestras en casa o exámenes sin desplazarse.',
+    highlights: ['Preparación de exámenes', 'Validación del tipo de muestra', 'Bogotá coordinado por SMD Vital'],
+    suitableFor: ['Exámenes programados', 'Pacientes con movilidad reducida', 'Familias que necesitan toma de muestras en casa'],
+    process: nationalProcess,
+    faqs: [
+      {
+        question: '¿Todos los exámenes se pueden tomar en casa?',
+        answer:
+          'No necesariamente. Depende del tipo de muestra, preparación, estabilidad de la prueba, ciudad y disponibilidad del servicio.'
+      },
+      {
+        question: '¿Debo enviar la orden médica?',
+        answer:
+          'Cuando exista orden o listado de exámenes, enviarlo por WhatsApp ayuda a validar requisitos, preparación y disponibilidad.'
+      },
+      {
+        question: '¿Cómo funciona en Bogotá?',
+        answer:
+          'En Bogotá, la orientación y coordinación operativa se deriva hacia SMD Vital Bogotá según disponibilidad y alcance confirmado.'
+      }
+    ],
+    related: ['colombia', 'laboratorio-clinico/laboratorio-a-domicilio', 'laboratorio-clinico/toma-de-muestra-a-domicilio']
+  },
   {
     slug: 'servicios-medicos/servicio-medico-a-domicilio',
     category: 'Servicios médicos',
