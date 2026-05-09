@@ -1,0 +1,181 @@
+---
+import { ArrowRight, CheckCircle2 } from '@lucide/astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ConversionPanel from '../../components/ConversionPanel.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import { absoluteUrl, getServicesByCategory, siteConfig, type ServiceCategory } from '../../data/services';
+
+type CategoryPage = {
+  slug: string;
+  category: ServiceCategory;
+  title: string;
+  h1: string;
+  description: string;
+  intro: string;
+  intent: string;
+};
+
+const getCategoryPages = (): CategoryPage[] => [
+  {
+    slug: 'servicios-medicos',
+    category: 'Servicios médicos',
+    title: 'Servicios médicos a domicilio | MedicExpress',
+    h1: 'Servicios médicos a domicilio con orientación clara',
+    description:
+      'Explora servicios médicos a domicilio, teleconsulta, valoración médica, procedimientos y orientación por WhatsApp con MedicExpress y SMD Vital.',
+    intro:
+      'Este hub reúne las páginas médicas principales para pacientes que necesitan orientación, atención en casa o una ruta responsable antes de desplazarse.',
+    intent: 'Médico a domicilio, teleconsulta, procedimientos menores, valoración y orientación médica.'
+  },
+  {
+    slug: 'servicios-de-enfermeria',
+    category: 'Enfermería',
+    title: 'Servicios de enfermería a domicilio | MedicExpress',
+    h1: 'Servicios de enfermería a domicilio para pacientes y familias',
+    description:
+      'Consulta servicios de enfermería a domicilio, inyectología, toma de signos vitales y acompañamiento a citas médicas. Atención coordinada por SMD Vital en Bogotá.',
+    intro:
+      'Este hub ordena las solicitudes de enfermería en casa: adultos mayores, medicamentos formulados, signos vitales, apoyo familiar y procedimientos programados.',
+    intent: 'Enfermería a domicilio, enfermera en casa, inyectología, signos vitales y cuidado de adultos mayores.'
+  },
+  {
+    slug: 'laboratorio-clinico',
+    category: 'Laboratorio clínico',
+    title: 'Laboratorio clínico a domicilio | MedicExpress',
+    h1: 'Laboratorio clínico a domicilio y toma de muestras en casa',
+    description:
+      'Consulta laboratorio clínico a domicilio, toma de muestras en casa, pruebas y orientación de preparación por WhatsApp con MedicExpress.',
+    intro:
+      'Este hub agrupa los servicios de laboratorio y toma de muestras para pacientes que necesitan evitar desplazamientos y validar requisitos antes de agendar.',
+    intent: 'Laboratorio a domicilio, toma de muestras, exámenes en casa y preparación de pruebas.'
+  }
+];
+
+export function getStaticPaths() {
+  const categoryPages: CategoryPage[] = [
+    {
+      slug: 'servicios-medicos',
+      category: 'Servicios médicos',
+      title: 'Servicios médicos a domicilio | MedicExpress',
+      h1: 'Servicios médicos a domicilio con orientación clara',
+      description:
+        'Explora servicios médicos a domicilio, teleconsulta, valoración médica, procedimientos y orientación por WhatsApp con MedicExpress y SMD Vital.',
+      intro:
+        'Este hub reúne las páginas médicas principales para pacientes que necesitan orientación, atención en casa o una ruta responsable antes de desplazarse.',
+      intent: 'Médico a domicilio, teleconsulta, procedimientos menores, valoración y orientación médica.'
+    },
+    {
+      slug: 'servicios-de-enfermeria',
+      category: 'Enfermería',
+      title: 'Servicios de enfermería a domicilio | MedicExpress',
+      h1: 'Servicios de enfermería a domicilio para pacientes y familias',
+      description:
+        'Consulta servicios de enfermería a domicilio, inyectología, toma de signos vitales y acompañamiento a citas médicas. Atención coordinada por SMD Vital en Bogotá.',
+      intro:
+        'Este hub ordena las solicitudes de enfermería en casa: adultos mayores, medicamentos formulados, signos vitales, apoyo familiar y procedimientos programados.',
+      intent: 'Enfermería a domicilio, enfermera en casa, inyectología, signos vitales y cuidado de adultos mayores.'
+    },
+    {
+      slug: 'laboratorio-clinico',
+      category: 'Laboratorio clínico',
+      title: 'Laboratorio clínico a domicilio | MedicExpress',
+      h1: 'Laboratorio clínico a domicilio y toma de muestras en casa',
+      description:
+        'Consulta laboratorio clínico a domicilio, toma de muestras en casa, pruebas y orientación de preparación por WhatsApp con MedicExpress.',
+      intro:
+        'Este hub agrupa los servicios de laboratorio y toma de muestras para pacientes que necesitan evitar desplazamientos y validar requisitos antes de agendar.',
+      intent: 'Laboratorio a domicilio, toma de muestras, exámenes en casa y preparación de pruebas.'
+    }
+  ];
+  return categoryPages.map((page) => ({
+    params: { category: page.slug },
+    props: { page }
+  }));
+}
+
+const { page } = Astro.props as { page: CategoryPage };
+const services = getServicesByCategory(page.category);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: page.title,
+  description: page.description,
+  url: absoluteUrl(`/${page.slug}/`),
+  isPartOf: {
+    '@type': 'WebSite',
+    name: siteConfig.name,
+    url: siteConfig.url
+  },
+  about: page.intent,
+  provider: {
+    '@type': 'MedicalBusiness',
+    name: siteConfig.name,
+    url: siteConfig.url,
+    telephone: siteConfig.phone
+  }
+};
+---
+
+<BaseLayout title={page.title} description={page.description} canonicalPath={`/${page.slug}/`} jsonLd={schema}>
+  <section class="container py-12 md:py-16">
+    <div class="grid gap-10 lg:grid-cols-[1fr_0.74fr] lg:items-center">
+      <div>
+        <p class="kicker">{page.category}</p>
+        <h1 class="mt-3 max-w-4xl text-balance text-5xl font-black tracking-tight text-slate-950 md:text-7xl">
+          {page.h1}
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{page.intro}</p>
+        <p class="mt-4 inline-flex max-w-2xl rounded-full bg-indigo-50 px-4 py-2 text-sm font-black text-indigo-800 ring-1 ring-indigo-100">
+          {siteConfig.referralMessage}
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <WhatsAppButton label="Consultar por WhatsApp" serviceName={page.category} />
+          <a class="btn-secondary" href="#servicios">
+            <span>Ver servicios</span>
+            <ArrowRight size={18} stroke-width={2.4} />
+          </a>
+        </div>
+      </div>
+
+      <aside class="surface rounded-[34px] p-6">
+        <h2 class="text-2xl font-black text-slate-950">Qué puede encontrar aquí</h2>
+        <ul class="mt-5 space-y-4">
+          {[
+            'Páginas indexables por servicio',
+            'Orientación responsable por WhatsApp',
+            'Derivación hacia SMD Vital Bogotá cuando aplica',
+            'Información clara antes de agendar'
+          ].map((item) => (
+            <li class="flex gap-3 text-sm font-bold leading-6 text-slate-700">
+              <CheckCircle2 class="mt-0.5 shrink-0 text-indigo-700" size={18} stroke-width={2.4} />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="servicios" class="section bg-white">
+    <div class="container">
+      <div class="max-w-3xl">
+        <p class="kicker">Rutas relacionadas</p>
+        <h2 class="mt-3 text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
+          Servicios de {page.category.toLowerCase()}
+        </h2>
+        <p class="mt-5 text-lg leading-8 text-slate-600">
+          Cada servicio tiene su propia URL para competir en Google y llevar al paciente hacia una conversación útil por WhatsApp.
+        </p>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {services.map((service) => (
+          <ServiceCard service={service} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <ConversionPanel title={`Consulta ${page.category.toLowerCase()} por WhatsApp`} />
+</BaseLayout>

@@ -1,6 +1,7 @@
 ﻿import { services, siteConfig } from '../data/services';
 
-const urls = ['/', ...services.map((service) => `/${service.slug}/`)];
+const categoryUrls = ['/servicios-medicos/', '/servicios-de-enfermeria/', '/laboratorio-clinico/'];
+const urls = ['/', ...categoryUrls, ...services.map((service) => `/${service.slug}/`)];
 
 export async function GET() {
   const body = `<?xml version="1.0" encoding="UTF-8"?>
