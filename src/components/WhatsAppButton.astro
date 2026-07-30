@@ -19,7 +19,7 @@ const {
 
 <a
   class:list={[variant === 'primary' ? 'btn-primary' : 'btn-secondary', 'focus-ring', className]}
-  href={getWhatsappUrl(serviceName)}
+  href={getWhatsappUrl(serviceName, Astro.url.pathname)}
   target="_blank"
   rel="noopener noreferrer"
 >

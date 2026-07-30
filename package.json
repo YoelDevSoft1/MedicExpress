@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",
     "build": "astro build",
-    "preview": "astro preview --host 127.0.0.1"
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "astro check",
+    "seo:audit": "node scripts/seo-audit.mjs --enforce-baseline",
+    "seo:snapshot": "node scripts/seo-audit.mjs --write-baseline"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.4",
@@ -15,6 +21,7 @@
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.4",
     "postcss": "^8.5.14",
     "typescript": "^6.0.3"
   }

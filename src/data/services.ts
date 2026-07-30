@@ -826,10 +826,11 @@ export function getRelatedServices(service: Service) {
     .filter((related): related is Service => Boolean(related));
 }
 
-export function getWhatsappUrl(serviceName?: string) {
+export function getWhatsappUrl(serviceName?: string, source = '/') {
+  const origin = `[Origen: MedicExpress | ${source}]`;
   const text = serviceName
-    ? `Hola, vengo de MedicExpress y quiero consultar disponibilidad para ${serviceName}. Entiendo que la atención será coordinada por SMD Vital Bogotá.`
-    : 'Hola, vengo de MedicExpress y quiero recibir orientación para un servicio médico. Entiendo que la atención será coordinada por SMD Vital Bogotá.';
+    ? `Hola, vengo de MedicExpress y quiero consultar disponibilidad para ${serviceName}. Entiendo que la atención será coordinada por SMD Vital Bogotá. ${origin}`
+    : `Hola, vengo de MedicExpress y quiero recibir orientación para un servicio médico. Entiendo que la atención será coordinada por SMD Vital Bogotá. ${origin}`;
 
   return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(text)}`;
 }
@@ -838,8 +839,11 @@ export function absoluteUrl(path = '/') {
   return new URL(path, siteConfig.url).toString();
 }
 
-export function getSmdReferralUrl(path = '/') {
+export function getSmdReferralUrl(path = '/', source?: string) {
   const url = new URL(path, siteConfig.mainBrandUrl);
+  if (source) {
+    url.searchParams.set('ref', `medicexpress_${source}`);
+  }
   return url.toString();
 }
 

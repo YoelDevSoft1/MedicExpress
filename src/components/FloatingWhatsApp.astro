@@ -4,7 +4,7 @@ import { getWhatsappUrl } from '../data/services';
 ---
 
 <a
-  href={getWhatsappUrl()}
+  href={getWhatsappUrl(undefined, Astro.url.pathname)}
   class="whatsapp-orbit focus-ring"
   target="_blank"
   rel="noopener noreferrer"

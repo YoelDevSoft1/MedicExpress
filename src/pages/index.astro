@@ -6,7 +6,7 @@ import FAQSection from '../components/FAQSection.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import TrustStrip from '../components/TrustStrip.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
-import { categories, getServicesByCategory, services, siteConfig, absoluteUrl } from '../data/services';
+import { categories, getServicesByCategory, siteConfig, absoluteUrl } from '../data/services';
 
 const title = 'MedicExpress | Servicios médicos a domicilio conectados con SMD Vital';
 const description =
@@ -18,7 +18,7 @@ const homeSchema = {
   '@type': 'MedicalBusiness',
   name: siteConfig.name,
   url: siteConfig.url,
-  image: absoluteUrl('/img/screens/doctors.png'),
+  image: absoluteUrl('/img/medicexpress-og.jpg'),
   logo: absoluteUrl(siteConfig.logoPath),
   telephone: siteConfig.phone,
   areaServed: {

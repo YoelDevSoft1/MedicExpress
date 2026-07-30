@@ -1,0 +1,237 @@
+{
+  "generatedFrom": "dist",
+  "pages": [
+    {
+      "route": "/colombia",
+      "title": "Servicios médicos en casa Colombia | MedicExpress y SMD Vital",
+      "description": "MedicExpress orienta solicitudes de médico a domicilio, teleconsulta, enfermería y laboratorio en Colombia. En Bogotá, la atención se coordina con SMD Vital.",
+      "canonical": "https://medicexpress.com.co/colombia/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/enfermeria-a-domicilio-colombia",
+      "title": "Enfermería a domicilio Colombia | MedicExpress",
+      "description": "Consulta enfermería a domicilio en Colombia para adultos mayores, inyectología, signos vitales y cuidados programados. Bogotá coordinado por SMD Vital.",
+      "canonical": "https://medicexpress.com.co/enfermeria-a-domicilio-colombia/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/",
+      "title": "MedicExpress | Servicios médicos a domicilio conectados con SMD Vital",
+      "description": "MedicExpress orienta solicitudes de servicios médicos a domicilio, enfermería, laboratorio y teleconsulta con agendamiento por WhatsApp.",
+      "canonical": "https://medicexpress.com.co/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/laboratorio-a-domicilio-colombia",
+      "title": "Laboratorio a domicilio Colombia | MedicExpress",
+      "description": "Consulta toma de muestras y laboratorio a domicilio en Colombia. MedicExpress orienta requisitos, disponibilidad y coordinación por WhatsApp.",
+      "canonical": "https://medicexpress.com.co/laboratorio-a-domicilio-colombia/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/laboratorio-clinico",
+      "title": "Laboratorio clínico a domicilio | MedicExpress",
+      "description": "Consulta laboratorio clínico a domicilio, toma de muestras en casa, pruebas y orientación de preparación por WhatsApp con MedicExpress.",
+      "canonical": "https://medicexpress.com.co/laboratorio-clinico/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/laboratorio-clinico/laboratorio-a-domicilio",
+      "title": "Laboratorio clínico a domicilio Bogotá 24 horas | MedicExpress",
+      "description": "Solicita laboratorio clínico a domicilio en Bogotá y toma de muestras en casa. Coordinación por WhatsApp con SMD Vital.",
+      "canonical": "https://medicexpress.com.co/laboratorio-clinico/laboratorio-a-domicilio/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/laboratorio-clinico/prueba-de-antigeno-a-domicilio",
+      "title": "Prueba de antígeno a domicilio | MedicExpress",
+      "description": "Consulta disponibilidad para prueba de antígeno a domicilio. Coordinación por WhatsApp y proceso claro.",
+      "canonical": "https://medicexpress.com.co/laboratorio-clinico/prueba-de-antigeno-a-domicilio/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/laboratorio-clinico/toma-de-muestra-a-domicilio",
+      "title": "Toma de muestras a domicilio | MedicExpress",
+      "description": "Coordina toma de muestras a domicilio con orientación por WhatsApp. Servicio practico para pacientes y familias.",
+      "canonical": "https://medicexpress.com.co/laboratorio-clinico/toma-de-muestra-a-domicilio/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/laboratorio-clinico/toma-de-muestra-pcr-covid-19-a-domicilio",
+      "title": "PCR COVID-19 a domicilio | MedicExpress",
+      "description": "Consulta disponibilidad para toma de muestra PCR COVID-19 a domicilio. Coordinación por WhatsApp.",
+      "canonical": "https://medicexpress.com.co/laboratorio-clinico/toma-de-muestra-pcr-covid-19-a-domicilio/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/medico-a-domicilio-colombia",
+      "title": "Médico a domicilio Colombia | MedicExpress",
+      "description": "Busca médico a domicilio en Colombia con orientación por WhatsApp. En Bogotá, la atención será coordinada por SMD Vital Bogotá.",
+      "canonical": "https://medicexpress.com.co/medico-a-domicilio-colombia/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-de-enfermeria/acompanamiento-a-citas-medicas",
+      "title": "Acompañamiento a citas médicas | MedicExpress",
+      "description": "Coordina acompañamiento a citas médicas para adultos mayores, pacientes con movilidad reducida o familias que necesitan apoyo.",
+      "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/acompanamiento-a-citas-medicas/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario",
+      "title": "Enfermería a domicilio | MedicExpress",
+      "description": "Solicita enfermería domiciliaria y apoyo hospitalario. Coordinación por WhatsApp y atención conectada con SMD Vital.",
+      "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-de-enfermeria",
+      "title": "Servicios de enfermería a domicilio | MedicExpress",
+      "description": "Consulta servicios de enfermería a domicilio, inyectología, toma de signos vitales y acompañamiento a citas médicas. Atención coordinada por SMD Vital en Bogotá.",
+      "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-de-enfermeria/inyectologia-a-domicilio",
+      "title": "Inyectología a domicilio Bogotá | MedicExpress",
+      "description": "Agenda inyectología a domicilio en Bogotá desde $95.000. Validación de fórmula médica y atención coordinada por SMD Vital.",
+      "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/inyectologia-a-domicilio/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-de-enfermeria/toma-de-signos-vitales",
+      "title": "Toma de signos vitales a domicilio | MedicExpress",
+      "description": "Solicita toma de signos vitales a domicilio. Orientación por WhatsApp para pacientes, adultos mayores y seguimiento.",
+      "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/toma-de-signos-vitales/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/atencion-a-pacientes-con-covid-19",
+      "title": "Atención COVID-19 a domicilio | MedicExpress",
+      "description": "Orientación para pacientes con síntomas respiratorios o sospecha de COVID-19. Consulta por WhatsApp el servicio adecuado.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/atencion-a-pacientes-con-covid-19/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/cura-de-heridas-simples-y-complejas",
+      "title": "Cura de heridas a domicilio | MedicExpress",
+      "description": "Solicita cura de heridas simples y complejas a domicilio. Orientación por WhatsApp y manejo responsable.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/cura-de-heridas-simples-y-complejas/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/electrocardiografia-basica",
+      "title": "Electrocardiograma a domicilio Bogotá | MedicExpress",
+      "description": "Solicita electrocardiograma a domicilio en Bogotá. Coordinación por WhatsApp y atención realizada por SMD Vital.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/electrocardiografia-basica/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/extraccion-y-cuidado-para-unas-encarnadas",
+      "title": "Uñas encarnadas a domicilio | MedicExpress",
+      "description": "Solicita orientación para extraccion y cuidado de uñas encarnadas a domicilio. Coordinación por WhatsApp.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/extraccion-y-cuidado-para-unas-encarnadas/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos",
+      "title": "Servicios médicos a domicilio | MedicExpress",
+      "description": "Explora servicios médicos a domicilio, teleconsulta, valoración médica, procedimientos y orientación por WhatsApp con MedicExpress y SMD Vital.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/lavado-de-oido",
+      "title": "Lavado de oído a domicilio Bogotá | MedicExpress",
+      "description": "Solicita lavado de oído a domicilio en Bogotá desde $140.000. Validación previa y atención coordinada por SMD Vital.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/lavado-de-oido/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/retiro-y-colocacion-de-sonda-vesical",
+      "title": "Sonda vesical a domicilio | MedicExpress",
+      "description": "Coordina retiro o colocación de sonda vesical a domicilio con orientación por WhatsApp y manejo profesional.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/retiro-y-colocacion-de-sonda-vesical/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/servicio-medico-a-domicilio",
+      "title": "Servicio médico a domicilio | MedicExpress",
+      "description": "Solicita orientación para servicio médico a domicilio. Atención humana, agendamiento por WhatsApp y conexión con SMD Vital.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/servicio-medico-a-domicilio/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/suero-multivitaminico",
+      "title": "Suero multivitamínico a domicilio Bogotá | MedicExpress",
+      "description": "Consulta suero multivitamínico a domicilio en Bogotá desde $185.000. Atención coordinada por SMD Vital.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/suero-multivitaminico/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/sutura-y-retiro-de-puntos",
+      "title": "Sutura y retiro de puntos a domicilio Bogotá | MedicExpress",
+      "description": "Solicita orientación para sutura o retiro de puntos a domicilio en Bogotá. Revisión previa y atención coordinada por SMD Vital.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/sutura-y-retiro-de-puntos/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/teleconsulta-medica",
+      "title": "Teleconsulta médica | MedicExpress",
+      "description": "Agenda orientación por teleconsulta médica. Ideal para dudas, seguimiento y casos que no requieren visita inmediata.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/teleconsulta-medica/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/terapias-respiratorias",
+      "title": "Terapias respiratorias a domicilio | MedicExpress",
+      "description": "Solicita orientación para terapia respiratoria a domicilio. Coordinación por WhatsApp y atención responsable.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/terapias-respiratorias/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/servicios-medicos/valoracion-medica-a-domicilio",
+      "title": "Valoración médica a domicilio | MedicExpress",
+      "description": "Solicita valoración médica a domicilio con orientación profesional y agendamiento por WhatsApp.",
+      "canonical": "https://medicexpress.com.co/servicios-medicos/valoracion-medica-a-domicilio/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/teleconsulta-medica-colombia",
+      "title": "Teleconsulta médica Colombia | Orientación por WhatsApp",
+      "description": "Consulta orientación por teleconsulta médica en Colombia. MedicExpress conecta solicitudes con el canal de atención de SMD Vital cuando aplica.",
+      "canonical": "https://medicexpress.com.co/teleconsulta-medica-colombia/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    }
+  ]
+}
