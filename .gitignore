@@ -1,9 +1,25 @@
+# Dependencies and generated output
 node_modules/
 dist/
 .astro/
+
+# Environment variables and local secrets
 .env
 .env.*
-*.local
+!.env.example
+
+# Logs
 *.log
-*.Zone.Identifier
-*_zone.identifier
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Netlify local state
+.netlify/
