@@ -13,6 +13,13 @@ export const siteConfig = {
 
 export type ServiceCategory = 'Cobertura nacional' | 'Servicios médicos' | 'Enfermería' | 'Laboratorio clínico';
 
+export const categoryPaths: Record<ServiceCategory, string> = {
+  'Cobertura nacional': '/colombia/',
+  'Servicios médicos': '/servicios-medicos/',
+  Enfermería: '/servicios-de-enfermeria/',
+  'Laboratorio clínico': '/laboratorio-clinico/'
+};
+
 export type Service = {
   slug: string;
   category: ServiceCategory;

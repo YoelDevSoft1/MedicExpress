@@ -85,6 +85,19 @@ for (const page of pages.filter((item) => item.canonical)) {
 for (const [canonical, routes] of canonicalOwners) {
   if (routes.length > 1) errors.push({ code: 'duplicate-canonical', canonical, routes });
 }
+const sitemapPath = join(distDir, 'sitemap.xml');
+if (existsSync(sitemapPath)) {
+  const sitemapUrls = [...readFileSync(sitemapPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/gi)]
+    .map((match) => decode(match[1]));
+  const pageByCanonical = new Map(pages.filter((page) => page.canonical).map((page) => [page.canonical, page]));
+  for (const url of sitemapUrls) {
+    const page = pageByCanonical.get(url);
+    if (!page) errors.push({ code: 'sitemap-url-not-canonical', url });
+    if (page?.robots.toLowerCase().includes('noindex')) {
+      errors.push({ route: page.route, code: 'noindex-in-sitemap', url });
+    }
+  }
+}
 if (enforceBaseline && existsSync(baselinePath)) {
   const baseline = JSON.parse(readFileSync(baselinePath, 'utf8'));
   const currentByRoute = new Map(pages.map((page) => [page.route, page]));

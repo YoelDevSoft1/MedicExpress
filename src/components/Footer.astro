@@ -1,6 +1,6 @@
 ﻿---
 import WhatsAppButton from './WhatsAppButton.astro';
-import { categories, getServicesByCategory, getSmdReferralUrl, siteConfig } from '../data/services';
+import { categories, categoryPaths, getServicesByCategory, getSmdReferralUrl, siteConfig } from '../data/services';
 ---
 
 <footer class="border-t border-slate-200 bg-slate-950 text-white">
@@ -33,7 +33,9 @@ import { categories, getServicesByCategory, getSmdReferralUrl, siteConfig } from
       {
         categories.map((category) => (
           <div>
-            <h2 class="text-sm font-black text-white">{category}</h2>
+            <h2 class="text-sm font-black text-white">
+              <a class="transition hover:text-indigo-200" href={categoryPaths[category]}>{category}</a>
+            </h2>
             <ul class="mt-4 space-y-3 text-sm text-slate-400">
               {getServicesByCategory(category).slice(0, 7).map((service) => (
                 <li>
