@@ -103,6 +103,7 @@ export const services: Service[] = [
     summary:
       'Una página nacional para captar pacientes que necesitan hablar con un profesional, resolver dudas no urgentes o definir si conviene atención domiciliaria, consulta presencial o una ruta de urgencias.',
     intent: 'Personas en Colombia que buscan consulta médica virtual, médico online u orientación médica por WhatsApp.',
+    price: '$50.000 COP',
     highlights: ['Orientación sin desplazamiento', 'Útil para dudas no urgentes', 'Derivación responsable si hay alarma'],
     suitableFor: ['Dudas médicas no urgentes', 'Seguimiento de síntomas leves o moderados', 'Familias que necesitan saber qué paso tomar'],
     process: nationalProcess,
@@ -297,6 +298,7 @@ export const services: Service[] = [
     summary:
       'Alternativa práctica para recibir orientación médica inicial, resolver dudas y definir si conviene atención presencial.',
     intent: 'Usuarios que quieren hablar con un profesional sin salir de casa.',
+    price: '$50.000 COP',
     highlights: ['Respuesta sin desplazamiento', 'Orientación de siguiente paso', 'Canal útil para seguimiento'],
     suitableFor: ['Dudas médicas no urgentes', 'Seguimiento de síntomas', 'Orientación familiar'],
     process: commonProcess,
