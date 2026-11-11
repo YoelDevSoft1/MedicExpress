@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: 'MedicExpress',
   url: 'https://medicexpress.com.co',
-  phone: '+57 304 291 2564',
-  whatsappNumber: '573042912564',
+  phone: '+57 320 225 2996',
+  whatsappNumber: '573202252996',
   mainBrand: 'SMD Vital Bogotá',
   mainBrandUrl: 'https://smdvitalbogota.com',
   logoPath: '/img/logo/logo-square.svg',
