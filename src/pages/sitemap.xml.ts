@@ -10,9 +10,6 @@ ${urls
   .map(
     (path) => `  <url>
     <loc>${new URL(path, siteConfig.url).toString()}</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>${path === '/' ? 'weekly' : 'monthly'}</changefreq>
-    <priority>${path === '/' ? '1.0' : '0.8'}</priority>
   </url>`
   )
   .join('\n')}

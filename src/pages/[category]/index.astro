@@ -96,12 +96,16 @@ export function getStaticPaths() {
 
 const { page } = Astro.props as { page: CategoryPage };
 const services = getServicesByCategory(page.category);
+const unavailable = page.category === 'Laboratorio clínico';
+const description = unavailable
+  ? 'Laboratorio clínico y toma de muestras: servicios actualmente no disponibles en MedicExpress y SMD Vital. No se aceptan reservas.'
+  : page.description;
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: page.title,
-  description: page.description,
+  description,
   url: absoluteUrl(`/${page.slug}/`),
   isPartOf: {
     '@type': 'WebSite',
@@ -118,7 +122,7 @@ const schema = {
 };
 ---
 
-<BaseLayout title={page.title} description={page.description} canonicalPath={`/${page.slug}/`} jsonLd={schema}>
+<BaseLayout title={page.title} description={description} canonicalPath={`/${page.slug}/`} jsonLd={schema}>
   <section class="container py-12 md:py-16">
     <div class="grid gap-10 lg:grid-cols-[1fr_0.74fr] lg:items-center">
       <div>
@@ -126,12 +130,12 @@ const schema = {
         <h1 class="mt-3 max-w-4xl text-balance text-5xl font-black tracking-tight text-slate-950 md:text-7xl">
           {page.h1}
         </h1>
-        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{page.intro}</p>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{unavailable ? description : page.intro}</p>
         <p class="mt-4 inline-flex max-w-2xl rounded-full bg-indigo-50 px-4 py-2 text-sm font-black text-indigo-800 ring-1 ring-indigo-100">
           {siteConfig.referralMessage}
         </p>
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <WhatsAppButton label="Consultar por WhatsApp" serviceName={page.category} />
+          {!unavailable && <WhatsAppButton label="Consultar por WhatsApp" serviceName={page.category} />}
           <a class="btn-secondary" href="#servicios">
             <span>Ver servicios</span>
             <ArrowRight size={18} stroke-width={2.4} />
@@ -143,7 +147,7 @@ const schema = {
         <h2 class="text-2xl font-black text-slate-950">Qué puede encontrar aquí</h2>
         <ul class="mt-5 space-y-4">
           {[
-            'Páginas indexables por servicio',
+            'Información sobre cada servicio',
             'Orientación responsable por WhatsApp',
             'Derivación hacia SMD Vital Bogotá cuando aplica',
             'Información clara antes de agendar'
@@ -161,12 +165,12 @@ const schema = {
   <section id="servicios" class="section bg-white">
     <div class="container">
       <div class="max-w-3xl">
-        <p class="kicker">Rutas relacionadas</p>
+        <p class="kicker">Información relacionada</p>
         <h2 class="mt-3 text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
           Servicios de {page.category.toLowerCase()}
         </h2>
         <p class="mt-5 text-lg leading-8 text-slate-600">
-          Cada servicio tiene su propia URL para competir en Google y llevar al paciente hacia una conversación útil por WhatsApp.
+          Revisa el alcance y el estado de disponibilidad de cada servicio antes de solicitar atención.
         </p>
       </div>
       <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -177,5 +181,5 @@ const schema = {
     </div>
   </section>
 
-  <ConversionPanel title={`Consulta ${page.category.toLowerCase()} por WhatsApp`} />
+  {!unavailable && <ConversionPanel title={`Consulta ${page.category.toLowerCase()} por WhatsApp`} />}
 </BaseLayout>
