@@ -1,5 +1,5 @@
 ﻿---
-import { ArrowRight, CheckCircle2 } from '@lucide/astro';
+import Icon from './Icon.astro';
 import WhatsAppButton from './WhatsAppButton.astro';
 import type { Service } from '../data/services';
 
@@ -30,7 +30,7 @@ const { service, title, text } = Astro.props;
             <WhatsAppButton label="Solicitar orientación" serviceName={service?.title} />
             <a class="btn-secondary bg-white text-indigo-950" href="/#servicios">
               <span>Ver servicios</span>
-              <ArrowRight size={18} stroke-width={2.4} />
+              <Icon name="arrow-right" size={20} stroke-width={1.75} aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -39,7 +39,7 @@ const { service, title, text } = Astro.props;
           <ul class="mt-5 space-y-4 text-sm leading-6 text-indigo-50">
             {['Nombre y edad del paciente', 'Dirección o localidad', 'Servicio requerido', 'Motivo de consulta y tiempo de evolución'].map((item) => (
               <li class="flex gap-3">
-                <CheckCircle2 class="mt-0.5 shrink-0 text-indigo-200" size={18} stroke-width={2.4} />
+                <Icon name="circle-check" class="mt-0.5 shrink-0 text-indigo-200" size={20} stroke-width={1.75} aria-hidden="true" />
                 <span>{item}</span>
               </li>
             ))}

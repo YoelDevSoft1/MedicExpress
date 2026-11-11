@@ -1,5 +1,5 @@
 ﻿---
-import { Phone } from '@lucide/astro';
+import Icon from './Icon.astro';
 import WhatsAppButton from './WhatsAppButton.astro';
 import { getSmdReferralUrl, siteConfig } from '../data/services';
 ---
@@ -40,7 +40,7 @@ import { getSmdReferralUrl, siteConfig } from '../data/services';
         class="focus-ring hidden min-h-11 items-center gap-2 rounded-full border border-slate-200 px-4 text-[14px] font-extrabold text-slate-800 transition hover:border-indigo-200 hover:text-indigo-700 md:inline-flex"
         href={`tel:${siteConfig.phone.replaceAll(' ', '')}`}
       >
-        <Phone size={16} stroke-width={2.4} />
+        <Icon name="phone" size={16} stroke-width={1.75} aria-hidden="true" />
         <span>{siteConfig.phone}</span>
       </a>
       <WhatsAppButton label="WhatsApp" class="min-w-28" />

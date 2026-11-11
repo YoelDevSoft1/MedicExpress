@@ -1,12 +1,22 @@
 ---
 type Props = {
-  name: 'visita-medica' | 'auxiliar-cuidado';
+  name: 'visita-medica' | 'auxiliar-cuidado' | 'acompanamiento-citas' | 'signos-vitales' | 'teleconsulta-hogar' | 'cuidado-nocturno' | 'preparacion-curaciones' | 'material-visita-medica' | 'valoracion-oidos' | 'coordinacion-familiar';
   priority?: boolean;
 };
 const { name, priority = false } = Astro.props;
-const alt = name === 'visita-medica'
-  ? 'Escena ilustrativa de un médico conversando con una mujer mayor en su hogar'
-  : 'Escena ilustrativa de una auxiliar de enfermería conversando con una adulta mayor en casa';
+const descriptions: Record<Props['name'], string> = {
+  'visita-medica': 'Escena ilustrativa de un médico conversando con una mujer mayor en su hogar',
+  'auxiliar-cuidado': 'Escena ilustrativa de una auxiliar de enfermería conversando con una adulta mayor en casa',
+  'acompanamiento-citas': 'Una auxiliar acompaña a un adulto mayor y a su familiar al salir de casa',
+  'signos-vitales': 'Una auxiliar mide la presión arterial de una mujer mayor en su hogar',
+  'teleconsulta-hogar': 'Una mujer conversa por videollamada desde su portátil en casa',
+  'cuidado-nocturno': 'Una auxiliar acompaña a una mujer mayor en una sala al anochecer',
+  'preparacion-curaciones': 'Material de curación cerrado y ordenado sobre una bandeja en un hogar',
+  'material-visita-medica': 'Maletín médico con estetoscopio y material cerrado en una sala doméstica',
+  'valoracion-oidos': 'Un médico conversa con un adulto mayor antes de examinar sus oídos',
+  'coordinacion-familiar': 'Una auxiliar conversa con una mujer mayor y su hijo en casa',
+};
+const alt = descriptions[name];
 ---
 
 <figure>
@@ -21,11 +31,9 @@ const alt = name === 'visita-medica'
     fetchpriority={priority ? 'high' : 'auto'}
     decoding="async"
   />
-  <figcaption>Escena ilustrativa generada con IA.</figcaption>
 </figure>
 
 <style>
   figure{margin:0}
   img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:24px;background:#e8e7ec}
-  figcaption{margin:8px 4px 0;font-size:11px;line-height:1.6;color:#64748b}
 </style>

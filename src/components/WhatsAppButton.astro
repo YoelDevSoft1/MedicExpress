@@ -1,5 +1,5 @@
 ﻿---
-import { MessageCircle } from '@lucide/astro';
+import Icon from './Icon.astro';
 import { getWhatsappUrl } from '../data/services';
 
 type Props = {
@@ -23,7 +23,7 @@ const {
   target="_blank"
   rel="noopener noreferrer"
 >
-  <MessageCircle size={18} stroke-width={2.4} />
+  <Icon name="brand-whatsapp" size={20} stroke-width={1.75} aria-hidden="true" />
   <span>{label}</span>
 </a>
 

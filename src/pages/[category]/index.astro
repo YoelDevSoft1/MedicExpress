@@ -1,5 +1,5 @@
 ---
-import { ArrowRight, CheckCircle2 } from '@lucide/astro';
+import Icon from '../../components/Icon.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ConversionPanel from '../../components/ConversionPanel.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
@@ -138,7 +138,7 @@ const schema = {
           <WhatsAppButton label="Consultar por WhatsApp" serviceName={page.category} />
           <a class="btn-secondary" href="#servicios">
             <span>Ver servicios</span>
-            <ArrowRight size={18} stroke-width={2.4} />
+            <Icon name="arrow-right" size={20} stroke-width={1.75} aria-hidden="true" />
           </a>
         </div>
       </div>
@@ -153,7 +153,7 @@ const schema = {
             'Información clara antes de agendar'
           ].map((item) => (
             <li class="flex gap-3 text-sm font-bold leading-6 text-slate-700">
-              <CheckCircle2 class="mt-0.5 shrink-0 text-indigo-700" size={18} stroke-width={2.4} />
+              <Icon name="circle-check" class="mt-0.5 shrink-0 text-indigo-700" size={20} stroke-width={1.75} aria-hidden="true" />
               <span>{item}</span>
             </li>
           ))}

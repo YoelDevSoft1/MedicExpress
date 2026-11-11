@@ -1,0 +1,21 @@
+---
+import collection from '@iconify-json/tabler/icons.json';
+
+type Props = {
+  name: string;
+  size?: number;
+  class?: string;
+  'stroke-width'?: number;
+  'aria-hidden'?: string | boolean;
+};
+
+const { name, size = 20, class: className, 'stroke-width': strokeWidth = 1.75 } = Astro.props;
+const icons: Record<string, { body: string; width?: number; height?: number }> = collection.icons;
+const icon = icons[name];
+if (!icon) throw new Error(`Unknown Tabler icon: ${name}`);
+const body = icon.body.replaceAll('stroke-width="2"', `stroke-width="${strokeWidth}"`);
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox={`0 0 ${icon.width ?? collection.width} ${icon.height ?? collection.height}`} class={className} data-icon={`tabler:${name}`} aria-hidden="true" focusable="false">
+  <Fragment set:html={body} />
+</svg>

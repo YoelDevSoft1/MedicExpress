@@ -1,5 +1,5 @@
 ﻿---
-import { ArrowLeft, CheckCircle2, Clock3, ShieldCheck } from '@lucide/astro';
+import Icon from '../components/Icon.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ConversionPanel from '../components/ConversionPanel.astro';
 import FAQSection from '../components/FAQSection.astro';
@@ -70,7 +70,7 @@ const faqSchema = {
 >
   <section class="container py-10 md:py-16">
     <a href="/" class="focus-ring inline-flex items-center gap-2 rounded-full text-sm font-black text-indigo-700 hover:text-indigo-900">
-      <ArrowLeft size={17} stroke-width={2.4} />
+      <Icon name="arrow-left" size={20} stroke-width={1.75} aria-hidden="true" />
       Volver a servicios
     </a>
 
@@ -104,7 +104,7 @@ const faqSchema = {
         <div class="mt-5 grid gap-3">
           {(review ? ['Revisión de tu solicitud', 'Zona y fecha por confirmar', 'Cotización antes de reservar'] : service.highlights).map((highlight) => (
             <div class="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm">
-              <CheckCircle2 class="text-indigo-700" size={19} stroke-width={2.4} />
+              <Icon name="circle-check" class="text-indigo-700" size={20} stroke-width={1.75} aria-hidden="true" />
               <span class="text-sm font-bold text-slate-700">{highlight}</span>
             </div>
           ))}
@@ -142,12 +142,12 @@ const faqSchema = {
   <section id="detalles" class="section bg-white">
     <div class="container grid gap-10 lg:grid-cols-3">
       <div class="rounded-[28px] border border-slate-200 p-6">
-        <ShieldCheck class="text-indigo-700" size={28} stroke-width={2.4} />
+        <Icon name="shield-check" class="text-indigo-700" size={24} stroke-width={1.75} aria-hidden="true" />
         <h2 class="mt-5 text-2xl font-black text-slate-950">Cuándo puede servir</h2>
         <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-600">
           {service.suitableFor.map((item) => (
             <li class="flex gap-3">
-              <CheckCircle2 class="mt-0.5 shrink-0 text-indigo-700" size={17} stroke-width={2.4} />
+              <Icon name="circle-check" class="mt-0.5 shrink-0 text-indigo-700" size={20} stroke-width={1.75} aria-hidden="true" />
               <span>{item}</span>
             </li>
           ))}
@@ -155,7 +155,7 @@ const faqSchema = {
       </div>
 
       <div class="rounded-[28px] border border-slate-200 p-6 lg:col-span-2">
-        <Clock3 class="text-indigo-700" size={28} stroke-width={2.4} />
+        <Icon name="clock" class="text-indigo-700" size={24} stroke-width={1.75} aria-hidden="true" />
         <h2 class="mt-5 text-2xl font-black text-slate-950">Cómo funciona</h2>
         <ol class="mt-5 grid gap-4 md:grid-cols-2">
           {service.process.map((step, index) => (

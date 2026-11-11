@@ -1,0 +1,90 @@
+{
+  "createdAt": "2026-11-11",
+  "method": "ImageGen integrado",
+  "disclosure": "Imágenes ilustrativas creadas con IA; no representan al equipo ni a pacientes reales.",
+  "placement": "Una aclaración global en el pie de página; sin rótulos incrustados en las imágenes.",
+  "exports": {
+    "format": "webp",
+    "quality": 80,
+    "widths": [
+      480,
+      768,
+      1200
+    ],
+    "aspectRatio": "4:3"
+  },
+  "assets": [
+    {
+      "name": "acompanamiento-citas",
+      "title": "Acompañamiento a citas",
+      "alt": "Una auxiliar acompaña a un adulto mayor y a su familiar al salir de casa.",
+      "use": "Acompañamiento a citas médicas",
+      "original": "acompanamiento-citas-original.png",
+      "publicPrefix": "/img/photos/acompanamiento-citas",
+      "prompt": "Use case: photorealistic-natural. Asset: editorial website photograph for domiciliary care and accompaniment in Bogotá. One single landscape 4:3 photograph, fictional people. A Latin American female nursing auxiliary around 35 in plain muted indigo scrubs accompanying a fully clothed older Latin American man around 73 and his adult daughter as they prepare to leave their modest apartment for a medical appointment. Calm respectful interaction at the doorway, elderly man standing independently with a simple walking cane correctly held, assistant beside him with respectful personal space, no lifting or medical procedure. Natural soft overcast Bogotá daylight, warm neutral interior, believable everyday home, realistic faces, hands and skin texture, candid documentary 50mm photography, subtle depth of field, unposed, no exaggerated smiles, no luxury. Central 75 percent contains faces and hands for responsive crop, ample breathing space at edges. No logos, no text, no watermarks, no badges, no certificates, no medical records visible. Not a real team testimonial or real patient. Commercial illustrative photography without any embedded caption or lettering."
+    },
+    {
+      "name": "signos-vitales",
+      "title": "Control de signos vitales",
+      "alt": "Una auxiliar mide la presión arterial de una mujer mayor en su hogar.",
+      "use": "Toma de signos vitales",
+      "original": "signos-vitales-original.png",
+      "publicPrefix": "/img/photos/signos-vitales",
+      "prompt": "Use case: photorealistic-natural. Single landscape 4:3 editorial photograph for an illustrative nursing home-care service in Bogotá. Fictional Latin American nursing auxiliary woman in plain indigo scrubs around 32 checking a seated fully clothed older woman's blood pressure with a modern automatic upper-arm monitor in a comfortable modest apartment. Correct technique: older woman at dining table, back supported, feet flat uncrossed, forearm relaxed supported at heart height, cuff wrapped on bare upper arm not over clothing, no stethoscope needed for automatic monitor, no visible invented measurements on display (screen angled away). Auxiliary looking attentively at the monitor. Natural skin pores and wrinkles, realistic hands and anatomy, candid 50mm documentary photography, soft window daylight, restrained indigo and warm neutral palette, accessible everyday home not luxury. Respectful calm expression, no stock-photo exaggerated smiling. Faces, cuff and hands in central 75% with comfortable edges for responsive crop. No logos, text, lettering, watermark, badges, certificates or patient data. Fictional illustrative scene, no real staff claim. No embedded caption."
+    },
+    {
+      "name": "teleconsulta-hogar",
+      "title": "Teleconsulta desde casa",
+      "alt": "Una mujer conversa por videollamada desde su portátil en casa.",
+      "use": "Teleconsulta de medicina general",
+      "original": "teleconsulta-hogar-original.png",
+      "publicPrefix": "/img/photos/teleconsulta-hogar",
+      "prompt": "Use case: photorealistic-natural. One single landscape 4:3 editorial website photograph illustrating a general medical teleconsultation from home in Bogotá. A fictional Latin American adult woman around 45 seated comfortably at a small dining table speaking attentively to her open laptop. Camera from side at three-quarter angle, screen turned away from camera so no screen content or readable personal data is visible. Natural attentive expression, relaxed hands resting on table, simple home decor, small plant, plain water glass, no medical devices, no documents. Soft overcast window daylight, warm-neutral walls with restrained indigo accent, realistic skin texture and hands, candid documentary photograph, 50mm lens, subtle depth of field, modest tidy apartment, accessible not luxurious, no glamour, no exaggerated smiling. Keep face, hands and laptop in central 75 percent with ample edge space for responsive crops. No logos, text, watermarks, badges, diagnosis, claims or embedded caption. Fictional illustrative person, not a real patient testimonial."
+    },
+    {
+      "name": "cuidado-nocturno",
+      "title": "Cuidado al anochecer",
+      "alt": "Una auxiliar acompaña a una mujer mayor en una sala al anochecer.",
+      "use": "Turnos nocturnos de auxiliares",
+      "original": "cuidado-nocturno-original.png",
+      "publicPrefix": "/img/photos/cuidado-nocturno",
+      "prompt": "Use case: photorealistic-natural. Single landscape 4:3 editorial photograph for illustrative overnight auxiliary home care in Bogotá. Fictional Latin American nursing auxiliary woman around 40 in plain indigo scrubs seated quietly in a chair beside an older Latin American woman resting comfortably in an armchair with an oatmeal cardigan and light blanket covering her legs. Both fully clothed, older woman awake and relaxed, auxiliary speaking softly at eye level. Modest comfortable domestic living room at early evening, gentle warm table-lamp light balanced with blue dusk from window, faces well exposed, quiet reassuring atmosphere without drama. A simple clock far in background unreadable. Realistic anatomy and hands, natural skin and wrinkles, restrained documentary 50mm photography, no glamour or exaggerated smiles. Mid-wide composition, both faces and hands in central 75%, comfortable margins for mobile crop. No bed restraints, IVs, medical procedures, stethoscopes, logos, labels, lettering, watermarks or claims of around-the-clock staffing. Fictional illustrative people not actual personnel or patients; no embedded caption."
+    },
+    {
+      "name": "preparacion-curaciones",
+      "title": "Preparación para curaciones",
+      "alt": "Material de curación cerrado y ordenado sobre una bandeja en un hogar.",
+      "use": "Curación de heridas; recurso de contexto, sin mostrar técnica clínica",
+      "original": "preparacion-curaciones-original.png",
+      "publicPrefix": "/img/photos/preparacion-curaciones",
+      "prompt": "Use case: photorealistic-natural. Single landscape 4:3 editorial still-life photograph for domiciliary wound-care services, illustrative only. Close-up of an orderly preparation area on a clean portable tray placed on an uncluttered home dining table in Bogotá, not a hospital. On tray: unopened sterile gauze packages, one unopened simple bandage roll in transparent wrap, sealed generic dressing packets, a plain capped saline bottle without a readable label, and an unopened examination glove box with no visible printing. No opened sterile field, no used material, no exposed needles, no scissors or sharp objects, no medications or labels, no patient or wound or skin, no hands touching sterile items. Warm neutral domestic setting softly out of focus, gentle daylight, matte indigo medical bag partially visible behind tray, premium accessible documentary product photography, realistic materials, subtle shadows, natural detail, restrained neutral palette. Centered composition with comfortable margins for responsive crops. No text, logos, watermarks, claims, signage or embedded caption. This is an illustrative preparation scene and not evidence of equipment included in any service."
+    },
+    {
+      "name": "material-visita-medica",
+      "title": "Material para visita médica",
+      "alt": "Maletín médico con estetoscopio y material cerrado en una sala doméstica.",
+      "use": "Consulta médica domiciliaria; recurso de contexto",
+      "original": "material-visita-medica-original.png",
+      "publicPrefix": "/img/photos/material-visita-medica",
+      "prompt": "Use case: photorealistic-natural. Single landscape 4:3 editorial website photograph illustrating preparation for a general home medical visit in Bogotá. Close environmental still-life of a plain muted indigo medical carry bag open on a clean modest apartment side table, a realistic black stethoscope neatly coiled beside it, a compact closed blood-pressure monitor case and sealed small consumables packets, no readable writing or patient records, no pills, no syringes, no IV, no oxygen or catheter equipment. A comfortable armchair and a softly sunlit plant in the background, simple lived-in home rather than clinic. Soft overcast natural window light, believable texture of nylon fabric, wood and rubber, calm neutral colors with restrained indigo accent, documentary 50mm product photograph with moderate depth of field. Natural uncontrived arrangement, commercially useful but not luxury. Central subject with spacious margins suitable for mobile and 16:9 crops. No people, logos, text, watermarks, badges, certificates, guarantees or embedded caption. Fictional illustrative kit, not a promise that any specific supplies or transport are included."
+    },
+    {
+      "name": "valoracion-oidos",
+      "title": "Valoraci?n previa del o?do",
+      "alt": "Un m?dico conversa con un adulto mayor antes de examinar sus o?dos.",
+      "use": "Lavado de o?dos; valoraci?n previa, sin representar una t?cnica de irrigaci?n",
+      "original": "valoracion-oidos-original.png",
+      "publicPrefix": "/img/photos/valoracion-oidos",
+      "prompt": "Use case: photorealistic-natural. One landscape 4:3 editorial illustrative photograph for a domiciliary ear assessment before possible ear lavage in Bogot?. A fictional Latin American general doctor man around 40 in plain dark indigo scrubs sits at eye level next to a fictional Latin American older man around 68 in a comfortable modest home. Doctor holding a realistic compact black otoscope DOWN in a relaxed hand over his own knee, not in use, while attentively explaining the upcoming ear examination. Otoscope has realistic short metal head, no glowing beam, no contact with patient. Older man fully clothed, listening calmly, no ear manipulation, no fluids, no syringe, no irrigation, no invasive procedure, no claims of guaranteed suitability. Mid-wide documentary composition with both faces and hands in central 75 percent, comfortable edge spacing for responsive crops, natural skin textures and hands, soft overcast window daylight, warm neutral walls, simple domestic decor, restrained indigo palette, unposed and realistic 50mm photograph, no glamour or exaggerated smiles. No visible records, logos, text, watermarks, certificates, badges or embedded caption. Fictional illustrative scene not actual staff or patient."
+    },
+    {
+      "name": "coordinacion-familiar",
+      "title": "Coordinaci?n del cuidado familiar",
+      "alt": "Una auxiliar conversa con una mujer mayor y su hijo en casa.",
+      "use": "Planes de cuidado y coordinaci?n familiar",
+      "original": "coordinacion-familiar-original.png",
+      "publicPrefix": "/img/photos/coordinacion-familiar",
+      "prompt": "Use case: photorealistic-natural. Single landscape 4:3 editorial photograph illustrating family coordination of auxiliary nursing home care in Bogot?. Three fictional Latin American adults seated comfortably together in a modest apartment living room: nursing auxiliary woman around 34 in plain muted indigo scrubs, older woman around 76 fully clothed in a light oatmeal cardigan, and adult son around 46 in casual dark blue shirt. Calm respectful planning conversation at eye level, auxiliary listens to the older woman, son attentive nearby, natural hands resting on knees or table, no touching medical instruments, no paperwork with readable patient data, no examination or treatment, no clinical claims. Warm human rapport without exaggerated smiles. Soft natural window daylight, simple plants and neutral domestic furnishings, approachable everyday setting, realistic wrinkles, skin, hands and anatomy, 50mm documentary photo with subtle depth of field, restrained neutral and indigo palette. Balanced environmental framing, faces and hands within central 75 percent, comfortable edge margins for responsive crop. No logos, badges, certificates, text, watermarks or embedded caption. Fictional illustrative people, not actual team members or testimonials."
+    }
+  ]
+}

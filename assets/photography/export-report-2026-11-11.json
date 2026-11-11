@@ -1,0 +1,149 @@
+{
+  "generatedAssets": 8,
+  "exports": [
+    {
+      "path": "public/img/photos/acompanamiento-citas-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 27002
+    },
+    {
+      "path": "public/img/photos/acompanamiento-citas-768.webp",
+      "width": 768,
+      "height": 576,
+      "bytes": 57798
+    },
+    {
+      "path": "public/img/photos/acompanamiento-citas-1200.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 112970
+    },
+    {
+      "path": "public/img/photos/signos-vitales-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 30858
+    },
+    {
+      "path": "public/img/photos/signos-vitales-768.webp",
+      "width": 768,
+      "height": 576,
+      "bytes": 65402
+    },
+    {
+      "path": "public/img/photos/signos-vitales-1200.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 132254
+    },
+    {
+      "path": "public/img/photos/teleconsulta-hogar-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 25070
+    },
+    {
+      "path": "public/img/photos/teleconsulta-hogar-768.webp",
+      "width": 768,
+      "height": 576,
+      "bytes": 51168
+    },
+    {
+      "path": "public/img/photos/teleconsulta-hogar-1200.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 101364
+    },
+    {
+      "path": "public/img/photos/cuidado-nocturno-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 29094
+    },
+    {
+      "path": "public/img/photos/cuidado-nocturno-768.webp",
+      "width": 768,
+      "height": 576,
+      "bytes": 60870
+    },
+    {
+      "path": "public/img/photos/cuidado-nocturno-1200.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 114128
+    },
+    {
+      "path": "public/img/photos/preparacion-curaciones-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 19640
+    },
+    {
+      "path": "public/img/photos/preparacion-curaciones-768.webp",
+      "width": 768,
+      "height": 576,
+      "bytes": 42824
+    },
+    {
+      "path": "public/img/photos/preparacion-curaciones-1200.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 90760
+    },
+    {
+      "path": "public/img/photos/material-visita-medica-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 25338
+    },
+    {
+      "path": "public/img/photos/material-visita-medica-768.webp",
+      "width": 768,
+      "height": 576,
+      "bytes": 53100
+    },
+    {
+      "path": "public/img/photos/material-visita-medica-1200.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 116666
+    },
+    {
+      "path": "public/img/photos/valoracion-oidos-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 23212
+    },
+    {
+      "path": "public/img/photos/valoracion-oidos-768.webp",
+      "width": 768,
+      "height": 576,
+      "bytes": 48356
+    },
+    {
+      "path": "public/img/photos/valoracion-oidos-1200.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 94654
+    },
+    {
+      "path": "public/img/photos/coordinacion-familiar-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 32174
+    },
+    {
+      "path": "public/img/photos/coordinacion-familiar-768.webp",
+      "width": 768,
+      "height": 576,
+      "bytes": 68118
+    },
+    {
+      "path": "public/img/photos/coordinacion-familiar-1200.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 134694
+    }
+  ]
+}

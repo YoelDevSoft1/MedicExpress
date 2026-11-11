@@ -1,5 +1,5 @@
 ﻿---
-import { ArrowUpRight, HeartPulse } from '@lucide/astro';
+import Icon from './Icon.astro';
 import type { Service } from '../data/services';
 import { requiresAvailabilityReview } from '../data/services';
 
@@ -9,6 +9,26 @@ type Props = {
 
 const { service } = Astro.props;
 const review = requiresAvailabilityReview(service);
+const icons: Record<string, string> = {
+  'teleconsulta-medica-colombia': 'video',
+  'servicios-medicos/teleconsulta-medica': 'video',
+  'servicios-medicos/terapias-respiratorias': 'wind',
+  'servicios-medicos/electrocardiografia-basica': 'activity',
+  'servicios-medicos/suero-multivitaminico': 'droplet',
+  'servicios-medicos/cura-de-heridas-simples-y-complejas': 'bandage',
+  'servicios-medicos/sutura-y-retiro-de-puntos': 'bandage',
+  'servicios-medicos/retiro-y-colocacion-de-sonda-vesical': 'briefcase-2',
+  'servicios-medicos/lavado-de-oido': 'ear',
+  'servicios-medicos/extraccion-y-cuidado-para-unas-encarnadas': 'shoe',
+  'servicios-de-enfermeria/inyectologia-a-domicilio': 'vaccine',
+  'servicios-de-enfermeria/toma-de-signos-vitales': 'activity',
+  'servicios-de-enfermeria/acompanamiento-a-citas-medicas': 'users',
+};
+const iconName = icons[service.slug] ?? (service.category === 'Laboratorio clínico' || service.slug === 'laboratorio-a-domicilio-colombia'
+  ? 'flask'
+  : service.category === 'Enfermería' || service.slug === 'enfermeria-a-domicilio-colombia'
+    ? 'heart-handshake'
+    : service.slug === 'colombia' ? 'map-pin' : 'stethoscope');
 ---
 
 <a
@@ -16,10 +36,10 @@ const review = requiresAvailabilityReview(service);
   class="focus-ring group flex h-full flex-col rounded-[24px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-950/10"
 >
   <div class="flex items-start justify-between gap-4">
-    <span class="grid h-11 w-11 place-items-center rounded-2xl bg-indigo-50 text-indigo-700 transition group-hover:bg-indigo-700 group-hover:text-white">
-      <HeartPulse size={21} stroke-width={2.25} />
+    <span class="grid h-11 w-11 place-items-center rounded-lg border border-slate-200 bg-slate-50 text-slate-700">
+      <Icon name={iconName} size={24} stroke-width={1.75} aria-hidden="true" />
     </span>
-    <ArrowUpRight class="shrink-0 text-slate-400 transition group-hover:text-indigo-700" size={20} stroke-width={2.3} aria-hidden="true" />
+    <Icon name="arrow-up-right" class="shrink-0 text-slate-400 transition group-hover:text-indigo-700" size={20} stroke-width={1.75} aria-hidden="true" />
   </div>
   <div class="mt-6">
     <p class="text-xs font-black uppercase text-indigo-700">{service.category}</p>
