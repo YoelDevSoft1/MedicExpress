@@ -27,7 +27,7 @@ const relatedServices = getRelatedServices(service);
 const isNationalPage = service.category === 'Cobertura nacional';
 const isNursingPage = service.slug === 'servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario';
 const servicePhoto = isNursingPage ? 'auxiliar-cuidado' : ['servicios-medicos/servicio-medico-a-domicilio', 'servicios-medicos/valoracion-medica-a-domicilio'].includes(service.slug) ? 'visita-medica' : undefined;
-const targetCities = ['Bogotá', 'Medellín', 'Cali', 'Barranquilla', 'Cartagena', 'Bucaramanga', 'Pereira', 'Manizales'];
+const isRemoteConsultation = service.slug === 'teleconsulta-medica-colombia';
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -43,7 +43,7 @@ const serviceSchema = {
     telephone: siteConfig.phone
   },
   areaServed: {
-    '@type': isNationalPage ? 'Country' : 'City',
+    '@type': isRemoteConsultation ? 'Country' : 'City',
     name: isNationalPage ? 'Colombia' : 'Bogotá'
   }
 };
@@ -120,23 +120,19 @@ const faqSchema = {
       <section class="section bg-slate-50">
         <div class="container grid gap-8 lg:grid-cols-[0.8fr_1fr] lg:items-start">
           <div>
-            <p class="kicker">Cobertura nacional responsable</p>
+            <p class="kicker">Zona de atención</p>
             <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 md:text-4xl">
-              Captamos solicitudes en Colombia sin prometer cobertura que no esté validada
+              Atención domiciliaria en Bogotá, según disponibilidad
             </h2>
             <p class="mt-5 text-base leading-8 text-slate-600">
-              MedicExpress ayuda a ordenar la demanda nacional: ciudad, servicio, nivel de urgencia, datos básicos y canal adecuado. En Bogotá, la atención será coordinada por SMD Vital Bogotá.
+              Indica la localidad o barrio, el servicio y el horario que necesitas. El equipo de SMD Vital Bogotá confirma si puede atender el caso y cuál es el precio antes de reservar.
             </p>
           </div>
-          <div class="grid gap-4 md:grid-cols-2">
-            {targetCities.map((city) => (
-              <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
-                <p class="text-sm font-black text-slate-950">{city}</p>
-                <p class="mt-2 text-sm leading-6 text-slate-600">
-                  Solicitudes clasificadas por WhatsApp según servicio, disponibilidad y siguiente paso responsable.
-                </p>
-              </div>
-            ))}
+          <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+            <h3 class="text-lg font-black text-slate-950">Si estás fuera de Bogotá</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">
+              No tenemos cobertura domiciliaria confirmada en otras ciudades. Puedes consultar si una teleconsulta es adecuada para tu necesidad; el equipo debe confirmar disponibilidad y alcance. Una consulta virtual no sustituye los procedimientos presenciales.
+            </p>
           </div>
         </div>
       </section>
