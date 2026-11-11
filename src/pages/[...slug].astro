@@ -6,6 +6,7 @@ import FAQSection from '../components/FAQSection.astro';
 import NursingPrices from '../components/NursingPrices.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import ServicePhoto from '../components/ServicePhoto.astro';
+import type { ComponentProps } from 'astro/types';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import { absoluteUrl, getRelatedServices, requiresAvailabilityReview, services, siteConfig, type Service } from '../data/services';
 
@@ -26,7 +27,22 @@ const description = review ? `${service.shortTitle}: consulta tu solicitud por W
 const relatedServices = getRelatedServices(service);
 const isNationalPage = service.category === 'Cobertura nacional';
 const isNursingPage = service.slug === 'servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario';
-const servicePhoto = isNursingPage ? 'auxiliar-cuidado' : ['servicios-medicos/servicio-medico-a-domicilio', 'servicios-medicos/valoracion-medica-a-domicilio'].includes(service.slug) ? 'visita-medica' : undefined;
+const servicePhotos: Record<string, ComponentProps<typeof ServicePhoto>['name']> = {
+  'colombia': 'coordinacion-familiar',
+  'medico-a-domicilio-colombia': 'material-visita-medica',
+  'enfermeria-a-domicilio-colombia': 'auxiliar-cuidado',
+  'teleconsulta-medica-colombia': 'teleconsulta-hogar',
+  'servicios-medicos/servicio-medico-a-domicilio': 'visita-medica',
+  'servicios-medicos/valoracion-medica-a-domicilio': 'visita-medica',
+  'servicios-medicos/teleconsulta-medica': 'teleconsulta-hogar',
+  'servicios-medicos/cura-de-heridas-simples-y-complejas': 'preparacion-curaciones',
+  'servicios-medicos/sutura-y-retiro-de-puntos': 'preparacion-curaciones',
+  'servicios-medicos/lavado-de-oido': 'valoracion-oidos',
+  'servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario': 'auxiliar-cuidado',
+  'servicios-de-enfermeria/toma-de-signos-vitales': 'signos-vitales',
+  'servicios-de-enfermeria/acompanamiento-a-citas-medicas': 'acompanamiento-citas',
+};
+const servicePhoto = servicePhotos[service.slug];
 const isRemoteConsultation = service.slug === 'teleconsulta-medica-colombia';
 
 const serviceSchema = {
@@ -90,7 +106,7 @@ const faqSchema = {
       </div>
 
       <div class="surface rounded-[34px] p-6">
-        {servicePhoto && <div class="mb-4"><ServicePhoto name={servicePhoto} /></div>}
+        {servicePhoto && <div class="mb-4"><ServicePhoto name={servicePhoto} priority /></div>}
         <div class="rounded-[26px] bg-indigo-950 p-6 text-white">
           <p class="text-sm font-bold text-indigo-100">Servicio solicitado</p>
           <h2 class="mt-2 text-2xl font-black">{service.shortTitle}</h2>

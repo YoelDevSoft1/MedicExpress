@@ -1,5 +1,6 @@
 ---
 import nursingPrices from '../data/nursing-prices.json';
+import ServicePhoto from './ServicePhoto.astro';
 import { getWhatsappUrl } from '../data/services';
 const formatCOP = (value: number) => `${new Intl.NumberFormat('es-CO').format(value)} COP`;
 const groups = [
@@ -44,13 +45,16 @@ const groups = [
       <article><p class="kicker">Bloque mínimo de 4 horas</p><h3>Acompañamiento a citas</h3><p class="additional-price">{formatCOP(nursingPrices.appointmentSupportCOP)}</p><p>El traslado del paciente se acuerda aparte. <a class="focus-ring" href="/servicios-de-enfermeria/acompanamiento-a-citas-medicas/">Ver acompañamiento a citas →</a></p></article>
       <article><p class="kicker">Según plan y necesidades</p><h3>Cuidado de adulto mayor</h3><p class="additional-price">Cotización por plan</p><p>Se revisan tareas, duración y nivel de dependencia antes de definir el alcance y el valor.</p></article>
     </div>
-    <div class="care-notes">
+    <div class="care-notes grid gap-8 lg:grid-cols-[0.7fr_1fr] lg:items-start">
+      <ServicePhoto name="cuidado-nocturno" />
+      <div>
       <h3 class="text-xl font-black text-slate-950">Antes de confirmar tu turno</h3>
       <p><strong>24 horas significa dos relevos de 12 horas.</strong> Se confirman ambos bloques; no se asigna una sola persona durante 24 horas continuas. Los valores festivos incluyen el precio de esa jornada, sin añadir otro porcentaje por el mismo concepto.</p>
       <p>El equipo de cuidado está formado por auxiliares de enfermería. Las actividades se confirman según sus competencias y las indicaciones del equipo tratante; un turno no sustituye una consulta médica ni una atención de enfermera jefe o terapeuta.</p>
       <p>Para un turno, indica movilidad, nivel de dependencia, horario y tareas que requiere el paciente. Para un procedimiento puntual, consulta <a class="font-bold text-indigo-700 underline" href="/servicios-de-enfermeria/inyectologia-a-domicilio/">inyectología</a>, <a class="font-bold text-indigo-700 underline" href="/servicios-medicos/cura-de-heridas-simples-y-complejas/">curación de heridas</a> o <a class="font-bold text-indigo-700 underline" href="/servicios-de-enfermeria/toma-de-signos-vitales/">toma de signos vitales</a>. Cada procedimiento tiene requisitos y cotización propios.</p>
       <p>No se presupone que medicamentos, materiales o transporte estén incluidos. Los procedimientos e insumos especiales se cotizan aparte. Para apoyo hospitalario, informa la institución y sus requisitos de ingreso; las tarifas domiciliarias no garantizan la misma cotización hospitalaria.</p>
       <p>MedicExpress recibe la solicitud y SMD Vital coordina la atención. Estas tarifas corresponden a Bogotá y no garantizan atención inmediata ni cobertura presencial en otra ciudad.</p>
+      </div>
     </div>
   </div>
 </section>

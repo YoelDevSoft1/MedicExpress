@@ -3,6 +3,7 @@ import Icon from '../../components/Icon.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ConversionPanel from '../../components/ConversionPanel.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import ServicePhoto from '../../components/ServicePhoto.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import { absoluteUrl, getServicesByCategory, siteConfig, type ServiceCategory } from '../../data/services';
 
@@ -144,6 +145,8 @@ const schema = {
       </div>
 
       <div class="surface rounded-[34px] p-6">
+        {page.category === 'Servicios médicos' && <div class="mb-6"><ServicePhoto name="material-visita-medica" priority /></div>}
+        {page.category === 'Enfermería' && <div class="mb-6"><ServicePhoto name="auxiliar-cuidado" priority /></div>}
         <h2 class="text-2xl font-black text-slate-950">Qué puede encontrar aquí</h2>
         <ul class="mt-5 space-y-4">
           {[
