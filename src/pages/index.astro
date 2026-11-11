@@ -10,7 +10,7 @@ import { categories, categoryPaths, getServicesByCategory, siteConfig, absoluteU
 
 const title = 'MedicExpress | Servicios médicos a domicilio conectados con SMD Vital';
 const description =
-  'MedicExpress orienta solicitudes de servicios médicos a domicilio, enfermería, laboratorio y teleconsulta con agendamiento por WhatsApp.';
+  'Consulta médica, auxiliares de enfermería y procedimientos a domicilio en Bogotá. Consulta precios y disponibilidad por WhatsApp. Atención coordinada por SMD Vital.';
 const nationalPages = getServicesByCategory('Cobertura nacional');
 
 const homeSchema = {
@@ -22,8 +22,8 @@ const homeSchema = {
   logo: absoluteUrl(siteConfig.logoPath),
   telephone: siteConfig.phone,
   areaServed: {
-    '@type': 'Country',
-    name: 'Colombia'
+    '@type': 'City',
+    name: 'Bogotá'
   },
   sameAs: [siteConfig.mainBrandUrl]
 };
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: 'MedicExpress y SMD Vital son lo mismo?',
     answer:
-      'MedicExpress funciona como canal satélite de captación y orientación. La prioridad comercial es dirigir solicitudes calificadas hacia los canales de atención de SMD Vital.'
+      'Puedes solicitar atención desde MedicExpress. El equipo de SMD Vital Bogotá confirma el servicio, la zona, el horario y el precio antes de agendar.'
   },
   {
     question: 'Puedo solicitar el servicio directamente por WhatsApp?',
@@ -51,11 +51,11 @@ const faqs = [
   <section class="container grid min-h-[calc(100vh-80px)] gap-12 py-14 lg:grid-cols-[1fr_0.92fr] lg:items-center">
     <div>
       <h1 class="text-balance max-w-3xl text-5xl font-black tracking-tight text-slate-950 md:text-7xl">
-        Servicios médicos a domicilio con respuesta clara y humana
+        Servicios médicos a domicilio en Bogotá
       </h1>
       <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-        MedicExpress convierte una búsqueda de salud en una conversación útil: entendemos la necesidad,
-        validamos el servicio y orientamos el agendamiento hacia el canal adecuado de SMD Vital.
+        Solicita consulta médica, apoyo de auxiliares de enfermería o un procedimiento en casa.
+        Cuéntanos qué necesitas y en qué localidad estás para confirmar precio y disponibilidad con SMD Vital.
       </p>
       <p class="mt-4 inline-flex max-w-2xl rounded-full bg-indigo-50 px-4 py-2 text-sm font-black text-indigo-800 ring-1 ring-indigo-100">
         {siteConfig.referralMessage}
@@ -106,15 +106,15 @@ const faqs = [
   <section id="colombia" class="section bg-white">
     <div class="container grid gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-start">
       <div>
-        <p class="kicker">Gancho nacional</p>
+        <p class="kicker">Ubicación y disponibilidad</p>
         <h2 class="mt-3 text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
-          MedicExpress ahora capta demanda médica en Colombia
+          Confirma la atención según tu ciudad
         </h2>
         <p class="mt-5 text-lg leading-8 text-slate-600">
-          La estrategia nacional es responsable: recibir solicitudes, clasificar ciudad y necesidad, orientar el siguiente paso y convertir los casos de Bogotá hacia SMD Vital.
+          La atención domiciliaria se coordina en Bogotá. Indica tu localidad, el servicio que necesitas y el horario deseado para revisar disponibilidad.
         </p>
         <p class="mt-4 rounded-3xl bg-indigo-50 p-5 text-sm font-bold leading-7 text-indigo-900 ring-1 ring-indigo-100">
-          No prometemos cobertura presencial donde no esté validada. Captamos la intención nacional y convertimos lo posible en teleconsulta, orientación o atención coordinada por SMD Vital Bogotá.
+          Si estás en otra ciudad, consulta si tu necesidad puede atenderse por teleconsulta. La atención presencial fuera de Bogotá no está confirmada.
         </p>
       </div>
       <div class="grid gap-5 md:grid-cols-2">
@@ -128,13 +128,13 @@ const faqs = [
   <section id="servicios" class="section">
     <div class="container">
       <div class="max-w-3xl">
-        <p class="kicker">Servicios indexables</p>
+        <p class="kicker">Servicios y condiciones</p>
         <h2 class="mt-3 text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
-          Las rutas actuales se conservan y se fortalecen
+          Encuentra información sobre el servicio que necesitas
         </h2>
         <p class="mt-5 text-lg leading-8 text-slate-600">
-          Cada página mantiene su URL para proteger la indexación existente, pero gana mejor estructura,
-          mejor conversión y un mensaje más claro para el paciente.
+          Revisa el alcance de cada servicio y consulta su disponibilidad antes de reservar.
+          El equipo confirma el precio y las condiciones para tu caso.
         </p>
       </div>
 
@@ -165,21 +165,21 @@ const faqs = [
   <section id="proceso" class="section bg-white">
     <div class="container grid gap-12 lg:grid-cols-[0.82fr_1fr] lg:items-start">
       <div>
-        <p class="kicker">Proceso comercial</p>
+        <p class="kicker">Cómo solicitar atención</p>
         <h2 class="mt-3 text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
-          Menos fricción, más solicitudes calificadas
+          Coordina tu visita por WhatsApp
         </h2>
         <p class="mt-5 text-lg leading-8 text-slate-600">
-          El objetivo no es solo posicionar: es convertir tráfico en conversaciones que el equipo pueda cerrar.
-          MedicExpress debe orientar y transferir demanda hacia la operación principal.
+          Puedes escribirnos como paciente o como familiar encargado de coordinar la visita.
+          Revisamos los datos de tu solicitud antes de confirmar la atención.
         </p>
       </div>
       <ol class="grid gap-4">
         {[
-          'El usuario llega por búsqueda orgánica a una página específica.',
-          'Encuentra una explicación clara, precio cuando aplica y alcance responsable.',
-          'Inicia WhatsApp con mensaje prellenado desde MedicExpress.',
-          'El equipo valida datos mínimos, disponibilidad y siguiente paso con SMD Vital.'
+          'Elige el servicio y revisa su alcance y precio de referencia.',
+          'Escríbenos por WhatsApp e indica localidad y horario deseado.',
+          'El equipo revisa disponibilidad, requisitos y precio para tu caso.',
+          'Confirma los detalles de la atención con SMD Vital antes de la visita.'
         ].map((step, index) => (
           <li class="surface flex gap-5 rounded-[28px] p-6">
             <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-indigo-700 text-sm font-black text-white">
