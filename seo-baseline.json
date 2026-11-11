@@ -43,7 +43,7 @@
     },
     {
       "route": "/laboratorio-clinico/laboratorio-a-domicilio",
-      "title": "Laboratorio clínico a domicilio Bogotá 24 horas | MedicExpress",
+      "title": "Consulta de laboratorio a domicilio Bogotá | MedicExpress",
       "description": "Solicita laboratorio clínico a domicilio en Bogotá y toma de muestras en casa. Coordinación por WhatsApp con SMD Vital.",
       "canonical": "https://medicexpress.com.co/laboratorio-clinico/laboratorio-a-domicilio/",
       "robots": "index, follow, max-image-preview:large",
@@ -83,16 +83,16 @@
     },
     {
       "route": "/servicios-de-enfermeria/acompanamiento-a-citas-medicas",
-      "title": "Acompañamiento a citas médicas | MedicExpress",
-      "description": "Coordina acompañamiento a citas médicas para adultos mayores, pacientes con movilidad reducida o familias que necesitan apoyo.",
+      "title": "Acompañamiento a citas médicas Bogotá | MedicExpress",
+      "description": "Acompañamiento a citas en Bogotá: $110.000 COP por bloque mínimo de 4 horas. El traslado se acuerda aparte. Consulta requisitos y disponibilidad.",
       "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/acompanamiento-a-citas-medicas/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
     },
     {
       "route": "/servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario",
-      "title": "Enfermería a domicilio | MedicExpress",
-      "description": "Solicita enfermería domiciliaria y apoyo hospitalario. Coordinación por WhatsApp y atención conectada con SMD Vital.",
+      "title": "Auxiliar de enfermería a domicilio Bogotá | MedicExpress",
+      "description": "Auxiliares de enfermería en Bogotá: turnos de 4, 6, 8, 12 y cobertura de 24 horas con dos relevos. Consulta precios, tareas y disponibilidad.",
       "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
@@ -108,15 +108,15 @@
     {
       "route": "/servicios-de-enfermeria/inyectologia-a-domicilio",
       "title": "Inyectología a domicilio Bogotá | MedicExpress",
-      "description": "Agenda inyectología a domicilio en Bogotá desde $95.000. Validación de fórmula médica y atención coordinada por SMD Vital.",
+      "description": "Inyectología a domicilio en Bogotá por $95.000 COP. Consulta requisitos de fórmula médica, medicamento, zona y disponibilidad antes de reservar.",
       "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/inyectologia-a-domicilio/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
     },
     {
       "route": "/servicios-de-enfermeria/toma-de-signos-vitales",
-      "title": "Toma de signos vitales a domicilio | MedicExpress",
-      "description": "Solicita toma de signos vitales a domicilio. Orientación por WhatsApp para pacientes, adultos mayores y seguimiento.",
+      "title": "Signos vitales a domicilio Bogotá | MedicExpress",
+      "description": "Toma de signos vitales a domicilio en Bogotá por $100.000 COP. Confirma parámetros a controlar, zona, horario y disponibilidad por WhatsApp.",
       "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/toma-de-signos-vitales/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
@@ -131,8 +131,8 @@
     },
     {
       "route": "/servicios-medicos/cura-de-heridas-simples-y-complejas",
-      "title": "Cura de heridas a domicilio | MedicExpress",
-      "description": "Solicita cura de heridas simples y complejas a domicilio. Orientación por WhatsApp y manejo responsable.",
+      "title": "Curación de heridas a domicilio Bogotá | MedicExpress",
+      "description": "Curación de heridas a domicilio en Bogotá desde $150.000 COP. El equipo revisa el caso y confirma alcance, insumos y precio antes de reservar.",
       "canonical": "https://medicexpress.com.co/servicios-medicos/cura-de-heridas-simples-y-complejas/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
@@ -164,23 +164,23 @@
     {
       "route": "/servicios-medicos/lavado-de-oido",
       "title": "Lavado de oído a domicilio Bogotá | MedicExpress",
-      "description": "Solicita lavado de oído a domicilio en Bogotá desde $140.000. Validación previa y atención coordinada por SMD Vital.",
+      "description": "Lavado de oídos a domicilio en Bogotá por $140.000 COP, sujeto a valoración previa. Consulta zona, horario, requisitos y disponibilidad por WhatsApp.",
       "canonical": "https://medicexpress.com.co/servicios-medicos/lavado-de-oido/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
     },
     {
       "route": "/servicios-medicos/retiro-y-colocacion-de-sonda-vesical",
-      "title": "Sonda vesical a domicilio | MedicExpress",
-      "description": "Coordina retiro o colocación de sonda vesical a domicilio con orientación por WhatsApp y manejo profesional.",
+      "title": "Cambio y retiro de sonda a domicilio Bogotá | MedicExpress",
+      "description": "Cambio de sonda vesical en Bogotá: $150.000 COP; retiro: $120.000 COP. Confirma calibre, indicación, insumos y disponibilidad por WhatsApp.",
       "canonical": "https://medicexpress.com.co/servicios-medicos/retiro-y-colocacion-de-sonda-vesical/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
     },
     {
       "route": "/servicios-medicos/servicio-medico-a-domicilio",
-      "title": "Servicio médico a domicilio | MedicExpress",
-      "description": "Solicita orientación para servicio médico a domicilio. Atención humana, agendamiento por WhatsApp y conexión con SMD Vital.",
+      "title": "Médico a domicilio en Bogotá | MedicExpress",
+      "description": "Consulta de medicina general a domicilio en Bogotá por $140.000 COP. Confirma zona, horario, disponibilidad y requisitos por WhatsApp.",
       "canonical": "https://medicexpress.com.co/servicios-medicos/servicio-medico-a-domicilio/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
@@ -188,7 +188,7 @@
     {
       "route": "/servicios-medicos/suero-multivitaminico",
       "title": "Suero multivitamínico a domicilio Bogotá | MedicExpress",
-      "description": "Consulta suero multivitamínico a domicilio en Bogotá desde $185.000. Atención coordinada por SMD Vital.",
+      "description": "Consulta hidratación por $150.000 COP o sueroterapia formulada por $185.000 COP en Bogotá. El equipo confirma requisitos, insumos y alcance del caso.",
       "canonical": "https://medicexpress.com.co/servicios-medicos/suero-multivitaminico/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
@@ -196,31 +196,31 @@
     {
       "route": "/servicios-medicos/sutura-y-retiro-de-puntos",
       "title": "Sutura y retiro de puntos a domicilio Bogotá | MedicExpress",
-      "description": "Solicita orientación para sutura o retiro de puntos a domicilio en Bogotá. Revisión previa y atención coordinada por SMD Vital.",
+      "description": "Retiro de puntos en Bogotá por $100.000 COP y suturas desde $150.000 COP. Consulta requisitos, zona y disponibilidad antes de reservar.",
       "canonical": "https://medicexpress.com.co/servicios-medicos/sutura-y-retiro-de-puntos/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
     },
     {
       "route": "/servicios-medicos/teleconsulta-medica",
-      "title": "Teleconsulta médica | MedicExpress",
-      "description": "Agenda orientación por teleconsulta médica. Ideal para dudas, seguimiento y casos que no requieren visita inmediata.",
+      "title": "Teleconsulta de medicina general | MedicExpress",
+      "description": "Teleconsulta de medicina general por $50.000 COP. Consulta requisitos y disponibilidad por WhatsApp; el equipo confirma si el caso es apto.",
       "canonical": "https://medicexpress.com.co/servicios-medicos/teleconsulta-medica/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
     },
     {
       "route": "/servicios-medicos/terapias-respiratorias",
-      "title": "Terapias respiratorias a domicilio | MedicExpress",
-      "description": "Solicita orientación para terapia respiratoria a domicilio. Coordinación por WhatsApp y atención responsable.",
+      "title": "Terapia respiratoria a domicilio Bogotá | MedicExpress",
+      "description": "Terapia respiratoria a domicilio en Bogotá por $115.000 COP. Se confirman profesional, zona, horario y alcance antes de reservar.",
       "canonical": "https://medicexpress.com.co/servicios-medicos/terapias-respiratorias/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
     },
     {
       "route": "/servicios-medicos/valoracion-medica-a-domicilio",
-      "title": "Valoración médica a domicilio | MedicExpress",
-      "description": "Solicita valoración médica a domicilio con orientación profesional y agendamiento por WhatsApp.",
+      "title": "Valoración médica a domicilio Bogotá | MedicExpress",
+      "description": "Valoración médica en Bogotá: general $140.000 COP y prioritaria $170.000 COP. Confirma disponibilidad y alcance antes de reservar.",
       "canonical": "https://medicexpress.com.co/servicios-medicos/valoracion-medica-a-domicilio/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
@@ -230,6 +230,14 @@
       "title": "Teleconsulta médica Colombia | Orientación por WhatsApp",
       "description": "Consulta orientación por teleconsulta médica en Colombia. MedicExpress conecta solicitudes con el canal de atención de SMD Vital cuando aplica.",
       "canonical": "https://medicexpress.com.co/teleconsulta-medica-colombia/",
+      "robots": "index, follow, max-image-preview:large",
+      "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
+    },
+    {
+      "route": "/guias/coordinar-cuidado-domiciliario",
+      "title": "Lista para coordinar cuidado domiciliario | MedicExpress",
+      "description": "Lista práctica para familias: tareas, horarios, relevos, insumos y precio que conviene confirmar antes de contratar cuidado domiciliario en Bogotá.",
+      "canonical": "https://medicexpress.com.co/guias/coordinar-cuidado-domiciliario/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/medicexpress-og.jpg"
     }

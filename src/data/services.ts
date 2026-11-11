@@ -237,9 +237,9 @@ export const services: Service[] = [
     title: 'Servicio médico a domicilio',
     shortTitle: 'Médico a domicilio',
     h1: 'Servicio médico a domicilio con orientación rápida',
-    metaTitle: 'Servicio médico a domicilio | MedicExpress',
+    metaTitle: 'Médico a domicilio en Bogotá | MedicExpress',
     metaDescription:
-      'Solicita orientación para servicio médico a domicilio. Atención humana, agendamiento por WhatsApp y conexión con SMD Vital.',
+      'Consulta de medicina general a domicilio en Bogotá por $140.000 COP. Confirma zona, horario, disponibilidad y requisitos por WhatsApp.',
     summary:
       'Una entrada clara para pacientes y familias que necesitan orientación médica en casa sin desplazamientos innecesarios.',
     intent: 'Personas que buscan atención médica domiciliaria con respuesta rápida y confiable.',
@@ -267,9 +267,9 @@ export const services: Service[] = [
     title: 'Valoración médica a domicilio',
     shortTitle: 'Valoración médica',
     h1: 'Valoración médica a domicilio para orientar el cuidado',
-    metaTitle: 'Valoración médica a domicilio | MedicExpress',
+    metaTitle: 'Valoración médica a domicilio Bogotá | MedicExpress',
     metaDescription:
-      'Solicita valoración médica a domicilio con orientación profesional y agendamiento por WhatsApp.',
+      'Valoración médica en Bogotá: general $140.000 COP y prioritaria $170.000 COP. Confirma disponibilidad y alcance antes de reservar.',
     summary:
       'Servicio pensado para evaluar el motivo de consulta, orientar el cuidado y definir si el paciente requiere seguimiento, remision o manejo domiciliario.',
     intent: 'Familias que necesitan una evaluación médica en casa con lenguaje claro.',
@@ -296,9 +296,9 @@ export const services: Service[] = [
     title: 'Teleconsulta médica',
     shortTitle: 'Teleconsulta',
     h1: 'Teleconsulta médica para orientación sin desplazarte',
-    metaTitle: 'Teleconsulta médica | MedicExpress',
+    metaTitle: 'Teleconsulta de medicina general | MedicExpress',
     metaDescription:
-      'Agenda orientación por teleconsulta médica. Ideal para dudas, seguimiento y casos que no requieren visita inmediata.',
+      'Teleconsulta de medicina general por $50.000 COP. Consulta requisitos y disponibilidad por WhatsApp; el equipo confirma si el caso es apto.',
     summary:
       'Alternativa práctica para recibir orientación médica inicial, resolver dudas y definir si conviene atención presencial.',
     intent: 'Usuarios que quieren hablar con un profesional sin salir de casa.',
@@ -326,13 +326,13 @@ export const services: Service[] = [
     title: 'Terapias respiratorias',
     shortTitle: 'Terapia respiratoria',
     h1: 'Terapias respiratorias a domicilio con coordinación profesional',
-    metaTitle: 'Terapias respiratorias a domicilio | MedicExpress',
+    metaTitle: 'Terapia respiratoria a domicilio Bogotá | MedicExpress',
     metaDescription:
-      'Solicita orientación para terapia respiratoria a domicilio. Coordinación por WhatsApp y atención responsable.',
+      'Terapia respiratoria a domicilio en Bogotá por $115.000 COP. Se confirman profesional, zona, horario y alcance antes de reservar.',
     summary:
       'Servicio orientado a pacientes que requieren apoyo respiratorio domiciliario, bajo indicaciónes y criterio profesional.',
     intent: 'Pacientes con necesidad de apoyo respiratorio no hospitalario.',
-    price: 'Desde $115.000',
+    price: '$115.000 COP',
     highlights: ['Atención en casa', 'Validación del caso', 'Coordinación según disponibilidad'],
     suitableFor: ['Apoyo respiratorio indicado', 'Seguimientos', 'Pacientes con movilidad limitada'],
     process: commonProcess,
@@ -387,11 +387,11 @@ export const services: Service[] = [
     h1: 'Suero multivitamínico a domicilio con valoración responsable',
     metaTitle: 'Suero multivitamínico a domicilio Bogotá | MedicExpress',
     metaDescription:
-      'Consulta suero multivitamínico a domicilio en Bogotá desde $185.000. Atención coordinada por SMD Vital.',
+      'Consulta hidratación por $150.000 COP o sueroterapia formulada por $185.000 COP en Bogotá. El equipo confirma requisitos, insumos y alcance del caso.',
     summary:
       'Servicio que debe realizarse con criterio responsable, validando antecedentes, motivo de solicitud y condiciones del paciente.',
     intent: 'Usuarios que buscan hidratación o sueroterapia en casa con supervisión adecuada.',
-    price: 'Desde $185.000',
+    price: 'Hidratación $150.000 COP / formulada $185.000 COP / avanzada desde $220.000 COP',
     highlights: ['Validación previa', 'Atención domiciliaria', 'Proceso claro por WhatsApp'],
     suitableFor: ['Solicitudes de hidratación', 'Pacientes que requieren evaluación previa', 'Servicios programados'],
     process: commonProcess,
@@ -415,9 +415,9 @@ export const services: Service[] = [
     title: 'Cura de heridas simples y complejas',
     shortTitle: 'Cura de heridas',
     h1: 'Cura de heridas a domicilio con atención cuidadosa',
-    metaTitle: 'Cura de heridas a domicilio | MedicExpress',
+    metaTitle: 'Curación de heridas a domicilio Bogotá | MedicExpress',
     metaDescription:
-      'Solicita cura de heridas simples y complejas a domicilio. Orientación por WhatsApp y manejo responsable.',
+      'Curación de heridas a domicilio en Bogotá desde $150.000 COP. El equipo revisa el caso y confirma alcance, insumos y precio antes de reservar.',
     summary:
       'Atención domiciliaria para curaciones que requieren higiene, tecnica, seguimiento y claridad sobre signos de alarma.',
     intent: 'Pacientes que necesitan curacion en casa despues de heridas, procedimientos o lesiones.',
@@ -447,11 +447,11 @@ export const services: Service[] = [
     h1: 'Sutura y retiro de puntos a domicilio con revisión previa',
     metaTitle: 'Sutura y retiro de puntos a domicilio Bogotá | MedicExpress',
     metaDescription:
-      'Solicita orientación para sutura o retiro de puntos a domicilio en Bogotá. Revisión previa y atención coordinada por SMD Vital.',
+      'Retiro de puntos en Bogotá por $100.000 COP y suturas desde $150.000 COP. Consulta requisitos, zona y disponibilidad antes de reservar.',
     summary:
       'Servicio para heridas y controles de puntos que requieren revisión del caso, tecnica adecuada y orientación clara.',
     intent: 'Usuarios que necesitan sutura, revisión o retiro de puntos sin desplazarse.',
-    price: 'Retiro desde $100.000 / sutura desde $150.000',
+    price: 'Retiro $100.000 COP / sutura desde $150.000 COP',
     highlights: ['Revisión previa', 'Atención programada', 'Orientación de signos de alarma'],
     suitableFor: ['Retiro de puntos', 'Heridas aptas para manejo domiciliario', 'Seguimiento postprocedimiento'],
     process: commonProcess,
@@ -475,9 +475,9 @@ export const services: Service[] = [
     title: 'Retiro y colocación de sonda vesical',
     shortTitle: 'Sonda vesical',
     h1: 'Retiro y colocación de sonda vesical a domicilio',
-    metaTitle: 'Sonda vesical a domicilio | MedicExpress',
+    metaTitle: 'Cambio y retiro de sonda a domicilio Bogotá | MedicExpress',
     metaDescription:
-      'Coordina retiro o colocación de sonda vesical a domicilio con orientación por WhatsApp y manejo profesional.',
+      'Cambio de sonda vesical en Bogotá: $150.000 COP; retiro: $120.000 COP. Confirma calibre, indicación, insumos y disponibilidad por WhatsApp.',
     summary:
       'Servicio delicado que requiere tecnica, higiene, validación del caso y seguimiento responsable.',
     intent: 'Pacientes que requieren cambio, retiro o colocación de sonda en casa.',
@@ -507,11 +507,11 @@ export const services: Service[] = [
     h1: 'Lavado de oído a domicilio con valoración previa',
     metaTitle: 'Lavado de oído a domicilio Bogotá | MedicExpress',
     metaDescription:
-      'Solicita lavado de oído a domicilio en Bogotá desde $140.000. Validación previa y atención coordinada por SMD Vital.',
+      'Lavado de oídos a domicilio en Bogotá por $140.000 COP, sujeto a valoración previa. Consulta zona, horario, requisitos y disponibilidad por WhatsApp.',
     summary:
       'Atención para molestias asociadas a cerumen o taponamiento, evitando automédicación o maniobras inseguras en casa.',
     intent: 'Personas con sensación de oído tapado que buscan atención domiciliaria.',
-    price: 'Desde $140.000',
+    price: '$140.000 COP',
     highlights: ['Consulta de disponibilidad', 'Valoración previa', 'Atención en domicilio'],
     suitableFor: ['Sensación de oído tapado', 'Molestia por cerumen', 'Pacientes con dificultad para desplazarse'],
     process: commonProcess,
@@ -593,9 +593,9 @@ export const services: Service[] = [
     title: 'Enfermería a nivel domiciliario y hospitalario',
     shortTitle: 'Enfermería',
     h1: 'Enfermería domiciliaria y apoyo hospitalario',
-    metaTitle: 'Enfermería a domicilio | MedicExpress',
+    metaTitle: 'Auxiliar de enfermería a domicilio Bogotá | MedicExpress',
     metaDescription:
-      'Solicita enfermería domiciliaria y apoyo hospitalario. Coordinación por WhatsApp y atención conectada con SMD Vital.',
+      'Auxiliares de enfermería en Bogotá: turnos de 4, 6, 8, 12 y cobertura de 24 horas con dos relevos. Consulta precios, tareas y disponibilidad.',
     summary:
       '¿Necesitas un turno de cuidado en casa o acompañamiento durante una hospitalización en Bogotá? MedicExpress recibe tu solicitud y SMD Vital valida el perfil, las tareas, el horario y la disponibilidad antes de confirmar.',
     intent: 'Familias que necesitan apoyo de enfermería en casa o entorno hospitalario.',
@@ -641,11 +641,11 @@ export const services: Service[] = [
     h1: 'Inyectología a domicilio con fórmula médica',
     metaTitle: 'Inyectología a domicilio Bogotá | MedicExpress',
     metaDescription:
-      'Agenda inyectología a domicilio en Bogotá desde $95.000. Validación de fórmula médica y atención coordinada por SMD Vital.',
+      'Inyectología a domicilio en Bogotá por $95.000 COP. Consulta requisitos de fórmula médica, medicamento, zona y disponibilidad antes de reservar.',
     summary:
       'Aplicación de medicamentos inyectables en casa, bajo fórmula médica y validación responsable antes del servicio.',
     intent: 'Pacientes que necesitan aplicación de médicamento formulado en casa.',
-    price: 'Desde $95.000',
+    price: '$95.000 COP',
     highlights: ['Se valida fórmula médica', 'Atención en casa', 'Proceso rápido por WhatsApp'],
     suitableFor: ['Medicamentos formulados', 'Pacientes con movilidad limitada', 'Servicios programados'],
     process: commonProcess,
@@ -669,13 +669,13 @@ export const services: Service[] = [
     title: 'Toma de signos vitales',
     shortTitle: 'Signos vitales',
     h1: 'Toma de signos vitales a domicilio',
-    metaTitle: 'Toma de signos vitales a domicilio | MedicExpress',
+    metaTitle: 'Signos vitales a domicilio Bogotá | MedicExpress',
     metaDescription:
-      'Solicita toma de signos vitales a domicilio. Orientación por WhatsApp para pacientes, adultos mayores y seguimiento.',
+      'Toma de signos vitales a domicilio en Bogotá por $100.000 COP. Confirma parámetros a controlar, zona, horario y disponibilidad por WhatsApp.',
     summary:
       'Servicio útil para seguimiento de presión arterial, frecuencia cardiaca, temperatura, saturación y otros datos básicos.',
     intent: 'Usuarios que necesitan seguimiento básico en casa.',
-    price: 'Desde $100.000',
+    price: '$100.000 COP',
     highlights: ['Registro de signos', 'Apoyo a cuidadores', 'Ideal para seguimiento'],
     suitableFor: ['Adultos mayores', 'Pacientes cronicos', 'Controles domiciliarios'],
     process: commonProcess,
@@ -700,9 +700,9 @@ export const services: Service[] = [
     title: 'Acompañamiento a citas médicas',
     shortTitle: 'Acompañamiento',
     h1: 'Acompañamiento a citas médicas para pacientes y familias',
-    metaTitle: 'Acompañamiento a citas médicas | MedicExpress',
+    metaTitle: 'Acompañamiento a citas médicas Bogotá | MedicExpress',
     metaDescription:
-      'Coordina acompañamiento a citas médicas para adultos mayores, pacientes con movilidad reducida o familias que necesitan apoyo.',
+      'Acompañamiento a citas en Bogotá: $110.000 COP por bloque mínimo de 4 horas. El traslado se acuerda aparte. Consulta requisitos y disponibilidad.',
     summary:
       'Apoyo humano y organizado para pacientes que necesitan acompañamiento durante desplazamientos, citas o gestiones de salud.',
     intent: 'Familias que necesitan apoyo confiable para llevar o acompañar pacientes.',
@@ -729,7 +729,7 @@ export const services: Service[] = [
     title: 'Laboratorio a domicilio',
     shortTitle: 'Laboratorio',
     h1: 'Laboratorio clínico a domicilio con toma de muestras en casa',
-    metaTitle: 'Laboratorio clínico a domicilio Bogotá 24 horas | MedicExpress',
+    metaTitle: 'Consulta de laboratorio a domicilio Bogotá | MedicExpress',
     metaDescription:
       'Solicita laboratorio clínico a domicilio en Bogotá y toma de muestras en casa. Coordinación por WhatsApp con SMD Vital.',
     summary:

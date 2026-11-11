@@ -38,7 +38,7 @@ test('price links request the selected shift through the current WhatsApp', () =
 });
 
 test('SEO identity and essential care conditions remain visible', () => {
-  assert(html.includes('<title>Enfermería a domicilio | MedicExpress</title>'));
+  assert(html.includes('<title>Auxiliar de enfermería a domicilio Bogotá | MedicExpress</title>'));
   assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
   assert(/<h1\b[^>]*>\s*Enfermería domiciliaria y apoyo hospitalario\s*<\/h1>/.test(html));
   assert(html.includes('https://medicexpress.com.co/servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario/'));

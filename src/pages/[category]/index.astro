@@ -1,6 +1,7 @@
 ---
 import Icon from '../../components/Icon.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ConversionPanel from '../../components/ConversionPanel.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import ServicePhoto from '../../components/ServicePhoto.astro';
@@ -125,6 +126,7 @@ const schema = {
 
 <BaseLayout title={page.title} description={description} canonicalPath={`/${page.slug}/`} jsonLd={schema}>
   <section class="container py-12 md:py-16">
+    <div class="mb-6"><Breadcrumbs items={[{ name: 'Inicio', path: '/' }, { name: page.category, path: `/${page.slug}/` }]} /></div>
     <div class="grid gap-10 lg:grid-cols-[1fr_0.74fr] lg:items-start">
       <div>
         <p class="kicker">{page.category}</p>

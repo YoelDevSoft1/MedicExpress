@@ -1,6 +1,7 @@
 ﻿---
 import Icon from '../components/Icon.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ConversionPanel from '../components/ConversionPanel.astro';
 import FAQSection from '../components/FAQSection.astro';
 import NursingPrices from '../components/NursingPrices.astro';
@@ -8,7 +9,7 @@ import ServiceCard from '../components/ServiceCard.astro';
 import ServicePhoto from '../components/ServicePhoto.astro';
 import type { ComponentProps } from 'astro/types';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
-import { absoluteUrl, getRelatedServices, requiresAvailabilityReview, services, siteConfig, type Service } from '../data/services';
+import { absoluteUrl, categoryPaths, getRelatedServices, requiresAvailabilityReview, services, siteConfig, type Service } from '../data/services';
 
 type Props = {
   service: Service;
@@ -60,7 +61,7 @@ const serviceSchema = {
   },
   areaServed: {
     '@type': isRemoteConsultation ? 'Country' : 'City',
-    name: isNationalPage ? 'Colombia' : 'Bogotá'
+    name: isRemoteConsultation ? 'Colombia' : 'Bogotá'
   }
 };
 
@@ -85,10 +86,11 @@ const faqSchema = {
   jsonLd={review ? { '@context': 'https://schema.org', '@type': 'WebPage', name: service.title, description, url: absoluteUrl(`/${service.slug}/`) } : [serviceSchema, faqSchema]}
 >
   <section class="container py-10 md:py-16">
-    <a href="/" class="focus-ring inline-flex items-center gap-2 rounded-full text-sm font-black text-indigo-700 hover:text-indigo-900">
-      <Icon name="arrow-left" size={20} stroke-width={1.75} aria-hidden="true" />
-      Volver a servicios
-    </a>
+    <Breadcrumbs items={[
+      { name: 'Inicio', path: '/' },
+      ...(service.slug === 'colombia' ? [] : [{ name: service.category === 'Cobertura nacional' ? 'Colombia' : service.category, path: categoryPaths[service.category] }]),
+      { name: service.shortTitle, path: `/${service.slug}/` },
+    ]} />
 
     <div class="service-hero">
       <div class="service-intro">

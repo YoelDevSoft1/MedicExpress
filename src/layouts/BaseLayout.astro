@@ -21,6 +21,24 @@ const {
 
 const canonical = absoluteUrl(canonicalPath);
 const schemas = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+const identity = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization', '@id': absoluteUrl('/#organization'),
+      name: siteConfig.name, url: absoluteUrl('/'),
+      logo: absoluteUrl(siteConfig.logoPath),
+      description: siteConfig.defaultDescription,
+      areaServed: { '@type': 'City', name: 'Bogotá' },
+      contactPoint: { '@type': 'ContactPoint', telephone: siteConfig.phone, contactType: 'customer service', availableLanguage: ['es-CO'] },
+    },
+    {
+      '@type': 'WebSite', '@id': absoluteUrl('/#website'),
+      name: siteConfig.name, url: absoluteUrl('/'), inLanguage: 'es-CO',
+      publisher: { '@id': absoluteUrl('/#organization') },
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -37,6 +55,7 @@ const schemas = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={siteConfig.name} />
+    <meta property="og:locale" content="es_CO" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -52,8 +71,8 @@ const schemas = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
     <meta name="twitter:image:alt" content="MedicExpress: servicios de salud coordinados con SMD Vital Bogotá" />
 
     {
-      schemas.map((schema) => (
-        <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+      [identity, ...schemas].map((schema) => (
+        <script is:inline type="application/ld+json" set:html={JSON.stringify(schema).replaceAll('<', '\\u003c')} />
       ))
     }
   </head>

@@ -1,0 +1,861 @@
+{
+  "checkedAt": "2026-11-11T20:53:33.354Z",
+  "scope": "Locally prepared SEO and opportunity research; no purchases, registrations, outreach, push or deployment",
+  "budget": {
+    "currency": "COP",
+    "monthlyMaximumExclusive": 100000,
+    "recommendedFirstMonthPaidSpend": 0
+  },
+  "liveCrawl": {
+    "at": "2026-11-11T20:45:00.587Z",
+    "scope": "URLs enumeradas en los sitemaps publicados; sin acceso autenticado a indexación",
+    "sites": [
+      {
+        "sitemap": "https://medicexpress.com.co/sitemap.xml",
+        "total": 29,
+        "rows": [
+          {
+            "url": "https://medicexpress.com.co/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/",
+            "canonical": "https://medicexpress.com.co/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/laboratorio-clinico/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/laboratorio-clinico/",
+            "canonical": "https://medicexpress.com.co/laboratorio-clinico/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/colombia/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/colombia/",
+            "canonical": "https://medicexpress.com.co/colombia/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-de-enfermeria/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-de-enfermeria/",
+            "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/teleconsulta-medica-colombia/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/teleconsulta-medica-colombia/",
+            "canonical": "https://medicexpress.com.co/teleconsulta-medica-colombia/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/medico-a-domicilio-colombia/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/medico-a-domicilio-colombia/",
+            "canonical": "https://medicexpress.com.co/medico-a-domicilio-colombia/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/laboratorio-a-domicilio-colombia/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/laboratorio-a-domicilio-colombia/",
+            "canonical": "https://medicexpress.com.co/laboratorio-a-domicilio-colombia/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/enfermeria-a-domicilio-colombia/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/enfermeria-a-domicilio-colombia/",
+            "canonical": "https://medicexpress.com.co/enfermeria-a-domicilio-colombia/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/servicio-medico-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/servicio-medico-a-domicilio/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/servicio-medico-a-domicilio/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/teleconsulta-medica/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/teleconsulta-medica/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/teleconsulta-medica/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/terapias-respiratorias/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/terapias-respiratorias/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/terapias-respiratorias/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/valoracion-medica-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/valoracion-medica-a-domicilio/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/valoracion-medica-a-domicilio/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/suero-multivitaminico/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/suero-multivitaminico/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/suero-multivitaminico/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/electrocardiografia-basica/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/electrocardiografia-basica/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/electrocardiografia-basica/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/cura-de-heridas-simples-y-complejas/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/cura-de-heridas-simples-y-complejas/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/cura-de-heridas-simples-y-complejas/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/sutura-y-retiro-de-puntos/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/sutura-y-retiro-de-puntos/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/sutura-y-retiro-de-puntos/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/extraccion-y-cuidado-para-unas-encarnadas/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/extraccion-y-cuidado-para-unas-encarnadas/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/extraccion-y-cuidado-para-unas-encarnadas/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/atencion-a-pacientes-con-covid-19/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/atencion-a-pacientes-con-covid-19/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/atencion-a-pacientes-con-covid-19/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/retiro-y-colocacion-de-sonda-vesical/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/retiro-y-colocacion-de-sonda-vesical/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/retiro-y-colocacion-de-sonda-vesical/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-medicos/lavado-de-oido/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-medicos/lavado-de-oido/",
+            "canonical": "https://medicexpress.com.co/servicios-medicos/lavado-de-oido/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario/",
+            "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-de-enfermeria/acompanamiento-a-citas-medicas/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-de-enfermeria/acompanamiento-a-citas-medicas/",
+            "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/acompanamiento-a-citas-medicas/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-de-enfermeria/inyectologia-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-de-enfermeria/inyectologia-a-domicilio/",
+            "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/inyectologia-a-domicilio/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/servicios-de-enfermeria/toma-de-signos-vitales/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/servicios-de-enfermeria/toma-de-signos-vitales/",
+            "canonical": "https://medicexpress.com.co/servicios-de-enfermeria/toma-de-signos-vitales/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/laboratorio-clinico/toma-de-muestra-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/laboratorio-clinico/toma-de-muestra-a-domicilio/",
+            "canonical": "https://medicexpress.com.co/laboratorio-clinico/toma-de-muestra-a-domicilio/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/laboratorio-clinico/toma-de-muestra-pcr-covid-19-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/laboratorio-clinico/toma-de-muestra-pcr-covid-19-a-domicilio/",
+            "canonical": "https://medicexpress.com.co/laboratorio-clinico/toma-de-muestra-pcr-covid-19-a-domicilio/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/laboratorio-clinico/laboratorio-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/laboratorio-clinico/laboratorio-a-domicilio/",
+            "canonical": "https://medicexpress.com.co/laboratorio-clinico/laboratorio-a-domicilio/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://medicexpress.com.co/laboratorio-clinico/prueba-de-antigeno-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://medicexpress.com.co/laboratorio-clinico/prueba-de-antigeno-a-domicilio/",
+            "canonical": "https://medicexpress.com.co/laboratorio-clinico/prueba-de-antigeno-a-domicilio/",
+            "robots": "index, follow, max-image-preview:large",
+            "h1": 1,
+            "legacyContact": false
+          }
+        ]
+      },
+      {
+        "sitemap": "https://smdvitalbogota.com/sitemap-index.xml",
+        "total": 58,
+        "rows": [
+          {
+            "url": "https://smdvitalbogota.com/acerca/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/acerca/",
+            "canonical": "https://smdvitalbogota.com/acerca/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/",
+            "canonical": "https://smdvitalbogota.com/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/adultos-y-atencion-medica/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/adultos-y-atencion-medica/",
+            "canonical": "https://smdvitalbogota.com/adultos-y-atencion-medica/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/acompa%C3%B1amiento-a-citas-medicas/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/acompa%C3%B1amiento-a-citas-medicas/",
+            "canonical": "https://smdvitalbogota.com/acompa%C3%B1amiento-a-citas-medicas/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/atencion-a-pacientes-covid-19/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/atencion-a-pacientes-covid-19/",
+            "canonical": "https://smdvitalbogota.com/atencion-a-pacientes-covid-19/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/beneficios-atencion-medica/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/beneficios-atencion-medica/",
+            "canonical": "https://smdvitalbogota.com/beneficios-atencion-medica/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/",
+            "canonical": "https://smdvitalbogota.com/blog/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/adultos-y-atencion-medica/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/adultos-y-atencion-medica/",
+            "canonical": "https://smdvitalbogota.com/blog/adultos-y-atencion-medica/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/beneficios-atencion-medica/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/beneficios-atencion-medica/",
+            "canonical": "https://smdvitalbogota.com/blog/beneficios-atencion-medica/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/como-tomar-presion-arterial-casa/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/como-tomar-presion-arterial-casa/",
+            "canonical": "https://smdvitalbogota.com/blog/como-tomar-presion-arterial-casa/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/cuidados-adultos-mayores-casa-guia-cientifica/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/cuidados-adultos-mayores-casa-guia-cientifica/",
+            "canonical": "https://smdvitalbogota.com/blog/cuidados-adultos-mayores-casa-guia-cientifica/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/cuidados-postoperatorios-domiciliarios-protocolo-medico-2025/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/cuidados-postoperatorios-domiciliarios-protocolo-medico-2025/",
+            "canonical": "https://smdvitalbogota.com/blog/cuidados-postoperatorios-domiciliarios-protocolo-medico-2025/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/cuidar-adulto-mayor-casa-guia-completa/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/cuidar-adulto-mayor-casa-guia-completa/",
+            "canonical": "https://smdvitalbogota.com/blog/cuidar-adulto-mayor-casa-guia-completa/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/dengue-colombia-2026-sintomas-alarma-orientacion-medica/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/dengue-colombia-2026-sintomas-alarma-orientacion-medica/",
+            "canonical": "https://smdvitalbogota.com/blog/dengue-colombia-2026-sintomas-alarma-orientacion-medica/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/detectar-arritmia-cardiaca-casa-guia-medica/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/detectar-arritmia-cardiaca-casa-guia-medica/",
+            "canonical": "https://smdvitalbogota.com/blog/detectar-arritmia-cardiaca-casa-guia-medica/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/elementos-clave-atencion-medica/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/elementos-clave-atencion-medica/",
+            "canonical": "https://smdvitalbogota.com/blog/elementos-clave-atencion-medica/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/enfermeria-domiciliaria-especializada-todo-que-necesitas-saber-2025/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/enfermeria-domiciliaria-especializada-todo-que-necesitas-saber-2025/",
+            "canonical": "https://smdvitalbogota.com/blog/enfermeria-domiciliaria-especializada-todo-que-necesitas-saber-2025/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/diabetes-domiciliaria-monitoreo-cuidados-2025/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/diabetes-domiciliaria-monitoreo-cuidados-2025/",
+            "canonical": "https://smdvitalbogota.com/blog/diabetes-domiciliaria-monitoreo-cuidados-2025/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/fiebre-amarilla-viajes-bogota-vacunacion-sintomas/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/fiebre-amarilla-viajes-bogota-vacunacion-sintomas/",
+            "canonical": "https://smdvitalbogota.com/blog/fiebre-amarilla-viajes-bogota-vacunacion-sintomas/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/guia-salud-domiciliaria-bogota-2024/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/guia-salud-domiciliaria-bogota-2024/",
+            "canonical": "https://smdvitalbogota.com/blog/guia-salud-domiciliaria-bogota-2024/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/influenza-vsr-tos-fuerte-cuando-consultar-casa/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/influenza-vsr-tos-fuerte-cuando-consultar-casa/",
+            "canonical": "https://smdvitalbogota.com/blog/influenza-vsr-tos-fuerte-cuando-consultar-casa/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/inyecciones-domicilio-bogota-formula-medica-whatsapp/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/inyecciones-domicilio-bogota-formula-medica-whatsapp/",
+            "canonical": "https://smdvitalbogota.com/blog/inyecciones-domicilio-bogota-formula-medica-whatsapp/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/laboratorio-domiciliario-guia-completa-examenes-2025/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/laboratorio-domiciliario-guia-completa-examenes-2025/",
+            "canonical": "https://smdvitalbogota.com/blog/laboratorio-domiciliario-guia-completa-examenes-2025/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/oido-tapado-cerumen-lavado-oidos-domicilio-bogota/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/oido-tapado-cerumen-lavado-oidos-domicilio-bogota/",
+            "canonical": "https://smdvitalbogota.com/blog/oido-tapado-cerumen-lavado-oidos-domicilio-bogota/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/post-enfemeria-smd-vital/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/post-enfemeria-smd-vital/",
+            "canonical": "https://smdvitalbogota.com/blog/post-enfemeria-smd-vital/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/pico-respiratorio-bogota-2026-teleconsulta-medico-domicilio/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/pico-respiratorio-bogota-2026-teleconsulta-medico-domicilio/",
+            "canonical": "https://smdvitalbogota.com/blog/pico-respiratorio-bogota-2026-teleconsulta-medico-domicilio/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/primeros-auxilios-domiciliarios-manual-practico-2025/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/primeros-auxilios-domiciliarios-manual-practico-2025/",
+            "canonical": "https://smdvitalbogota.com/blog/primeros-auxilios-domiciliarios-manual-practico-2025/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/retiro-puntos-sutura-domicilio-bogota-cuidados/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/retiro-puntos-sutura-domicilio-bogota-cuidados/",
+            "canonical": "https://smdvitalbogota.com/blog/retiro-puntos-sutura-domicilio-bogota-cuidados/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/sarampion-bogota-2026-sintomas-vacunacion-consulta/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/sarampion-bogota-2026-sintomas-vacunacion-consulta/",
+            "canonical": "https://smdvitalbogota.com/blog/sarampion-bogota-2026-sintomas-vacunacion-consulta/",
+            "robots": "index,follow",
+            "h1": 2,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/blog/smd-vital-post/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/blog/smd-vital-post/",
+            "canonical": "https://smdvitalbogota.com/blog/smd-vital-post/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/contacto/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/contacto/",
+            "canonical": "https://smdvitalbogota.com/contacto/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/cura-de-heridas-simples-y-complejas/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/cura-de-heridas-simples-y-complejas/",
+            "canonical": "https://smdvitalbogota.com/cura-de-heridas-simples-y-complejas/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/electrocardiografia-basica/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/electrocardiografia-basica/",
+            "canonical": "https://smdvitalbogota.com/electrocardiografia-basica/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/enfemeria-a-nivel-domiciliario-y-hospitalario/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/enfemeria-a-nivel-domiciliario-y-hospitalario/",
+            "canonical": "https://smdvitalbogota.com/enfemeria-a-nivel-domiciliario-y-hospitalario/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/equipo-medico/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/equipo-medico/",
+            "canonical": "https://smdvitalbogota.com/equipo-medico/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/extraccion-y-cuidado-de-u%C3%B1as-encarnadas/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/extraccion-y-cuidado-de-u%C3%B1as-encarnadas/",
+            "canonical": "https://smdvitalbogota.com/extraccion-y-cuidado-de-u%C3%B1as-encarnadas/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/inicio/filosofia/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/inicio/filosofia/",
+            "canonical": "https://smdvitalbogota.com/inicio/filosofia/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/inicio/mision/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/inicio/mision/",
+            "canonical": "https://smdvitalbogota.com/inicio/mision/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/inicio/quienes-somos/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/inicio/quienes-somos/",
+            "canonical": "https://smdvitalbogota.com/inicio/quienes-somos/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/inicio/vision/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/inicio/vision/",
+            "canonical": "https://smdvitalbogota.com/inicio/vision/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/lavado-de-oidos-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/lavado-de-oidos-a-domicilio/",
+            "canonical": "https://smdvitalbogota.com/lavado-de-oidos-a-domicilio/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/inyectologia-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/inyectologia-a-domicilio/",
+            "canonical": "https://smdvitalbogota.com/inyectologia-a-domicilio/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/laboratorio-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/laboratorio-a-domicilio/",
+            "canonical": "https://smdvitalbogota.com/laboratorio-a-domicilio/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/precios/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/precios/",
+            "canonical": "https://smdvitalbogota.com/precios/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/privacy/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/privacy/",
+            "canonical": "https://smdvitalbogota.com/privacy/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/prueba-de-antigeno-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/prueba-de-antigeno-a-domicilio/",
+            "canonical": "https://smdvitalbogota.com/prueba-de-antigeno-a-domicilio/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/retiro-y-colocacion-de-sonda-vesical/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/retiro-y-colocacion-de-sonda-vesical/",
+            "canonical": "https://smdvitalbogota.com/retiro-y-colocacion-de-sonda-vesical/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/salud-domiciliaria/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/salud-domiciliaria/",
+            "canonical": "https://smdvitalbogota.com/salud-domiciliaria/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/servicios/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/servicios/",
+            "canonical": "https://smdvitalbogota.com/servicios/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/suero-multivitaminico/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/suero-multivitaminico/",
+            "canonical": "https://smdvitalbogota.com/suero-multivitaminico/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/sutura-y-retiro-de-puntos/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/sutura-y-retiro-de-puntos/",
+            "canonical": "https://smdvitalbogota.com/sutura-y-retiro-de-puntos/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/teleconsulta-medica/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/teleconsulta-medica/",
+            "canonical": "https://smdvitalbogota.com/teleconsulta-medica/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/telemedicina-colombia-2024-guia-completa/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/telemedicina-colombia-2024-guia-completa/",
+            "canonical": "https://smdvitalbogota.com/telemedicina-colombia-2024-guia-completa/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/terms/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/terms/",
+            "canonical": "https://smdvitalbogota.com/terms/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/toma-de-muestra-pcr-covid-19/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/toma-de-muestra-pcr-covid-19/",
+            "canonical": "https://smdvitalbogota.com/toma-de-muestra-pcr-covid-19/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/toma-de-muestras-a-domicilio/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/toma-de-muestras-a-domicilio/",
+            "canonical": "https://smdvitalbogota.com/toma-de-muestras-a-domicilio/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/toma-de-signos-vitales/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/toma-de-signos-vitales/",
+            "canonical": "https://smdvitalbogota.com/toma-de-signos-vitales/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          },
+          {
+            "url": "https://smdvitalbogota.com/valoracion-medica-domiciliaria/",
+            "status": 200,
+            "finalUrl": "https://smdvitalbogota.com/valoracion-medica-domiciliaria/",
+            "canonical": "https://smdvitalbogota.com/valoracion-medica-domiciliaria/",
+            "robots": "index,follow",
+            "h1": 1,
+            "legacyContact": false
+          }
+        ]
+      }
+    ]
+  },
+  "localVerification": {
+    "medicexpress": {
+      "pages": 30,
+      "errors": 0,
+      "warnings": 0
+    },
+    "smdVital": {
+      "pages": 143,
+      "errors": 0,
+      "warnings": 2
+    },
+    "smdWarnings": [
+      {
+        "route": "/decapcms",
+        "code": "missing-description"
+      },
+      {
+        "route": "/decapcms",
+        "code": "missing-canonical"
+      }
+    ],
+    "tests": {
+      "medicexpressPassed": 7,
+      "smdPassed": 4,
+      "skipped": 0
+    },
+    "responsive": {
+      "routes": 30,
+      "viewports": [
+        360,
+        768,
+        1365,
+        1920
+      ],
+      "checks": 120,
+      "issues": 0
+    },
+    "smdBlog": {
+      "builtArticles": 23,
+      "publishedDuplicateH1ArticlesObserved": 16,
+      "localDuplicateH1ArticlesAfter": 0,
+      "articleTitlesAndFragmentIdsPreserved": true
+    }
+  },
+  "limits": [
+    "No current authenticated Search Console, Ahrefs or Moz access",
+    "Search volumes, current rankings, conversions and DA/DR not verified",
+    "A free profile does not guarantee an external website link or ranking credit",
+    "No paid health/Bogota publication with a verified final price below the budget",
+    "Business-profile ownership and company documents remain unverified"
+  ]
+}

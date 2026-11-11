@@ -16,17 +16,15 @@ const nationalPages = getServicesByCategory('Cobertura nacional');
 
 const homeSchema = {
   '@context': 'https://schema.org',
-  '@type': 'MedicalBusiness',
-  name: siteConfig.name,
-  url: siteConfig.url,
+  '@type': 'WebPage',
+  '@id': absoluteUrl('/#webpage'),
+  name: title,
+  description,
+  url: absoluteUrl('/'),
+  inLanguage: 'es-CO',
+  isPartOf: { '@id': absoluteUrl('/#website') },
+  about: { '@id': absoluteUrl('/#organization') },
   image: absoluteUrl('/img/medicexpress-og.jpg'),
-  logo: absoluteUrl(siteConfig.logoPath),
-  telephone: siteConfig.phone,
-  areaServed: {
-    '@type': 'City',
-    name: 'Bogotá'
-  },
-  sameAs: [siteConfig.mainBrandUrl]
 };
 
 const faqs = [
@@ -170,6 +168,7 @@ const faqs = [
           Revisamos los datos de tu solicitud antes de confirmar la atención.
         </p>
         <div class="mt-6"><ServicePhoto name="coordinacion-familiar" /></div>
+        <p class="mt-4 text-sm leading-6"><a class="focus-ring font-semibold text-indigo-700 underline" href="/guias/coordinar-cuidado-domiciliario/">Lista para coordinar el cuidado domiciliario con tu familia</a></p>
       </div>
       <ol class="grid gap-4">
         {[
