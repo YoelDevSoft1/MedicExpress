@@ -40,7 +40,7 @@ import { categories, categoryPaths, getServicesByCategory, getSmdReferralUrl, si
               {getServicesByCategory(category).slice(0, 7).map((service) => (
                 <li>
                   <a class="transition hover:text-white" href={`/${service.slug}/`}>
-                    {service.shortTitle}
+                    {service.slug === 'servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario' ? 'Enfermería domiciliaria y hospitalaria' : service.shortTitle}
                   </a>
                 </li>
               ))}
@@ -52,7 +52,7 @@ import { categories, categoryPaths, getServicesByCategory, getSmdReferralUrl, si
   </div>
 
   <div class="border-t border-white/10">
-    <div class="container flex flex-col gap-3 py-5 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
+    <div class="container flex flex-col gap-3 py-5 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
       <p>© {new Date().getFullYear()} MedicExpress. Dominio independiente conectado comercialmente con SMD Vital.</p>
       <a
         href={getSmdReferralUrl('/', 'footer_smd_vital')}
