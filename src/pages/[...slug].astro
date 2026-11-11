@@ -90,42 +90,43 @@ const faqSchema = {
       Volver a servicios
     </a>
 
-    <div class="mt-8 grid gap-10 lg:grid-cols-[1fr_0.82fr] lg:items-start">
-      <div>
+    <div class="service-hero">
+      <div class="service-intro">
         <p class="kicker">{service.category}</p>
-        <h1 class:list={['text-balance mt-3 font-black tracking-tight text-slate-950', isNursingPage ? 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl' : 'text-5xl md:text-7xl']}>
+        <h1 class="page-heading text-balance mt-3 font-extrabold tracking-tight text-slate-950">
           {service.h1}
         </h1>
         <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{review ? description : service.summary}</p>
-        <p class="mt-4 inline-flex max-w-2xl rounded-full bg-indigo-50 px-4 py-2 text-sm font-black text-indigo-800 ring-1 ring-indigo-100">
+        <p class="coordination-note">
           {siteConfig.referralMessage}
         </p>
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <div class="service-offer">
+          <div>
+            <p class="text-xs font-semibold text-slate-500">Servicio solicitado</p>
+            <h2 class="mt-1 text-lg font-bold text-slate-950">{service.shortTitle}</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-600">{review ? 'El equipo revisa el caso y la posibilidad de coordinar la atención antes de confirmar.' : service.intent}</p>
+          </div>
+          <div class="service-price">
+            <span class="text-xs font-semibold text-slate-500">Referencia comercial</span>
+            <p class="mt-1 text-xl font-extrabold text-indigo-950">{review ? 'Consultar disponibilidad' : service.price ?? 'Consultar disponibilidad'}</p>
+          </div>
+        </div>
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <WhatsAppButton label="Consultar con SMD Vital" serviceName={service.title} /><a class="btn-secondary" href={isNursingPage ? '#precios-enfermeria' : '#detalles'}>{isNursingPage ? 'Ver precios y turnos' : 'Ver detalles'}</a>
         </div>
       </div>
 
-      <div class="surface rounded-[34px] p-6">
-        {servicePhoto && <div class="mb-4"><ServicePhoto name={servicePhoto} priority /></div>}
-        <div class="rounded-[26px] bg-indigo-950 p-6 text-white">
-          <p class="text-sm font-bold text-indigo-100">Servicio solicitado</p>
-          <h2 class="mt-2 text-2xl font-black">{service.shortTitle}</h2>
-          <p class="mt-4 text-sm leading-7 text-indigo-50">{review ? 'El equipo revisa el caso y la posibilidad de coordinar la atención antes de confirmar.' : service.intent}</p>
-          <div class="mt-5 rounded-2xl bg-white/10 p-4">
-            <span class="text-xs font-bold uppercase text-indigo-100">Referencia comercial</span>
-            <p class="mt-1 text-xl font-black">{review ? 'Consultar disponibilidad' : service.price ?? 'Consultar disponibilidad'}</p>
-          </div>
-        </div>
-
-        <div class="mt-5 grid gap-3">
+      <aside class="service-visual" aria-label={`Información de ${service.shortTitle}`}>
+        {servicePhoto && <ServicePhoto name={servicePhoto} priority />}
+        <ul class="service-highlights">
           {(review ? ['Revisión de tu solicitud', 'Zona y fecha por confirmar', 'Cotización antes de reservar'] : service.highlights).map((highlight) => (
-            <div class="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm">
-              <Icon name="circle-check" class="text-indigo-700" size={20} stroke-width={1.75} aria-hidden="true" />
-              <span class="text-sm font-bold text-slate-700">{highlight}</span>
-            </div>
+            <li class="flex items-start gap-3">
+              <Icon name="circle-check" class="mt-0.5 shrink-0 text-indigo-700" size={20} stroke-width={1.75} aria-hidden="true" />
+              <span class="text-sm font-medium leading-6 text-slate-700">{highlight}</span>
+            </li>
           ))}
-        </div>
-      </div>
+        </ul>
+      </aside>
     </div>
   </section>
 
@@ -208,4 +209,16 @@ const faqSchema = {
   <FAQSection faqs={service.faqs} />
   <ConversionPanel service={service} title={`Consulta ${service.shortTitle.toLowerCase()} por WhatsApp`} />
 </BaseLayout>
+
+<style>
+  .service-hero{display:grid;gap:32px;margin-top:32px;align-items:start}
+  .service-offer{display:grid;gap:20px;margin-top:24px;padding:20px;border:1px solid #e2e8f0;border-radius:20px;background:#fff}
+  .service-price{border-top:1px solid #e2e8f0;padding-top:16px}
+  .service-visual{display:grid;gap:20px}
+  .service-highlights{padding:8px 20px;border:1px solid #e2e8f0;border-radius:20px;background:#fff}
+  .service-highlights li{padding-block:14px}
+  .service-highlights li+li{border-top:1px solid #f1f5f9}
+  @media(min-width:640px){.service-offer{grid-template-columns:minmax(0,1fr) minmax(140px,0.65fr);align-items:center}.service-price{border-top:0;border-left:1px solid #e2e8f0;padding-top:0;padding-left:20px}}
+  @media(min-width:1024px){.service-hero{grid-template-columns:minmax(0,1.08fr) minmax(0,0.92fr);gap:48px}}
+</style>
 
