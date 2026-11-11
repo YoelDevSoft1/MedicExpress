@@ -1,0 +1,62 @@
+{
+  "updatedAt": "2026-11-11",
+  "source": "Catálogo del agente de atención SMD Vital: nursingShiftPricing.ts",
+  "shifts": [
+    {
+      "code": "turno_enfermeria_4h",
+      "label": "4 horas diurnas",
+      "priceCOP": 110000
+    },
+    {
+      "code": "turno_enfermeria_6h",
+      "label": "6 horas diurnas",
+      "priceCOP": 120000
+    },
+    {
+      "code": "turno_enfermeria_8h_diurno",
+      "label": "8 horas diurnas",
+      "priceCOP": 125000
+    },
+    {
+      "code": "turno_enfermeria_8h_nocturno",
+      "label": "8 horas nocturnas",
+      "priceCOP": 150000
+    },
+    {
+      "code": "turno_enfermeria_12h_diurno",
+      "label": "12 horas diurnas",
+      "priceCOP": 145000
+    },
+    {
+      "code": "turno_enfermeria_12h_nocturno",
+      "label": "12 horas nocturnas",
+      "priceCOP": 180000
+    },
+    {
+      "code": "turno_enfermeria_24h",
+      "label": "24 horas ordinarias, dos relevos",
+      "priceCOP": 280000
+    },
+    {
+      "code": "turno_festivo_8h",
+      "label": "Festivo: 8 horas",
+      "priceCOP": 150000
+    },
+    {
+      "code": "turno_festivo_12h",
+      "label": "Festivo: 12 horas",
+      "priceCOP": 175000
+    },
+    {
+      "code": "turno_festivo_nocturno_12h",
+      "label": "Festivo nocturno: 12 horas",
+      "priceCOP": 205000
+    },
+    {
+      "code": "turno_festivo_24h",
+      "label": "Festivo: 24 horas, dos relevos",
+      "priceCOP": 330000
+    }
+  ],
+  "additionalHourCOP": 20000
+}

@@ -3,6 +3,7 @@ import { ArrowLeft, CheckCircle2, Clock3, ShieldCheck } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ConversionPanel from '../components/ConversionPanel.astro';
 import FAQSection from '../components/FAQSection.astro';
+import NursingPrices from '../components/NursingPrices.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import { absoluteUrl, getRelatedServices, services, siteConfig, type Service } from '../data/services';
@@ -185,6 +186,7 @@ const faqSchema = {
     )
   }
 
+  {service.slug === 'servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario' && <NursingPrices />}
   <FAQSection faqs={service.faqs} />
   <ConversionPanel service={service} title={`Consulta ${service.shortTitle.toLowerCase()} por WhatsApp`} />
 </BaseLayout>

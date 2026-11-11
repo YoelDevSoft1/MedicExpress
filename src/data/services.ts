@@ -1,3 +1,5 @@
+import nursingPrices from './nursing-prices.json';
+
 export const siteConfig = {
   name: 'MedicExpress',
   url: 'https://medicexpress.com.co',
@@ -593,14 +595,31 @@ export const services: Service[] = [
     metaDescription:
       'Solicita enfermería domiciliaria y apoyo hospitalario. Coordinación por WhatsApp y atención conectada con SMD Vital.',
     summary:
-      'Apoyo de enfermería para procedimientos, cuidados, seguimiento y acompañamiento según necesidad del paciente.',
+      '¿Necesitas un turno de cuidado en casa o acompañamiento durante una hospitalización en Bogotá? MedicExpress recibe tu solicitud y SMD Vital valida el perfil, las tareas, el horario y la disponibilidad antes de confirmar.',
     intent: 'Familias que necesitan apoyo de enfermería en casa o entorno hospitalario.',
+    price: `Desde ${new Intl.NumberFormat('es-CO').format(nursingPrices.shifts[0].priceCOP)} COP / turno diurno de 4 horas en Bogotá`,
     highlights: ['Apoyo a cuidadores', 'Procedimientos programados', 'Seguimiento humano'],
     suitableFor: ['Adultos mayores', 'Pacientes en recuperacion', 'Familias cuidadoras'],
     process: commonProcess,
     faqs: [
       {
-        question: 'El servicio puede ser recurrente?',
+        question: '¿Cuánto cuesta un turno de enfermería en Bogotá?',
+        answer: `El turno diurno de 4 horas tiene una tarifa base de ${new Intl.NumberFormat('es-CO').format(nursingPrices.shifts[0].priceCOP)} COP. La cobertura ordinaria de 24 horas cuesta ${new Intl.NumberFormat('es-CO').format(nursingPrices.shifts[6].priceCOP)} COP y se organiza con dos relevos de 12 horas. Consulta la tabla para las demás jornadas. Los procedimientos e insumos especiales se cotizan aparte.`
+      },
+      {
+        question: '¿La hora adicional se puede solicitar como una visita independiente?',
+        answer: `La hora adicional cuesta ${new Intl.NumberFormat('es-CO').format(nursingPrices.additionalHourCOP)} COP como extensión de un servicio. Su disponibilidad debe confirmarse con coordinación; no corresponde a una visita independiente.`
+      },
+      {
+        question: '¿Cómo solicito acompañamiento hospitalario?',
+        answer: 'Indica la institución, el horario solicitado y las tareas de apoyo. La disponibilidad depende del personal y de las normas de ingreso de la institución; se confirma antes de agendar.'
+      },
+      {
+        question: '¿Estas tarifas aplican a toda Colombia?',
+        answer: 'La tabla corresponde a los turnos coordinados por SMD Vital en Bogotá. Para otra ciudad se valida la posibilidad de atención y la cotización; no se garantiza cobertura presencial nacional.'
+      },
+      {
+        question: '¿El servicio puede ser recurrente?',
         answer:
           'Sí. Se puede consultar disponibilidad para visitas programadas o seguimiento según el caso.'
       },
