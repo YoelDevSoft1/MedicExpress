@@ -51,7 +51,7 @@ const nationalProcess = [
   'Escribes por WhatsApp e indicas ciudad, servicio requerido y motivo de consulta.',
   'Clasificamos si la solicitud puede orientarse por teleconsulta, atención presencial o ruta local responsable.',
   'En Bogotá, la atención operativa será coordinada por SMD Vital Bogotá según disponibilidad y alcance del servicio.',
-  'En otras ciudades, MedicExpress registra la solicitud, orienta el siguiente paso y prioriza opciones remotas cuando aplique.'
+  'Fuera de Bogotá no hay cobertura domiciliaria confirmada. Si necesitas orientación médica, consulta la disponibilidad y el alcance de una teleconsulta.'
 ];
 
 export const services: Service[] = [
@@ -63,9 +63,9 @@ export const services: Service[] = [
     h1: 'Servicios médicos en casa y orientación de salud para Colombia',
     metaTitle: 'Servicios médicos en casa Colombia | MedicExpress y SMD Vital',
     metaDescription:
-      'MedicExpress orienta solicitudes de médico a domicilio, teleconsulta, enfermería y laboratorio en Colombia. En Bogotá, la atención se coordina con SMD Vital.',
+      'Consulta disponibilidad de atención domiciliaria en Bogotá y teleconsulta. SMD Vital confirma zona, horario, alcance y precio antes de reservar.',
     summary:
-      'MedicExpress funciona como puerta de entrada nacional para pacientes y familias que buscan servicios médicos en casa, teleconsulta u orientación inicial. La cobertura presencial depende de ciudad, servicio y disponibilidad; en Bogotá la coordinación operativa se realiza con SMD Vital Bogotá.',
+      'Solicita atención médica, auxiliares de enfermería o procedimientos en Bogotá. SMD Vital confirma la disponibilidad antes de agendar. Fuera de Bogotá no contamos con cobertura domiciliaria confirmada; puedes consultar si una teleconsulta es adecuada para tu caso.',
     intent: 'Usuarios en Colombia que buscan una ruta clara para atención médica domiciliaria, teleconsulta o servicios de salud en casa.',
     highlights: ['Entrada nacional de solicitudes', 'Bogotá coordinado por SMD Vital', 'Teleconsulta y orientación inicial'],
     suitableFor: [
@@ -78,12 +78,12 @@ export const services: Service[] = [
       {
         question: '¿MedicExpress atiende presencialmente en toda Colombia?',
         answer:
-          'MedicExpress recibe y orienta solicitudes a nivel nacional. La atención presencial depende de ciudad, servicio, disponibilidad y validación del caso. En Bogotá, la coordinación será realizada por SMD Vital Bogotá.'
+          'No. La operación domiciliaria se realiza en Bogotá, según zona, servicio y disponibilidad. No tenemos cobertura presencial confirmada en otras ciudades.'
       },
       {
         question: '¿Qué pasa si estoy fuera de Bogotá?',
         answer:
-          'Podemos orientar el siguiente paso, evaluar si aplica teleconsulta y registrar la solicitud para priorizar cobertura futura. No prometemos atención presencial donde no exista disponibilidad confirmada.'
+          'Puedes consultar si una teleconsulta es adecuada para tu caso. El equipo confirma disponibilidad, alcance y precio. No tenemos una fecha de expansión ni visitas domiciliarias confirmadas fuera de Bogotá.'
       },
       {
         question: '¿MedicExpress reemplaza urgencias?',
@@ -103,7 +103,7 @@ export const services: Service[] = [
     metaDescription:
       'Consulta orientación por teleconsulta médica en Colombia. MedicExpress conecta solicitudes con el canal de atención de SMD Vital cuando aplica.',
     summary:
-      'Una página nacional para captar pacientes que necesitan hablar con un profesional, resolver dudas no urgentes o definir si conviene atención domiciliaria, consulta presencial o una ruta de urgencias.',
+      'Consulta con un médico sin desplazarte, según disponibilidad y valoración del motivo de consulta. La tarifa es de $50.000 COP. Antes de agendar, el equipo confirma si la modalidad virtual es adecuada o si necesitas atención presencial.',
     intent: 'Personas en Colombia que buscan consulta médica virtual, médico online u orientación médica por WhatsApp.',
     price: '$50.000 COP',
     highlights: ['Orientación sin desplazamiento', 'Útil para dudas no urgentes', 'Derivación responsable si hay alarma'],
@@ -138,7 +138,7 @@ export const services: Service[] = [
     metaDescription:
       'Busca médico a domicilio en Colombia con orientación por WhatsApp. En Bogotá, la atención será coordinada por SMD Vital Bogotá.',
     summary:
-      'MedicExpress capta solicitudes nacionales de médico a domicilio y ayuda a clasificar ciudad, necesidad, urgencia relativa y disponibilidad. La prioridad es orientar con claridad y convertir los casos aptos hacia atención real.',
+      'Solicita una consulta médica domiciliaria en Bogotá por $140.000 COP. Indica tu barrio y el horario deseado; el equipo confirma disponibilidad antes de agendar. No tenemos visitas domiciliarias confirmadas en otras ciudades.',
     intent: 'Usuarios que buscan médico a domicilio Colombia, doctor en casa o consulta médica domiciliaria.',
     highlights: ['Clasificación por ciudad', 'Bogotá con SMD Vital', 'Orientación antes de agendar'],
     suitableFor: ['Pacientes que necesitan valoración médica en casa', 'Adultos mayores o personas con movilidad limitada', 'Familias que quieren evitar desplazamientos innecesarios'],
@@ -147,7 +147,7 @@ export const services: Service[] = [
       {
         question: '¿En qué ciudades hay médico a domicilio?',
         answer:
-          'La disponibilidad debe confirmarse por WhatsApp. Bogotá es el centro operativo principal con coordinación de SMD Vital. Otras ciudades se validan según capacidad, servicio y oportunidad de cobertura.'
+          'Coordinamos consultas domiciliarias en Bogotá, según zona y disponibilidad. No tenemos atención domiciliaria confirmada en otras ciudades.'
       },
       {
         question: '¿Qué datos debo enviar?',
@@ -172,7 +172,7 @@ export const services: Service[] = [
     metaDescription:
       'Consulta enfermería a domicilio en Colombia para adultos mayores, inyectología, signos vitales y cuidados programados. Bogotá coordinado por SMD Vital.',
     summary:
-      'Página nacional para solicitudes de enfermería en casa: adultos mayores, procedimientos programados, aplicación de medicamentos formulados, signos vitales y apoyo familiar. La disponibilidad presencial se valida por ciudad.',
+      'Consulta turnos de auxiliares de enfermería y procedimientos programados en Bogotá. El equipo confirma el tipo de cuidado, la zona, el horario y el precio. No tenemos cobertura domiciliaria confirmada en otras ciudades.',
     intent: 'Familias en Colombia que buscan enfermera a domicilio, cuidados en casa o apoyo para adulto mayor.',
     highlights: ['Adulto mayor y cuidadores', 'Procedimientos programados', 'Validación de ciudad y servicio'],
     suitableFor: ['Adultos mayores que necesitan apoyo en casa', 'Aplicación de medicamentos con fórmula', 'Seguimiento básico y toma de signos vitales'],
