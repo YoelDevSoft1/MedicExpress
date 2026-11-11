@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 104px;
 }
 
 body {
@@ -27,6 +28,48 @@ body {
 
 a {
   color: inherit;
+}
+
+main h1 {
+  font-size: clamp(2.25rem, 1.65rem + 2.1vw, 4rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+main .grid > * {
+  min-width: 0;
+}
+
+main h2 {
+  text-wrap: balance;
+}
+
+main img {
+  max-width: 100%;
+}
+
+a:focus-visible,
+summary:focus-visible,
+button:focus-visible {
+  outline: 3px solid #6366f1;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  z-index: 100;
+  transform: translateY(-180%);
+  border-radius: 12px;
+  padding: 12px 18px;
+  background: #312e81;
+  color: white;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 ::selection {
@@ -53,16 +96,21 @@ a {
   justify-content: center;
   gap: 10px;
   border-radius: 999px;
-  padding: 0 18px;
+  padding: 12px 18px;
   font-size: 15px;
   font-weight: 750;
-  line-height: 1;
+  line-height: 1.4;
   text-decoration: none;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
     background 180ms ease,
     border-color 180ms ease;
+}
+
+.btn-primary svg,
+.btn-secondary svg {
+  flex-shrink: 0;
 }
 
 .btn-primary {
@@ -97,7 +145,7 @@ a {
 }
 
 .section {
-  padding-block: 72px;
+  padding-block: clamp(48px, 6vw, 72px);
 }
 
 .kicker {
@@ -122,8 +170,16 @@ a {
 }
 
 .focus-ring:focus-visible {
-  outline: 3px solid rgba(67, 56, 202, 0.35);
+  outline: 3px solid #6366f1;
   outline-offset: 3px;
+}
+
+@media (max-width: 639px) {
+  main h2.text-4xl,
+  main h2.text-3xl {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

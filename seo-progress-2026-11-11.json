@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-11",
+  "goal": "Mejorar y verificar posiciones de MedicExpress y SMD Vital sin perder las actuales",
+  "status": "published-corrections-verified-blocked-on-browser-and-current-ranking-evidence",
+  "historicalEvidence": {
+    "source": "D:/Velox/projects/ChatBotLGSMD/outputs/seo-competencia-smd-2026-10-31.md",
+    "period": "2026-10-02/2026-10-29",
+    "scope": "Search Console; búsqueda web; Colombia; SMD Vital",
+    "queries": [
+      {
+        "query": "lavado de oídos a domicilio bogotá",
+        "clicks": 10,
+        "impressions": 73,
+        "position": 1.5
+      },
+      {
+        "query": "cambio de sonda vesical a domicilio",
+        "clicks": 1,
+        "impressions": 9,
+        "position": 1.3
+      },
+      {
+        "query": "limpieza de oidos bogota",
+        "clicks": 4,
+        "impressions": 205,
+        "position": 4.5
+      },
+      {
+        "query": "inyectologia a domicilio",
+        "clicks": 7,
+        "impressions": 397,
+        "position": 4
+      },
+      {
+        "query": "retiro de puntos de sutura",
+        "clicks": 2,
+        "impressions": 53,
+        "position": 9.2
+      }
+    ],
+    "limitation": "Datos históricos de un informe local; no reconsultados en Search Console. Posición media, no ranking fijo en Bogotá."
+  },
+  "checks": {
+    "medicexpress": "Build, Astro check y auditoría SEO de 29 páginas aprobados; siete rutas no disponibles verificadas",
+    "smd": "Build y auditoría SEO de 143 páginas aprobados; dos advertencias administrativas",
+    "baselineCorrection": "SMD título de inicio alineado exclusivamente con cambio ya comprometido de091e8, que retiró 24/7; no regenerar toda la baseline",
+    "browserAccess": "Inventario de Chrome disponible; getTab falló dos veces con timeoutMs undefined; rendimiento actual pendiente"
+  },
+  "next": [
+    "Recover browser connection; review SMD PR10 image cropping and measure mobile/desktop layout shifts before publication.",
+    "Read current Search Console query/page/device data for both properties, compare equivalent periods and annotate release dates.",
+    "Keep clicks, sent requests, confirmed appointments and completed paid services separate when assessing SEO value."
+  ],
+  "rankingAchievementVerified": false,
+  "medicexpressRelease": {
+    "pr": 1,
+    "commit": "d9f07cb2c5daadb4842288d1a5025398bb022ece",
+    "verifiedAt": "2026-11-11T09:06:44.782Z",
+    "publicChecks": [
+      "/",
+      "/servicios-medicos/retiro-y-colocacion-de-sonda-vesical/",
+      "/laboratorio-clinico/",
+      "/servicios-medicos/electrocardiografia-basica/"
+    ],
+    "visualReview": "pending: browser goto fails",
+    "githubActions": "not started: account billing lock",
+    "netlifyPreview": "success"
+  },
+  "detailedReleaseLedger": "C:/Users/Administrator/Documents/GitHub/SMD-Vital-seo-20261111/cls-progress-20261111.json"
+}

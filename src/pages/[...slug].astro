@@ -5,8 +5,9 @@ import ConversionPanel from '../components/ConversionPanel.astro';
 import FAQSection from '../components/FAQSection.astro';
 import NursingPrices from '../components/NursingPrices.astro';
 import ServiceCard from '../components/ServiceCard.astro';
+import ServicePhoto from '../components/ServicePhoto.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
-import { absoluteUrl, getRelatedServices, services, siteConfig, type Service } from '../data/services';
+import { absoluteUrl, getRelatedServices, requiresAvailabilityReview, services, siteConfig, type Service } from '../data/services';
 
 type Props = {
   service: Service;
@@ -20,8 +21,12 @@ export function getStaticPaths() {
 }
 
 const { service } = Astro.props;
+const review = requiresAvailabilityReview(service);
+const description = review ? `${service.shortTitle}: consulta tu solicitud por WhatsApp. Confirmamos posibilidad de atención, zona, fecha, requisitos y cotización antes de reservar.` : service.metaDescription;
 const relatedServices = getRelatedServices(service);
 const isNationalPage = service.category === 'Cobertura nacional';
+const isNursingPage = service.slug === 'servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario';
+const servicePhoto = isNursingPage ? 'auxiliar-cuidado' : ['servicios-medicos/servicio-medico-a-domicilio', 'servicios-medicos/valoracion-medica-a-domicilio'].includes(service.slug) ? 'visita-medica' : undefined;
 const targetCities = ['Bogotá', 'Medellín', 'Cali', 'Barranquilla', 'Cartagena', 'Bucaramanga', 'Pereira', 'Manizales'];
 
 const serviceSchema = {
@@ -59,9 +64,9 @@ const faqSchema = {
 
 <BaseLayout
   title={service.metaTitle}
-  description={service.metaDescription}
+  description={description}
   canonicalPath={`/${service.slug}/`}
-  jsonLd={[serviceSchema, faqSchema]}
+  jsonLd={review ? { '@context': 'https://schema.org', '@type': 'WebPage', name: service.title, description, url: absoluteUrl(`/${service.slug}/`) } : [serviceSchema, faqSchema]}
 >
   <section class="container py-10 md:py-16">
     <a href="/" class="focus-ring inline-flex items-center gap-2 rounded-full text-sm font-black text-indigo-700 hover:text-indigo-900">
@@ -72,41 +77,43 @@ const faqSchema = {
     <div class="mt-8 grid gap-10 lg:grid-cols-[1fr_0.82fr] lg:items-center">
       <div>
         <p class="kicker">{service.category}</p>
-        <h1 class="text-balance mt-3 text-5xl font-black tracking-tight text-slate-950 md:text-7xl">
+        <h1 class:list={['text-balance mt-3 font-black tracking-tight text-slate-950', isNursingPage ? 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl' : 'text-5xl md:text-7xl']}>
           {service.h1}
         </h1>
-        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{service.summary}</p>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{review ? description : service.summary}</p>
         <p class="mt-4 inline-flex max-w-2xl rounded-full bg-indigo-50 px-4 py-2 text-sm font-black text-indigo-800 ring-1 ring-indigo-100">
           {siteConfig.referralMessage}
         </p>
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <WhatsAppButton label="Consultar con SMD Vital" serviceName={service.title} />
-          <a class="btn-secondary" href="#detalles">Ver detalles</a>
+          <WhatsAppButton label="Consultar con SMD Vital" serviceName={service.title} /><a class="btn-secondary" href={isNursingPage ? '#precios-enfermeria' : '#detalles'}>{isNursingPage ? 'Ver precios y turnos' : 'Ver detalles'}</a>
         </div>
       </div>
 
-      <aside class="surface rounded-[34px] p-6">
+      <div class="surface rounded-[34px] p-6">
+        {servicePhoto && <div class="mb-4"><ServicePhoto name={servicePhoto} /></div>}
         <div class="rounded-[26px] bg-indigo-950 p-6 text-white">
           <p class="text-sm font-bold text-indigo-100">Servicio solicitado</p>
           <h2 class="mt-2 text-2xl font-black">{service.shortTitle}</h2>
-          <p class="mt-4 text-sm leading-7 text-indigo-50">{service.intent}</p>
+          <p class="mt-4 text-sm leading-7 text-indigo-50">{review ? 'El equipo revisa el caso y la posibilidad de coordinar la atención antes de confirmar.' : service.intent}</p>
           <div class="mt-5 rounded-2xl bg-white/10 p-4">
             <span class="text-xs font-bold uppercase text-indigo-100">Referencia comercial</span>
-            <p class="mt-1 text-xl font-black">{service.price ?? 'Consultar disponibilidad'}</p>
+            <p class="mt-1 text-xl font-black">{review ? 'Consultar disponibilidad' : service.price ?? 'Consultar disponibilidad'}</p>
           </div>
         </div>
 
         <div class="mt-5 grid gap-3">
-          {service.highlights.map((highlight) => (
+          {(review ? ['Revisión de tu solicitud', 'Zona y fecha por confirmar', 'Cotización antes de reservar'] : service.highlights).map((highlight) => (
             <div class="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm">
               <CheckCircle2 class="text-indigo-700" size={19} stroke-width={2.4} />
               <span class="text-sm font-bold text-slate-700">{highlight}</span>
             </div>
           ))}
         </div>
-      </aside>
+      </div>
     </div>
   </section>
+
+  {isNursingPage && <NursingPrices />}
 
   {
     isNationalPage && (
@@ -186,7 +193,6 @@ const faqSchema = {
     )
   }
 
-  {service.slug === 'servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario' && <NursingPrices />}
   <FAQSection faqs={service.faqs} />
   <ConversionPanel service={service} title={`Consulta ${service.shortTitle.toLowerCase()} por WhatsApp`} />
 </BaseLayout>

@@ -10,7 +10,7 @@ export const siteConfig = {
   logoPath: '/img/logo/logo-square.svg',
   referralMessage: 'La atención será coordinada por SMD Vital Bogotá.',
   defaultDescription:
-    'Servicios médicos a domicilio, teleconsulta, enfermería y laboratorio en casa con orientación humana y agendamiento por WhatsApp.'
+    'Servicios médicos a domicilio en Bogotá, teleconsulta y auxiliares de enfermería. Confirma precio, alcance y disponibilidad por WhatsApp.'
 };
 
 export type ServiceCategory = 'Cobertura nacional' | 'Servicios médicos' | 'Enfermería' | 'Laboratorio clínico';
@@ -232,6 +232,7 @@ export const services: Service[] = [
   },
   {
     slug: 'servicios-medicos/servicio-medico-a-domicilio',
+    price: '$140.000 COP en Bogotá',
     category: 'Servicios médicos',
     title: 'Servicio médico a domicilio',
     shortTitle: 'Médico a domicilio',
@@ -261,6 +262,7 @@ export const services: Service[] = [
   },
   {
     slug: 'servicios-medicos/valoracion-medica-a-domicilio',
+    price: 'General $140.000 COP / prioritaria $170.000 COP en Bogotá',
     category: 'Servicios médicos',
     title: 'Valoración médica a domicilio',
     shortTitle: 'Valoración médica',
@@ -479,7 +481,7 @@ export const services: Service[] = [
     summary:
       'Servicio delicado que requiere tecnica, higiene, validación del caso y seguimiento responsable.',
     intent: 'Pacientes que requieren cambio, retiro o colocación de sonda en casa.',
-    price: 'Cambio desde $135.000 / retiro desde $120.000',
+    price: 'Cambio $150.000 COP / retiro $120.000 COP',
     highlights: ['Validación del caso', 'Procedimiento en domicilio', 'Orientación postservicio'],
     suitableFor: ['Pacientes con sonda', 'Cuidadores familiares', 'Seguimiento domiciliario'],
     process: commonProcess,
@@ -597,7 +599,7 @@ export const services: Service[] = [
     summary:
       '¿Necesitas un turno de cuidado en casa o acompañamiento durante una hospitalización en Bogotá? MedicExpress recibe tu solicitud y SMD Vital valida el perfil, las tareas, el horario y la disponibilidad antes de confirmar.',
     intent: 'Familias que necesitan apoyo de enfermería en casa o entorno hospitalario.',
-    price: `Desde ${new Intl.NumberFormat('es-CO').format(nursingPrices.shifts[0].priceCOP)} COP / turno diurno de 4 horas en Bogotá`,
+    price: `${new Intl.NumberFormat('es-CO').format(nursingPrices.shifts[0].priceCOP)} COP / turno diurno de 4 horas en Bogotá`,
     highlights: ['Apoyo a cuidadores', 'Procedimientos programados', 'Seguimiento humano'],
     suitableFor: ['Adultos mayores', 'Pacientes en recuperacion', 'Familias cuidadoras'],
     process: commonProcess,
@@ -693,6 +695,7 @@ export const services: Service[] = [
   },
   {
     slug: 'servicios-de-enfermeria/acompanamiento-a-citas-medicas',
+    price: '$110.000 COP / bloque mínimo de 4 horas',
     category: 'Enfermería',
     title: 'Acompañamiento a citas médicas',
     shortTitle: 'Acompañamiento',
@@ -710,7 +713,7 @@ export const services: Service[] = [
       {
         question: '¿Incluye transporte?',
         answer:
-          'Se debe confirmar al agendar. El alcance puede variar según zona, horario y necesidad del paciente.'
+          'El traslado del paciente se acuerda aparte. El acompañamiento cuesta $110.000 COP por un bloque mínimo de 4 horas; confirma recorrido, zona y horario antes de reservar.'
       },
       {
         question: 'Pueden acompañar adultos mayores?',
@@ -842,6 +845,15 @@ export const categories = Array.from(new Set(services.map((service) => service.c
 
 export function getServiceBySlug(slug: string) {
   return services.find((service) => service.slug === slug);
+}
+
+// Catálogo operativo confirmado el 11/11/2026; conservar las URL informativas.
+export function requiresAvailabilityReview(service: Service) {
+  return service.category === 'Laboratorio clínico' || [
+    'laboratorio-a-domicilio-colombia',
+    'servicios-medicos/electrocardiografia-basica',
+    'servicios-medicos/extraccion-y-cuidado-para-unas-encarnadas'
+  ].includes(service.slug);
 }
 
 export function getServicesByCategory(category: ServiceCategory) {

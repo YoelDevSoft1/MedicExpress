@@ -58,5 +58,6 @@
       "priceCOP": 330000
     }
   ],
-  "additionalHourCOP": 20000
+  "additionalHourCOP": 20000,
+  "appointmentSupportCOP": 110000
 }

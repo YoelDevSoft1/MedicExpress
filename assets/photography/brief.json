@@ -1,0 +1,18 @@
+{
+  "createdAt": "2026-11-11",
+  "method": "ImageGen integrado",
+  "disclosure": "Escenas ilustrativas generadas con IA. No representan al equipo ni a pacientes reales.",
+  "exports": "WebP, calidad 80, anchos 480, 768 y 1200 píxeles; proporción 4:3 conservada. Los PNG originales quedan fuera del directorio público.",
+  "assets": [
+    {
+      "original": "visita-medica-original.png",
+      "publicPrefix": "/img/photos/visita-medica",
+      "prompt": "Photorealistic-natural editorial commercial photograph of a fictional domiciliary general medical visit in a modest comfortable contemporary Bogotá apartment. A Latin American male general doctor around 38 in plain navy scrubs, no badges or logos, listening at eye level to a Latin American woman around 65 seated at her dining table. Calm attentive conversation, modest tidy home, soft cool daylight from a window, warm neutral walls, natural skin pores and wrinkles, restrained indigo accent, realistic hands, candid genuine expression, premium but accessible not luxury, no clinic, no exam procedure, no injections or IV, no masks needed, no medical claims, no text/signage/logos, no visible paperwork patient details. Landscape 4:3 composition, both faces and hands inside the central 75% with comfortable edge space for responsive crop, mid-wide environmental framing, 50mm documentary look, subtle depth of field, no dramatic bokeh, avoid overly perfect stock-photo smiles."
+    },
+    {
+      "original": "auxiliar-cuidado-original.png",
+      "publicPrefix": "/img/photos/auxiliar-cuidado",
+      "prompt": "Photorealistic-natural editorial commercial photograph for a fictional auxiliary nursing home-care service in Bogotá. Latin American woman auxiliary nursing assistant around 33 in unbranded muted indigo/lilac scrubs sits at equal eye level beside a Latin American elderly woman around 74 with natural grey hair, discussing daily care kindly in a comfortable modest lived-in apartment sitting room. The elderly woman seated comfortably in an armchair, fully clothed light oatmeal cardigan, assistant calmly listening with hands resting naturally on her own knees, respectful personal space. Warm human rapport, soft window daylight, quiet warm-neutral palette with restrained indigo accents, realistic skin pores and wrinkles, realistic anatomy and hands, home plants and simple bookshelf subtly out of focus, premium documentary photography but accessible ordinary home not luxurious, not a clinic. No medical procedure, no stethoscope, no diagnosis, no prescribing, no needles or IV, no certificates or badges or readable records, no logos/text/watermark, no idealized glamour or exaggerated stock smiles. Landscape 4:3 image; keep both faces/hands in central 75% for responsive cropping, balanced mid-wide framing, 50mm photograph, natural soft contrast. It is a fictional illustrative image, not the actual staff."
+    }
+  ]
+}

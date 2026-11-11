@@ -1,0 +1,31 @@
+---
+type Props = {
+  name: 'visita-medica' | 'auxiliar-cuidado';
+  priority?: boolean;
+};
+const { name, priority = false } = Astro.props;
+const alt = name === 'visita-medica'
+  ? 'Escena ilustrativa de un médico conversando con una mujer mayor en su hogar'
+  : 'Escena ilustrativa de una auxiliar de enfermería conversando con una adulta mayor en casa';
+---
+
+<figure>
+  <img
+    src={`/img/photos/${name}-768.webp`}
+    srcset={[480, 768, 1200].map((width) => `/img/photos/${name}-${width}.webp ${width}w`).join(', ')}
+    sizes="(min-width: 1024px) 480px, (min-width: 640px) 700px, calc(100vw - 64px)"
+    alt={alt}
+    width="1200"
+    height="900"
+    loading={priority ? 'eager' : 'lazy'}
+    fetchpriority={priority ? 'high' : 'auto'}
+    decoding="async"
+  />
+  <figcaption>Escena ilustrativa generada con IA.</figcaption>
+</figure>
+
+<style>
+  figure{margin:0}
+  img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:24px;background:#e8e7ec}
+  figcaption{margin:8px 4px 0;font-size:11px;line-height:1.6;color:#64748b}
+</style>

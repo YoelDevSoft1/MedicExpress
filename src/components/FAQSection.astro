@@ -15,7 +15,7 @@ const { faqs, title = 'Preguntas frecuentes' } = Astro.props;
 <section class="section bg-slate-50">
   <div class="container grid gap-10 lg:grid-cols-[0.7fr_1fr]">
     <div>
-      <p class="kicker">Informacion clara</p>
+      <p class="kicker">Información clara</p>
       <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 md:text-4xl">{title}</h2>
       <p class="mt-4 max-w-md text-base leading-7 text-slate-600">
         La prioridad es orientar bien al paciente, reducir fricción y escalar responsablemente si el caso supera el alcance domiciliario.
@@ -35,4 +35,13 @@ const { faqs, title = 'Preguntas frecuentes' } = Astro.props;
     </div>
   </div>
 </section>
+
+<style>
+  summary{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;line-height:1.6}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+';display:grid;place-items:center;width:28px;height:28px;flex-shrink:0;border-radius:50%;background:#eef2ff;color:#4338ca;font-size:22px;line-height:1;font-weight:500}
+  details[open]{border-color:#c7d2fe}
+  details[open] summary::after{content:'−'}
+  details>p{max-width:65ch}
+</style>
 

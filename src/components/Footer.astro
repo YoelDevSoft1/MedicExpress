@@ -21,7 +21,7 @@ import { categories, categoryPaths, getServicesByCategory, getSmdReferralUrl, si
         </div>
       </div>
       <p class="mt-5 max-w-md text-sm leading-7 text-slate-300">
-        Orientamos solicitudes de servicios médicos, enfermería y laboratorio a domicilio con lenguaje claro,
+        Orientamos solicitudes de servicios médicos y auxiliares de enfermería a domicilio con lenguaje claro,
         respeto por la privacidad del paciente y conexión directa con el equipo de atención de SMD Vital.
       </p>
       <div class="mt-6">
@@ -29,7 +29,7 @@ import { categories, categoryPaths, getServicesByCategory, getSmdReferralUrl, si
       </div>
     </div>
 
-    <div class="grid gap-8 sm:grid-cols-3">
+    <div class="grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
       {
         categories.map((category) => (
           <div>
@@ -52,7 +52,7 @@ import { categories, categoryPaths, getServicesByCategory, getSmdReferralUrl, si
   </div>
 
   <div class="border-t border-white/10">
-    <div class="container flex flex-col gap-3 py-5 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
+    <div class="container flex flex-col gap-3 py-5 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
       <p>© {new Date().getFullYear()} MedicExpress. Dominio independiente conectado comercialmente con SMD Vital.</p>
       <a
         href={getSmdReferralUrl('/', 'footer_smd_vital')}

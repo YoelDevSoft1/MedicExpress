@@ -1,29 +1,90 @@
 ---
 import nursingPrices from '../data/nursing-prices.json';
+import { getWhatsappUrl } from '../data/services';
 const formatCOP = (value: number) => `${new Intl.NumberFormat('es-CO').format(value)} COP`;
+const groups = [
+  { title: 'Jornadas ordinarias', description: 'Turnos diurnos, nocturnos y cobertura de 24 horas.', shifts: nursingPrices.shifts.filter((shift) => !shift.code.startsWith('turno_festivo_')) },
+  { title: 'Jornadas festivas', description: 'Precio total del turno festivo. La fecha y disponibilidad se confirman antes de reservar.', shifts: nursingPrices.shifts.filter((shift) => shift.code.startsWith('turno_festivo_')) },
+];
 ---
 
-<section class="section bg-white" aria-labelledby="tarifas-enfermeria">
+<section id="precios-enfermeria" class="section nursing-prices" aria-labelledby="tarifas-enfermeria">
   <div class="container">
-    <p class="kicker">Turnos en Bogotá</p>
-    <h2 id="tarifas-enfermeria" class="mt-3 text-3xl font-black text-slate-950 md:text-4xl">Precios de enfermería y cuidado por turnos</h2>
-    <p class="mt-5 max-w-3xl leading-8 text-slate-600">Tarifas base del catálogo de SMD Vital, actualizadas el <time datetime={nursingPrices.updatedAt}>11 de noviembre de 2026</time>. La asignación se confirma según las actividades de cuidado, el perfil requerido y la disponibilidad.</p>
-    <div class="mt-8 overflow-x-auto rounded-3xl border border-slate-200 p-4 md:p-6">
-      <table class="w-full text-left text-sm text-slate-700">
-        <caption class="mb-4 text-left font-bold">Precio total por turno en pesos colombianos (COP), Bogotá</caption>
-        <thead><tr><th scope="col" class="border-b border-slate-200 p-3">Jornada</th><th scope="col" class="border-b border-slate-200 p-3">Precio al paciente</th></tr></thead>
-        <tbody>{nursingPrices.shifts.map((shift) => (
-          <tr><th scope="row" class="border-b border-slate-100 p-3 font-normal">{shift.label}</th><td class="whitespace-nowrap border-b border-slate-100 p-3 font-bold">{formatCOP(shift.priceCOP)}</td></tr>
-        ))}</tbody>
-      </table>
+    <div class="price-heading">
+      <div>
+        <p class="kicker">Auxiliares de enfermería · Bogotá</p>
+        <h2 id="tarifas-enfermeria" class="mt-3 text-3xl font-black text-slate-950 md:text-4xl">Precios de enfermería y cuidado por turnos</h2>
+        <p class="mt-4 max-w-3xl leading-7 text-slate-600">Compara las jornadas y consulta la que necesitas. Antes de reservar, confirmamos zona, fecha, horario, tareas, insumos y disponibilidad del auxiliar.</p>
+      </div>
+      <p class="price-date">Tarifas al <time datetime={nursingPrices.updatedAt}>11 nov 2026</time><span>Pesos colombianos · COP</span></p>
     </div>
-    <div class="mt-6 max-w-3xl space-y-4 leading-8 text-slate-600">
-      <p><strong>Hora adicional: {formatCOP(nursingPrices.additionalHourCOP)}.</strong> Corresponde a la extensión de un servicio, no a una visita independiente. Consulta su disponibilidad con coordinación.</p>
-      <p>La cobertura de 24 horas se organiza con dos relevos de 12 horas. Los valores festivos ya incluyen el precio del festivo; no se añade otro porcentaje por ese concepto.</p>
-      <h3 class="text-xl font-black text-slate-950">Cómo elegir el apoyo adecuado</h3>
+    <div class="price-groups">
+      {groups.map((group) => (
+        <div class="price-group">
+          <div class="price-group-heading">
+            <h3>{group.title}</h3>
+            <p>{group.description}</p>
+          </div>
+          <table>
+            <caption class="sr-only">{group.title}: precio total por turno en Bogotá</caption>
+            <thead><tr><th scope="col">Jornada</th><th scope="col">Precio COP</th></tr></thead>
+            <tbody>{group.shifts.map((shift) => (
+              <tr>
+                <th scope="row">{shift.label}{shift.code.endsWith('_24h') && <span class="relay-note">2 relevos de 12 horas</span>}</th>
+                <td><a class="focus-ring price-link" href={getWhatsappUrl(`un turno de auxiliar de enfermería: ${shift.label}`, Astro.url.pathname)} target="_blank" rel="noopener noreferrer" aria-label={`Consultar ${shift.label}, ${formatCOP(shift.priceCOP)}`}><span>{formatCOP(shift.priceCOP)}</span><span aria-hidden="true">↗</span></a></td>
+              </tr>
+            ))}</tbody>
+          </table>
+          <p class="price-group-foot">El precio enlaza a WhatsApp para consultar disponibilidad.</p>
+        </div>
+      ))}
+    </div>
+    <div class="additional-services">
+      <article><p class="kicker">Extensión de un servicio</p><h3>Hora adicional</h3><p class="additional-price">{formatCOP(nursingPrices.additionalHourCOP)}</p><p>No se vende como visita independiente. Confirma la extensión con coordinación.</p></article>
+      <article><p class="kicker">Bloque mínimo de 4 horas</p><h3>Acompañamiento a citas</h3><p class="additional-price">{formatCOP(nursingPrices.appointmentSupportCOP)}</p><p>El traslado del paciente se acuerda aparte. <a class="focus-ring" href="/servicios-de-enfermeria/acompanamiento-a-citas-medicas/">Ver acompañamiento a citas →</a></p></article>
+      <article><p class="kicker">Según plan y necesidades</p><h3>Cuidado de adulto mayor</h3><p class="additional-price">Cotización por plan</p><p>Se revisan tareas, duración y nivel de dependencia antes de definir el alcance y el valor.</p></article>
+    </div>
+    <div class="care-notes">
+      <h3 class="text-xl font-black text-slate-950">Antes de confirmar tu turno</h3>
+      <p><strong>24 horas significa dos relevos de 12 horas.</strong> Se confirman ambos bloques; no se asigna una sola persona durante 24 horas continuas. Los valores festivos incluyen el precio de esa jornada, sin añadir otro porcentaje por el mismo concepto.</p>
+      <p>El equipo de cuidado está formado por auxiliares de enfermería. Las actividades se confirman según sus competencias y las indicaciones del equipo tratante; un turno no sustituye una consulta médica ni una atención de enfermera jefe o terapeuta.</p>
       <p>Para un turno, indica movilidad, nivel de dependencia, horario y tareas que requiere el paciente. Para un procedimiento puntual, consulta <a class="font-bold text-indigo-700 underline" href="/servicios-de-enfermeria/inyectologia-a-domicilio/">inyectología</a>, <a class="font-bold text-indigo-700 underline" href="/servicios-medicos/cura-de-heridas-simples-y-complejas/">curación de heridas</a> o <a class="font-bold text-indigo-700 underline" href="/servicios-de-enfermeria/toma-de-signos-vitales/">toma de signos vitales</a>. Cada procedimiento tiene requisitos y cotización propios.</p>
-      <p>Los procedimientos e insumos especiales se cotizan aparte. Antes de agendar se confirma el alcance, el perfil, la zona y el valor total. Para apoyo hospitalario, informa la institución y sus requisitos de ingreso; las tarifas domiciliarias no garantizan la misma cotización hospitalaria.</p>
-      <p>MedicExpress recibe la solicitud y SMD Vital coordina la atención. Esta tabla corresponde a Bogotá; para otra ciudad, primero consulta la posibilidad de atención.</p>
+      <p>No se presupone que medicamentos, materiales o transporte estén incluidos. Los procedimientos e insumos especiales se cotizan aparte. Para apoyo hospitalario, informa la institución y sus requisitos de ingreso; las tarifas domiciliarias no garantizan la misma cotización hospitalaria.</p>
+      <p>MedicExpress recibe la solicitud y SMD Vital coordina la atención. Estas tarifas corresponden a Bogotá y no garantizan atención inmediata ni cobertura presencial en otra ciudad.</p>
     </div>
   </div>
 </section>
+
+<style>
+  .nursing-prices{background:#f8f9ff;scroll-margin-top:100px}
+  .price-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:28px}
+  .price-heading h2{max-width:720px;text-wrap:balance}
+  .price-date{flex-shrink:0;border:1px solid #e0e7ff;border-radius:14px;padding:12px 16px;background:white;color:#4338ca;font-size:13px;font-weight:750;line-height:1.6}
+  .price-date span{display:block;color:#64748b;font-size:12px;font-weight:500}
+  .price-groups{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;align-items:start}
+  .price-group{overflow:hidden;border:1px solid #e0e7ff;border-radius:24px;background:white;box-shadow:0 8px 24px #312e8105}
+  .price-group-heading{padding:24px 24px 20px;background:#eef2ff}
+  .price-group h3,.additional-services h3{font-size:20px;font-weight:800;line-height:1.35;color:#0f172a}
+  .price-group-heading p{margin-top:8px;color:#475569;font-size:14px;line-height:1.6}
+  table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}
+  thead th{padding:14px 24px;border-bottom:1px solid #e2e8f0;color:#64748b;font-size:12px;font-weight:700}
+  thead th:last-child{text-align:right}
+  tbody th,td{padding:16px 24px;border-bottom:1px solid #f1f5f9;vertical-align:middle}
+  tbody th{font-weight:600;line-height:1.5;color:#334155}
+  td{text-align:right;white-space:nowrap}
+  .relay-note{display:block;margin-top:4px;font-size:12px;color:#64748b;font-weight:400}
+  .price-link{display:inline-flex;align-items:center;gap:8px;padding:6px 0;color:#4338ca;font-weight:800;text-decoration:none;min-height:44px}
+  .price-link:hover{text-decoration:underline;text-underline-offset:4px}
+  .price-group-foot{padding:16px 24px;color:#64748b;font-size:12px;line-height:1.6}
+  .additional-services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
+  .additional-services article{padding:24px;border:1px solid #e2e8f0;border-radius:20px;background:white}
+  .additional-services h3{margin-top:8px;font-size:18px}
+  .additional-price{margin:12px 0;font-size:21px;font-weight:800;color:#312e81;line-height:1.4}
+  .additional-services article>p:last-child{font-size:14px;line-height:1.8;color:#475569}
+  .additional-services a{font-weight:700;color:#4338ca;text-decoration:underline;text-underline-offset:3px}
+  .care-notes{max-width:860px;margin-top:32px;padding-top:28px;border-top:1px solid #dfe3ef;line-height:1.85;color:#475569}
+  .care-notes p{margin-top:16px}
+  @media(min-width:768px){.price-group-heading{min-height:124px}}
+  @media(max-width:767px){.price-heading{display:block}.price-date{display:inline-block;margin-top:20px}.price-groups,.additional-services{grid-template-columns:1fr;gap:16px}.price-group-heading{padding:20px}thead th,tbody th,td{padding:12px 16px}.price-group-foot{padding:14px 16px}.additional-services article{padding:20px}.care-notes{font-size:15px}}
+  @media(max-width:359px){table{font-size:13px}thead th,tbody th,td{padding:10px 12px}.price-link{gap:4px}}
+</style>
