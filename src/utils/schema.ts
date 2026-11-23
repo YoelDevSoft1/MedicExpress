@@ -69,16 +69,28 @@ export const MEDICEXPRESS_OFFERS_BY_SLUG: Record<string, MedicExpressOfferItem[]
   ],
   'servicios-medicos/servicio-medico-a-domicilio': [
     {
-      name: 'Consulta médica domiciliaria en Bogotá',
-      description: 'Valoración médica integral en casa en Bogotá con examen físico completo y formulación.',
+      name: 'Consulta médica convencional a domicilio en Bogotá',
+      description: 'Valoración médica convencional en casa en Bogotá con examen físico completo y formulación.',
+      price: 140000,
+      priceCurrency: 'COP',
+    },
+    {
+      name: 'Valoración médica prioritaria a domicilio en Bogotá',
+      description: 'Valoración médica prioritaria el mismo día en Bogotá con examen físico completo.',
       price: 170000,
       priceCurrency: 'COP',
     },
   ],
   'servicios-medicos/valoracion-medica-a-domicilio': [
     {
-      name: 'Consulta médica domiciliaria / Valoración médica prioritaria',
-      description: 'Valoración médica domiciliaria y prioritaria en Bogotá con examen físico completo.',
+      name: 'Consulta médica convencional a domicilio en Bogotá',
+      description: 'Valoración médica convencional en casa en Bogotá con examen físico completo.',
+      price: 140000,
+      priceCurrency: 'COP',
+    },
+    {
+      name: 'Valoración médica prioritaria a domicilio en Bogotá',
+      description: 'Valoración médica prioritaria el mismo día en Bogotá con examen físico completo.',
       price: 170000,
       priceCurrency: 'COP',
     },

@@ -187,8 +187,8 @@
     },
     {
       "route": "/servicios-medicos/servicio-medico-a-domicilio",
-      "title": "Médico a Domicilio en Bogotá $170.000 COP | Atención Hoy Mismo | MedicExpress",
-      "description": "Consulta médica domiciliaria en Bogotá por $170.000 COP. Atención hoy mismo con médicos a domicilio de SMD Vital. Examen físico completo y fórmula médica.",
+      "title": "Médico a Domicilio en Bogotá desde $140.000 COP | Prioritaria $170.000 | MedicExpress",
+      "description": "Consulta médica convencional a domicilio en Bogotá por $140.000 COP y valoración médica prioritaria por $170.000 COP. Atención hoy mismo con médicos de SMD Vital.",
       "canonical": "https://medicexpress.com.co/servicios-medicos/servicio-medico-a-domicilio/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/photos/visita-medica-1200.webp"
@@ -227,8 +227,8 @@
     },
     {
       "route": "/servicios-medicos/valoracion-medica-a-domicilio",
-      "title": "Valoración Médica Domiciliaria Bogotá $170.000 COP | Atención Hoy Mismo | MedicExpress",
-      "description": "Consulta médica domiciliaria y valoración médica prioritaria en Bogotá por $170.000 COP. Atención hoy mismo con médicos a domicilio de SMD Vital.",
+      "title": "Valoración Médica Domiciliaria Bogotá $140.000 COP | Prioritaria $170.000 | MedicExpress",
+      "description": "Consulta médica convencional a domicilio en Bogotá por $140.000 COP y valoración médica prioritaria por $170.000 COP. Atención hoy mismo con médicos de SMD Vital.",
       "canonical": "https://medicexpress.com.co/servicios-medicos/valoracion-medica-a-domicilio/",
       "robots": "index, follow, max-image-preview:large",
       "ogImage": "https://medicexpress.com.co/img/photos/visita-medica-1200.webp"

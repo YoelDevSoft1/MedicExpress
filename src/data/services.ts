@@ -356,18 +356,18 @@ export const services: Service[] = [
   },
   {
     slug: 'servicios-medicos/servicio-medico-a-domicilio',
-    price: '$170.000 COP en Bogotá',
+    price: '$140.000 COP (Convencional) | $170.000 COP (Prioritaria)',
     category: 'Servicios médicos',
     title: 'Servicio médico a domicilio',
     shortTitle: 'Médico a domicilio',
     h1: 'Servicio médico a domicilio con orientación rápida',
-    metaTitle: 'Médico a Domicilio en Bogotá $170.000 COP | Atención Hoy Mismo | MedicExpress',
+    metaTitle: 'Médico a Domicilio en Bogotá desde $140.000 COP | Prioritaria $170.000 | MedicExpress',
     metaDescription:
-      'Consulta médica domiciliaria en Bogotá por $170.000 COP. Atención hoy mismo con médicos a domicilio de SMD Vital. Examen físico completo y fórmula médica.',
+      'Consulta médica convencional a domicilio en Bogotá por $140.000 COP y valoración médica prioritaria por $170.000 COP. Atención hoy mismo con médicos de SMD Vital.',
     summary:
-      'Recibe consulta médica domiciliaria en Bogotá por $170.000 COP sin salir de casa. Un médico certificado realiza valoración clínica integral, control de signos vitales, examen físico completo y plan de tratamiento en tu hogar, coordinado hoy mismo por SMD Vital Bogotá.',
-    intent: 'Personas que buscan médico a domicilio en Bogotá hoy mismo con tarifa transparente de $170.000 COP.',
-    highlights: ['Tarifa oficial $170.000 COP en Bogotá', 'Atención hoy mismo coordinada por SMD Vital', 'Médicos verificados en ReTHUS'],
+      'Recibe consulta médica convencional a domicilio en Bogotá por $140.000 COP o valoración médica prioritaria por $170.000 COP sin salir de casa. Un médico certificado realiza valoración clínica integral, control de signos vitales, examen físico completo y plan de tratamiento en tu hogar, coordinado hoy mismo por SMD Vital Bogotá.',
+    intent: 'Personas que buscan médico a domicilio en Bogotá hoy mismo con tarifa transparente ($140.000 COP convencional / $170.000 COP prioritaria).',
+    highlights: ['Consulta convencional $140.000 COP | Prioritaria $170.000 COP', 'Atención hoy mismo coordinada por SMD Vital', 'Médicos verificados en ReTHUS'],
     suitableFor: [
       'Cuadros agudos no vitales (infecciones respiratorias, gastrointestinales, urinarias, dolor lumbar o migraña)',
       'Adultos mayores, pacientes crónicos o personas con movilidad reducida en Bogotá',
@@ -394,7 +394,7 @@ export const services: Service[] = [
       {
         question: '¿Cuánto cuesta el servicio de médico a domicilio en Bogotá?',
         answer:
-          'El valor oficial de la consulta médica domiciliaria y valoración médica prioritaria en Bogotá es de $170.000 COP. Incluye valoración clínica presencial completa, toma de signos vitales, diagnóstico y formulación médica cuando aplique.'
+          'En Bogotá, la consulta médica convencional a domicilio tiene un valor de $140.000 COP y la valoración médica prioritaria es de $170.000 COP. Incluye valoración clínica presencial completa, toma de signos vitales, diagnóstico y formulación médica cuando aplique.'
       },
       {
         question: '¿El médico a domicilio reemplaza una urgencia hospitalaria?',
@@ -422,18 +422,18 @@ export const services: Service[] = [
   },
   {
     slug: 'servicios-medicos/valoracion-medica-a-domicilio',
-    price: '$170.000 COP en Bogotá',
+    price: '$140.000 COP (Convencional) | $170.000 COP (Prioritaria)',
     category: 'Servicios médicos',
     title: 'Valoración médica a domicilio',
     shortTitle: 'Valoración médica',
     h1: 'Valoración médica a domicilio para orientar el cuidado',
-    metaTitle: 'Valoración Médica Domiciliaria Bogotá $170.000 COP | Atención Hoy Mismo | MedicExpress',
+    metaTitle: 'Valoración Médica Domiciliaria Bogotá $140.000 COP | Prioritaria $170.000 | MedicExpress',
     metaDescription:
-      'Consulta médica domiciliaria y valoración médica prioritaria en Bogotá por $170.000 COP. Atención hoy mismo con médicos a domicilio de SMD Vital.',
+      'Consulta médica convencional a domicilio en Bogotá por $140.000 COP y valoración médica prioritaria por $170.000 COP. Atención hoy mismo con médicos de SMD Vital.',
     summary:
-      'Valoración médica domiciliaria y prioritaria en Bogotá por $170.000 COP para evaluar de forma integral al paciente en su hogar, establecer diagnóstico clínico, formular tratamiento y definir si requiere manejo en casa, procedimientos de enfermería o remisión.',
-    intent: 'Familias que buscan consulta médica domiciliaria o valoración médica prioritaria en Bogotá hoy mismo por $170.000 COP.',
-    highlights: ['Tarifa única oficial $170.000 COP', 'Atención hoy mismo en Bogotá', 'Examen físico completo y plan médico'],
+      'Consulta médica convencional a domicilio ($140.000 COP) y valoración médica prioritaria ($170.000 COP) en Bogotá para evaluar de forma integral al paciente en su hogar, establecer diagnóstico clínico, formular tratamiento y definir si requiere manejo en casa, procedimientos de enfermería o remisión.',
+    intent: 'Familias que buscan consulta médica convencional ($140.000 COP) o valoración médica prioritaria ($170.000 COP) en Bogotá hoy mismo.',
+    highlights: ['Convencional $140.000 COP | Prioritaria $170.000 COP', 'Atención hoy mismo en Bogotá', 'Examen físico completo y plan médico'],
     suitableFor: [
       'Adultos mayores con descompensación leve a moderada o múltiples comorbilidades',
       'Valoración médica prioritaria en casa para síntomas agudos no vitales ($170.000 COP)',
@@ -460,7 +460,7 @@ export const services: Service[] = [
       {
         question: '¿Cuánto cuesta la consulta médica domiciliaria y la valoración médica prioritaria en Bogotá?',
         answer:
-          'Tanto la consulta médica domiciliaria como la valoración médica prioritaria en Bogotá tienen una tarifa oficial de $170.000 COP. El equipo de SMD Vital Bogotá confirma disponibilidad horaria y zona por WhatsApp antes de agendar.'
+          'En Bogotá, la consulta médica convencional a domicilio tiene una tarifa de $140.000 COP y la valoración médica prioritaria a domicilio tiene una tarifa de $170.000 COP. El equipo de SMD Vital Bogotá confirma disponibilidad horaria y zona por WhatsApp antes de agendar.'
       },
       {
         question: '¿Qué diferencia hay entre la valoración médica a domicilio ($170.000 COP) y la teleconsulta ($90.000 COP)?',
