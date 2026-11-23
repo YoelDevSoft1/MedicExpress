@@ -12,7 +12,8 @@
     "preview": "astro preview --host 127.0.0.1",
     "check": "astro check",
     "seo:audit": "node scripts/seo-audit.mjs --enforce-baseline",
-    "seo:snapshot": "node scripts/seo-audit.mjs --write-baseline"
+    "seo:snapshot": "node scripts/seo-audit.mjs --write-baseline",
+    "seo:indexing": "node scripts/generate-indexing-manifest.mjs --write"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.4",
