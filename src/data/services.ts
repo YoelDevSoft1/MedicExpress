@@ -71,7 +71,7 @@ export const services: Service[] = [
       'MedicExpress funciona como puerta de entrada nacional para pacientes y familias que buscan servicios médicos en casa, enfermería a domicilio, teleconsulta ($90.000 COP) u orientación clínica inicial. En Bogotá, la atención presencial se coordina hoy mismo con SMD Vital Bogotá.',
     intent: 'Usuarios en Colombia y Bogotá que buscan atención médica domiciliaria, enfermería en casa o teleconsulta con tarifas transparentes en COP.',
     price: 'Desde $90.000 COP (Teleconsulta) / Domicilio en Bogotá desde $95.000 COP',
-    highlights: ['Atención hoy mismo en Bogotá con SMD Vital', 'Precios transparentes desde $90.000 COP', 'Profesionales verificados en ReTHUS'],
+    highlights: ['Atención hoy mismo en Bogotá con SMD Vital', 'Precios transparentes desde $90.000 COP', 'Personal de salud calificado'],
     suitableFor: [
       'Pacientes en Bogotá que requieren enfermería o médico a domicilio hoy mismo',
       'Familias que necesitan orientación clínica rápida antes de desplazarse',
@@ -80,7 +80,7 @@ export const services: Service[] = [
     includes: [
       'Triage y orientación inicial por WhatsApp para clasificar el nivel de atención requerido.',
       'Validación de cobertura por localidad en Bogotá y Sabana con tarifas oficiales en pesos colombianos (COP).',
-      'Asignación de profesionales de medicina general o enfermería verificados en ReTHUS a través de SMD Vital Bogotá.',
+      'Asignación de profesionales de medicina general o enfermería calificados en salud a través de SMD Vital Bogotá.',
       'Derivación responsable hacia teleconsulta o ruta de urgencias cuando el cuadro clínico lo exija.'
     ],
     preparation: [
@@ -139,7 +139,7 @@ export const services: Service[] = [
       'Familias que necesitan definir si requieren consulta médica domiciliaria ($170.000 COP) o urgencias'
     ],
     includes: [
-      'Sesión de teleconsulta de medicina general por videollamada segura con médico registrado en ReTHUS.',
+      'Sesión de teleconsulta de medicina general por videollamada segura con médico calificado.',
       'Anamnesis clínica completa, evaluación de síntomas, antecedentes y revisión de resultados diagnósticos previos.',
       'Plan de manejo médico, recomendaciones terapéuticas y fórmula u órdenes médicas digitales cuando el criterio clínico lo indique.',
       'Aclaración importante: por política clínica, la teleconsulta no emite incapacidades médicas.'
@@ -261,7 +261,7 @@ export const services: Service[] = [
     ],
     includes: [
       'Validación clínica previa del procedimiento o perfil de turno de enfermería requerido en Bogotá.',
-      'Asignación de personal de enfermería verificado en ReTHUS con protocolos de bioseguridad y técnica aséptica.',
+      'Asignación de personal de enfermería calificado en salud con protocolos de bioseguridad y técnica aséptica.',
       'Seguimiento familiar y educación en cuidados domiciliarios y detección temprana de signos de alarma.'
     ],
     preparation: [
@@ -367,14 +367,14 @@ export const services: Service[] = [
     summary:
       'Recibe consulta médica convencional a domicilio en Bogotá por $140.000 COP o valoración médica prioritaria por $170.000 COP sin salir de casa. Un médico certificado realiza valoración clínica integral, control de signos vitales, examen físico completo y plan de tratamiento en tu hogar, coordinado hoy mismo por SMD Vital Bogotá.',
     intent: 'Personas que buscan médico a domicilio en Bogotá hoy mismo con tarifa transparente ($140.000 COP convencional / $170.000 COP prioritaria).',
-    highlights: ['Consulta convencional $140.000 COP | Prioritaria $170.000 COP', 'Atención hoy mismo coordinada por SMD Vital', 'Médicos verificados en ReTHUS'],
+    highlights: ['Consulta convencional $140.000 COP | Prioritaria $170.000 COP', 'Atención hoy mismo coordinada por SMD Vital', 'Médicos calificados en salud'],
     suitableFor: [
       'Cuadros agudos no vitales (infecciones respiratorias, gastrointestinales, urinarias, dolor lumbar o migraña)',
       'Adultos mayores, pacientes crónicos o personas con movilidad reducida en Bogotá',
       'Familias que prefieren valoración médica presencial en casa sin esperas en sala'
     ],
     includes: [
-      'Visita presencial de médico general titulado y registrado en ReTHUS en el domicilio del paciente en Bogotá.',
+      'Visita presencial de médico general titulado y calificado en el domicilio del paciente en Bogotá.',
       'Historia clínica completa, entrevista médica (anamnesis) y revisión de antecedentes y medicamentos actuales.',
       'Toma de signos vitales completos (presión arterial, frecuencia cardíaca, saturación de oxígeno, temperatura y frecuencia respiratoria).',
       'Examen físico por sistemas, impresión diagnóstica, formulación médica y plan de cuidado con signos de alarma.'
@@ -440,7 +440,7 @@ export const services: Service[] = [
       'Seguimiento posthospitalario, control de enfermedades crónicas y ajuste terapéutico'
     ],
     includes: [
-      'Evaluación clínica presencial en Bogotá por médico general certificado en ReTHUS ($170.000 COP).',
+      'Evaluación clínica presencial en Bogotá por médico general calificado en salud ($170.000 COP).',
       'Toma e interpretación de signos vitales (tensión arterial, oximetría de pulso, frecuencia cardíaca y temperatura).',
       'Examen físico cefalocaudal completo, revisión de conciliación medicamentosa y antecedentes clínicos.',
       'Entrega de diagnóstico clínico, fórmula médica, órdenes de apoyo diagnóstico si aplican y recomendaciones de alarma.'
@@ -506,7 +506,7 @@ export const services: Service[] = [
       'Seguimiento de enfermedades crónicas estables y renovación de fórmulas según criterio médico'
     ],
     includes: [
-      'Consulta virtual por videollamada con médico general titulado y verificado en ReTHUS ($90.000 COP).',
+      'Consulta virtual por videollamada con médico general titulado y calificado en salud ($90.000 COP).',
       'Evaluación clínica de síntomas, historia médica, antecedentes farmacológicos y revisión de paraclínicos.',
       'Recomendaciones terapéuticas, plan de cuidado en casa y envío digital de fórmula médica u órdenes de exámenes cuando aplique.',
       'Condición normativa y clínica: la teleconsulta de medicina general no emite incapacidades médicas.'
@@ -1127,7 +1127,7 @@ export const services: Service[] = [
       '¿Necesitas un turno de enfermería a domicilio o acompañamiento hospitalario en Bogotá? Coordinamos turnos de 8h ($140.000 COP), 12h día ($160.000 COP), 12h noche ($170.000 COP) y 24h ($310.000 COP con dos relevos de 12 horas), además de turnos cortos desde 4h ($110.000 COP) con SMD Vital Bogotá.',
     intent: 'Familias que buscan turnos de enfermería a domicilio en Bogotá (8h $140.000, 12h día $160.000, 12h noche $170.000, 24h $310.000 COP).',
     price: `8h $140.000 COP | 12h día $160.000 COP | 12h noche $170.000 COP | 24h $310.000 COP (4h desde ${new Intl.NumberFormat('es-CO').format(nursingPrices.shifts[0].priceCOP)} COP)`,
-    highlights: ['Turnos 8h ($140k), 12h día ($160k), 12h noche ($170k), 24h ($310k)', 'Atención domiciliaria y apoyo hospitalario en Bogotá', 'Personal de enfermería verificado en ReTHUS'],
+    highlights: ['Turnos 8h ($140k), 12h día ($160k), 12h noche ($170k), 24h ($310k)', 'Atención domiciliaria y apoyo hospitalario en Bogotá', 'Personal de enfermería calificado en salud'],
     suitableFor: [
       'Adultos mayores con dependencia funcional, deterioro cognitivo o riesgo de caídas',
       'Pacientes en recuperación postquirúrgica o posthospitalaria que requieren cuidado por turnos',
@@ -1206,7 +1206,7 @@ export const services: Service[] = [
       'Adultos mayores y personas que desean evitar desplazamientos a droguerías o salas de urgencias'
     ],
     includes: [
-      'Tarifa base de $95.000 COP: visita a domicilio en Bogotá por profesional de enfermería certificado en ReTHUS para aplicación IM, SC o IV.',
+      'Tarifa base de $95.000 COP: visita a domicilio en Bogotá por profesional de enfermería calificado en salud para aplicación IM, SC o IV.',
       'Insumos estériles de aplicación incluidos (jeringa desechable, aguja, torundas con alcohol antiséptico, guantes y guardián de biosanitarios).',
       'Verificación de los 10 correctos en administración de medicamentos y vigilancia post-aplicación inmediata.',
       'Modalidad con provisión de medicamento: el equipo clínico puede validar síntomas y proveer/llevar el medicamento cotizando aplicación + medicamento de forma transparente.'

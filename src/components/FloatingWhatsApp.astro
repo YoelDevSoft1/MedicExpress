@@ -17,88 +17,11 @@ import { getWhatsappUrl } from '../data/services';
   </span>
   <span class="whatsapp-orbit__copy">
     <strong>Agendar por WhatsApp</strong>
-    <small>Profesionales ReTHUS · Atención hoy mismo</small>
+    <small>Personal calificado · Atención hoy mismo</small>
   </span>
 </a>
 
-<div class="whatsapp-sticky-bar" role="region" aria-label="Acción rápida de WhatsApp en móvil">
-  <div class="whatsapp-sticky-bar__info">
-    <strong>Atención hoy mismo en Bogotá</strong>
-    <span>Profesionales ReTHUS · Insumos estériles</span>
-  </div>
-  <a
-    href={getWhatsappUrl(undefined, Astro.url.pathname)}
-    class="whatsapp-sticky-bar__btn focus-ring"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Icon name="brand-whatsapp" size={18} stroke-width={1.9} aria-hidden="true" />
-    <span>WhatsApp</span>
-  </a>
-</div>
-
 <style>
-  @media(max-width:1023px){a.whatsapp-orbit{display:none}}
-  @media(min-width:1024px){.whatsapp-sticky-bar{display:none}}
-
-  .whatsapp-sticky-bar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 65;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 10px 16px max(10px, env(safe-area-inset-bottom));
-    background: rgba(15, 23, 42, 0.96);
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
-    backdrop-filter: blur(12px);
-    color: #ffffff;
-    box-shadow: 0 -10px 28px rgba(15, 23, 42, 0.24);
-  }
-
-  .whatsapp-sticky-bar__info {
-    display: grid;
-    gap: 2px;
-    min-width: 0;
-  }
-
-  .whatsapp-sticky-bar__info strong {
-    font-size: 13px;
-    font-weight: 850;
-    line-height: 1.2;
-    color: #ffffff;
-  }
-
-  .whatsapp-sticky-bar__info span {
-    font-size: 11px;
-    font-weight: 600;
-    line-height: 1.25;
-    color: #cbd5e1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .whatsapp-sticky-bar__btn {
-    display: inline-flex;
-    flex-shrink: 0;
-    min-height: 42px;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #25d366, #12b76a);
-    padding: 8px 16px;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 850;
-    text-decoration: none;
-    box-shadow: 0 6px 18px rgba(18, 183, 106, 0.36);
-  }
-
   .whatsapp-orbit {
     position: fixed;
     right: max(18px, env(safe-area-inset-right));
