@@ -7,9 +7,25 @@ type FAQ = {
 type Props = {
   faqs: FAQ[];
   title?: string;
+  emitSchema?: boolean;
 };
 
-const { faqs, title = 'Preguntas frecuentes' } = Astro.props;
+const { faqs, title = 'Preguntas frecuentes', emitSchema = true } = Astro.props;
+const faqSchema =
+  emitSchema && faqs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      }
+    : null;
 ---
 
 <section class="section bg-slate-50">
@@ -34,6 +50,7 @@ const { faqs, title = 'Preguntas frecuentes' } = Astro.props;
       }
     </div>
   </div>
+  {faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema).replaceAll('<', '\\u003c')} />}
 </section>
 
 <style>

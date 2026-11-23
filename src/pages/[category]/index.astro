@@ -3,6 +3,7 @@ import Icon from '../../components/Icon.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ConversionPanel from '../../components/ConversionPanel.astro';
+import LocalCoverageHub from '../../components/LocalCoverageHub.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import ServicePhoto from '../../components/ServicePhoto.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
@@ -22,34 +23,34 @@ const getCategoryPages = (): CategoryPage[] => [
   {
     slug: 'servicios-medicos',
     category: 'Servicios médicos',
-    title: 'Servicios médicos a domicilio | MedicExpress',
+    title: 'Médicos a Domicilio Bogotá desde $90.000 COP | Atención Hoy Mismo | MedicExpress',
     h1: 'Servicios médicos a domicilio con orientación clara',
     description:
-      'Explora servicios médicos a domicilio, teleconsulta, valoración médica, procedimientos y orientación por WhatsApp con MedicExpress y SMD Vital.',
+      'Médicos a domicilio en Bogotá con atención hoy mismo: teleconsulta $90.000 COP, lavado de oídos $140.000 COP, consulta médica $170.000 COP y curaciones desde $150.000 COP.',
     intro:
-      'Este hub reúne las páginas médicas principales para pacientes que necesitan orientación, atención en casa o una ruta responsable antes de desplazarse.',
+      'Este hub reúne los servicios médicos a domicilio y virtuales en Bogotá coordinados por SMD Vital: consulta médica domiciliaria ($170.000 COP), teleconsulta ($90.000 COP), lavado de oídos ($140.000 COP), sueroterapia, curaciones y suturas (desde $150.000 COP).',
     intent: 'Médico a domicilio, teleconsulta, procedimientos menores, valoración y orientación médica.'
   },
   {
     slug: 'servicios-de-enfermeria',
     category: 'Enfermería',
-    title: 'Servicios de enfermería a domicilio | MedicExpress',
+    title: 'Enfermería a Domicilio Bogotá desde $95.000 COP | Atención Hoy Mismo | MedicExpress',
     h1: 'Servicios de enfermería a domicilio para pacientes y familias',
     description:
-      'Consulta servicios de enfermería a domicilio, inyectología, toma de signos vitales y acompañamiento a citas médicas. Atención coordinada por SMD Vital en Bogotá.',
+      'Enfermería a domicilio en Bogotá hoy mismo: inyectología $95.000 COP, signos vitales $100.000 COP, acompañamiento a citas $110.000 COP y turnos desde $140.000 COP (8h).',
     intro:
-      'Este hub ordena las solicitudes de enfermería en casa: adultos mayores, medicamentos formulados, signos vitales, apoyo familiar y procedimientos programados.',
+      'Este hub ordena los servicios de enfermería en casa coordinados con SMD Vital Bogotá: inyectología ($95.000 COP), toma de signos vitales ($100.000 COP), acompañamiento a citas médicas ($110.000 COP / 4h) y turnos de enfermería de 8h ($140.000 COP), 12h día ($160.000 COP), 12h noche ($170.000 COP) y 24h ($310.000 COP).',
     intent: 'Enfermería a domicilio, enfermera en casa, inyectología, signos vitales y cuidado de adultos mayores.'
   },
   {
     slug: 'laboratorio-clinico',
     category: 'Laboratorio clínico',
-    title: 'Laboratorio clínico a domicilio | MedicExpress',
+    title: 'Laboratorio Clínico a Domicilio Bogotá | Orientación por WhatsApp | MedicExpress',
     h1: 'Laboratorio clínico a domicilio y toma de muestras en casa',
     description:
-      'Consulta laboratorio clínico a domicilio, toma de muestras en casa, pruebas y orientación de preparación por WhatsApp con MedicExpress.',
+      'Consulta laboratorio clínico a domicilio, toma de muestras en casa, pruebas y orientación de preparación por WhatsApp con MedicExpress y SMD Vital.',
     intro:
-      'Este hub agrupa los servicios de laboratorio y toma de muestras para pacientes que necesitan evitar desplazamientos y validar requisitos antes de agendar.',
+      'Este hub agrupa las páginas informativas de laboratorio y toma de muestras para pacientes que necesitan validar requisitos y posibilidad de atención antes de agendar.',
     intent: 'Laboratorio a domicilio, toma de muestras, exámenes en casa y preparación de pruebas.'
   }
 ];
@@ -59,34 +60,34 @@ export function getStaticPaths() {
     {
       slug: 'servicios-medicos',
       category: 'Servicios médicos',
-      title: 'Servicios médicos a domicilio | MedicExpress',
+      title: 'Médicos a Domicilio Bogotá desde $90.000 COP | Atención Hoy Mismo | MedicExpress',
       h1: 'Servicios médicos a domicilio con orientación clara',
       description:
-        'Explora servicios médicos a domicilio, teleconsulta, valoración médica, procedimientos y orientación por WhatsApp con MedicExpress y SMD Vital.',
+        'Médicos a domicilio en Bogotá con atención hoy mismo: teleconsulta $90.000 COP, lavado de oídos $140.000 COP, consulta médica $170.000 COP y curaciones desde $150.000 COP.',
       intro:
-        'Este hub reúne las páginas médicas principales para pacientes que necesitan orientación, atención en casa o una ruta responsable antes de desplazarse.',
+        'Este hub reúne los servicios médicos a domicilio y virtuales en Bogotá coordinados por SMD Vital: consulta médica domiciliaria ($170.000 COP), teleconsulta ($90.000 COP), lavado de oídos ($140.000 COP), sueroterapia, curaciones y suturas (desde $150.000 COP).',
       intent: 'Médico a domicilio, teleconsulta, procedimientos menores, valoración y orientación médica.'
     },
     {
       slug: 'servicios-de-enfermeria',
       category: 'Enfermería',
-      title: 'Servicios de enfermería a domicilio | MedicExpress',
+      title: 'Enfermería a Domicilio Bogotá desde $95.000 COP | Atención Hoy Mismo | MedicExpress',
       h1: 'Servicios de enfermería a domicilio para pacientes y familias',
       description:
-        'Consulta servicios de enfermería a domicilio, inyectología, toma de signos vitales y acompañamiento a citas médicas. Atención coordinada por SMD Vital en Bogotá.',
+        'Enfermería a domicilio en Bogotá hoy mismo: inyectología $95.000 COP, signos vitales $100.000 COP, acompañamiento a citas $110.000 COP y turnos desde $140.000 COP (8h).',
       intro:
-        'Este hub ordena las solicitudes de enfermería en casa: adultos mayores, medicamentos formulados, signos vitales, apoyo familiar y procedimientos programados.',
+        'Este hub ordena los servicios de enfermería en casa coordinados con SMD Vital Bogotá: inyectología ($95.000 COP), toma de signos vitales ($100.000 COP), acompañamiento a citas médicas ($110.000 COP / 4h) y turnos de enfermería de 8h ($140.000 COP), 12h día ($160.000 COP), 12h noche ($170.000 COP) y 24h ($310.000 COP).',
       intent: 'Enfermería a domicilio, enfermera en casa, inyectología, signos vitales y cuidado de adultos mayores.'
     },
     {
       slug: 'laboratorio-clinico',
       category: 'Laboratorio clínico',
-      title: 'Laboratorio clínico a domicilio | MedicExpress',
+      title: 'Laboratorio Clínico a Domicilio Bogotá | Orientación por WhatsApp | MedicExpress',
       h1: 'Laboratorio clínico a domicilio y toma de muestras en casa',
       description:
-        'Consulta laboratorio clínico a domicilio, toma de muestras en casa, pruebas y orientación de preparación por WhatsApp con MedicExpress.',
+        'Consulta laboratorio clínico a domicilio, toma de muestras en casa, pruebas y orientación de preparación por WhatsApp con MedicExpress y SMD Vital.',
       intro:
-        'Este hub agrupa los servicios de laboratorio y toma de muestras para pacientes que necesitan evitar desplazamientos y validar requisitos antes de agendar.',
+        'Este hub agrupa las páginas informativas de laboratorio y toma de muestras para pacientes que necesitan validar requisitos y posibilidad de atención antes de agendar.',
       intent: 'Laboratorio a domicilio, toma de muestras, exámenes en casa y preparación de pruebas.'
     }
   ];
@@ -144,6 +145,20 @@ const schema = {
             <Icon name="arrow-right" size={20} stroke-width={1.75} aria-hidden="true" />
           </a>
         </div>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-slate-700">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">
+            <Icon name="shield-check" class="text-indigo-700" size={16} stroke-width={1.75} aria-hidden="true" />
+            Profesionales verificados en ReTHUS
+          </span>
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">
+            <Icon name="clock" class="text-indigo-700" size={16} stroke-width={1.75} aria-hidden="true" />
+            Atención hoy mismo en Bogotá
+          </span>
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">
+            <Icon name="circle-check" class="text-indigo-700" size={16} stroke-width={1.75} aria-hidden="true" />
+            Insumos estériles incluidos
+          </span>
+        </div>
       </div>
 
       <div class="surface rounded-[24px] p-5 sm:p-6">
@@ -186,5 +201,6 @@ const schema = {
     </div>
   </section>
 
+  <LocalCoverageHub currentCategory={page.category} />
   <ConversionPanel title={`Consulta ${page.category.toLowerCase()} por WhatsApp`} />
 </BaseLayout>

@@ -4,14 +4,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ServicePhoto from '../components/ServicePhoto.astro';
 import ConversionPanel from '../components/ConversionPanel.astro';
 import FAQSection from '../components/FAQSection.astro';
+import LocalCoverageHub from '../components/LocalCoverageHub.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import TrustStrip from '../components/TrustStrip.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import { categories, categoryPaths, getServicesByCategory, siteConfig, absoluteUrl } from '../data/services';
 
-const title = 'MedicExpress | Servicios médicos a domicilio conectados con SMD Vital';
+const title = 'Enfermería y Médicos a Domicilio Bogotá desde $95.000 COP | Atención Hoy Mismo | MedicExpress';
 const description =
-  'Consulta médica, auxiliares de enfermería y procedimientos a domicilio en Bogotá. Consulta precios y disponibilidad por WhatsApp. Atención coordinada por SMD Vital.';
+  'Enfermería y médicos a domicilio en Bogotá con atención hoy mismo: inyectología $95.000 COP, lavado de oídos $140.000 COP, consulta médica $170.000 COP y teleconsulta $90.000 COP.';
 const nationalPages = getServicesByCategory('Cobertura nacional');
 
 const homeSchema = {
@@ -29,19 +30,24 @@ const homeSchema = {
 
 const faqs = [
   {
-    question: 'MedicExpress y SMD Vital son lo mismo?',
+    question: '¿Cuánto cuestan los servicios médicos y de enfermería a domicilio en Bogotá?',
     answer:
-      'Puedes solicitar atención desde MedicExpress. El equipo de SMD Vital Bogotá confirma el servicio, la zona, el horario y el precio antes de agendar.'
+      'Tarifas oficiales en Bogotá: Inyectología $95.000 COP, Toma de signos vitales $100.000 COP, Retiro de sonda vesical $110.000 COP, Acompañamiento a citas médicas (hasta 4h) $110.000 COP, Retiro de puntos $120.000 COP, Lavado de oídos $140.000 COP (uno o ambos oídos), Suero de hidratación, Curación de heridas y Sutura desde $150.000 COP, Cambio/colocación de sonda vesical $170.000 COP, Consulta médica domiciliaria $170.000 COP, Turnos de enfermería 8h ($140.000 COP), 12h día ($160.000 COP), 12h noche ($170.000 COP), 24h ($310.000 COP) y Teleconsulta $90.000 COP.'
   },
   {
-    question: 'Puedo solicitar el servicio directamente por WhatsApp?',
+    question: '¿MedicExpress y SMD Vital son lo mismo?',
     answer:
-      'Sí. El canal de WhatsApp permite validar servicio, ubicación, horario, datos básicos del paciente y disponibilidad.'
+      'Puedes solicitar atención desde MedicExpress. El equipo clínico de SMD Vital Bogotá confirma el servicio, la localidad, el horario y el precio oficial antes de agendar.'
   },
   {
-    question: 'Atienden urgencias vitales?',
+    question: '¿Puedo solicitar atención hoy mismo directamente por WhatsApp?',
     answer:
-      'No reemplazamos una ruta de urgencias. Ante dificultad respiratoria severa, dolor torácico intenso, pérdida de conciencia o sangrado abundante, se debe acudir a urgencias.'
+      'Sí. El canal de WhatsApp permite validar servicio, localidad en Bogotá, horario, requisitos clínicos del paciente y disponibilidad para atención hoy mismo.'
+  },
+  {
+    question: '¿Atienden urgencias vitales?',
+    answer:
+      'No reemplazamos una ruta de urgencias. Ante dificultad respiratoria severa, dolor torácico intenso, pérdida de conciencia o sangrado abundante, se debe acudir a urgencias o llamar al 123.'
   }
 ];
 ---
@@ -59,17 +65,23 @@ const faqs = [
       <p class="coordination-note">
         {siteConfig.referralMessage}
       </p>
-      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+      <div class="mt-6 rounded-2xl border border-indigo-100 bg-indigo-50/70 p-4 text-sm text-slate-800">
+        <p class="font-extrabold text-indigo-950">Tarifas transparentes en Bogotá (COP)</p>
+        <p class="mt-1 leading-6 text-slate-700">
+          Inyectología <strong>$95.000 COP</strong> · Lavado de oídos <strong>$140.000 COP</strong> · Sueroterapia y Curaciones <strong>desde $150.000 COP</strong> · Consulta médica <strong>$170.000 COP</strong> · Teleconsulta <strong>$90.000 COP</strong>.
+        </p>
+      </div>
+      <div class="mt-6 flex flex-col gap-3 sm:flex-row">
         <WhatsAppButton label="Agendar por WhatsApp" />
         <a class="btn-secondary" href="#servicios">
-          <span>Explorar servicios</span>
+          <span>Explorar servicios y precios</span>
           <Icon name="arrow-right" size={20} stroke-width={1.75} aria-hidden="true" />
         </a>
       </div>
       <div class="mt-8 grid max-w-2xl gap-3 sm:grid-cols-3">
-        {['Orientación inicial', 'Servicios en casa', 'Conexión SMD Vital'].map((item) => (
+        {['Profesionales verificados en ReTHUS', 'Atención hoy mismo en Bogotá', 'Insumos estériles incluidos'].map((item) => (
           <div class="flex items-center gap-2 text-sm font-bold text-slate-700">
-            <Icon name="circle-check" class="text-indigo-700" size={20} stroke-width={1.75} aria-hidden="true" />
+            <Icon name="circle-check" class="shrink-0 text-indigo-700" size={20} stroke-width={1.75} aria-hidden="true" />
             <span>{item}</span>
           </div>
         ))}
@@ -188,6 +200,7 @@ const faqs = [
     </div>
   </section>
 
+  <LocalCoverageHub />
   <ConversionPanel />
   <FAQSection faqs={faqs} />
 </BaseLayout>

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-11",
-  "source": "Catálogo del agente de atención SMD Vital: nursingShiftPricing.ts",
+  "updatedAt": "2026-11-23",
+  "source": "Catálogo oficial SMD Vital Bogotá: nursingShiftPricing.ts",
   "shifts": [
     {
       "code": "turno_enfermeria_4h",
@@ -15,7 +15,7 @@
     {
       "code": "turno_enfermeria_8h_diurno",
       "label": "8 horas diurnas",
-      "priceCOP": 125000
+      "priceCOP": 140000
     },
     {
       "code": "turno_enfermeria_8h_nocturno",
@@ -25,17 +25,17 @@
     {
       "code": "turno_enfermeria_12h_diurno",
       "label": "12 horas diurnas",
-      "priceCOP": 145000
+      "priceCOP": 160000
     },
     {
       "code": "turno_enfermeria_12h_nocturno",
       "label": "12 horas nocturnas",
-      "priceCOP": 180000
+      "priceCOP": 170000
     },
     {
       "code": "turno_enfermeria_24h",
       "label": "24 horas ordinarias, dos relevos",
-      "priceCOP": 280000
+      "priceCOP": 310000
     },
     {
       "code": "turno_festivo_8h",

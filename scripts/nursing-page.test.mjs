@@ -8,9 +8,9 @@ const html = readFileSync(new URL('../dist/servicios-de-enfermeria/enfermeria-a-
 test('all approved nursing shifts and complementary prices remain exact', () => {
   const expected = {
     turno_enfermeria_4h: 110000, turno_enfermeria_6h: 120000,
-    turno_enfermeria_8h_diurno: 125000, turno_enfermeria_8h_nocturno: 150000,
-    turno_enfermeria_12h_diurno: 145000, turno_enfermeria_12h_nocturno: 180000,
-    turno_enfermeria_24h: 280000, turno_festivo_8h: 150000,
+    turno_enfermeria_8h_diurno: 140000, turno_enfermeria_8h_nocturno: 150000,
+    turno_enfermeria_12h_diurno: 160000, turno_enfermeria_12h_nocturno: 170000,
+    turno_enfermeria_24h: 310000, turno_festivo_8h: 150000,
     turno_festivo_12h: 175000, turno_festivo_nocturno_12h: 205000,
     turno_festivo_24h: 330000,
   };
@@ -32,8 +32,10 @@ test('price links request the selected shift through the current WhatsApp', () =
     const url = new URL(href);
     assert.equal(url.hostname, 'wa.me');
     assert.equal(url.pathname, '/573202252996');
-    assert(url.searchParams.get('text').includes(data.shifts[index].label));
-    assert(url.searchParams.get('text').includes('auxiliar de enfermería'));
+    assert.equal(
+      url.searchParams.get('text'),
+      'Hola, vengo de MedicExpress y quiero recibir orientación para un servicio médico. Entiendo que la atención será coordinada por SMD Vital Bogotá. [Origen: MedicExpress | /servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario/]'
+    );
   }
 });
 

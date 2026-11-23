@@ -41,9 +41,9 @@ const groups = [
       ))}
     </div>
     <div class="additional-services">
-      <article><p class="kicker">Extensión de un servicio</p><h3>Hora adicional</h3><p class="additional-price">{formatCOP(nursingPrices.additionalHourCOP)}</p><p>No se vende como visita independiente. Confirma la extensión con coordinación.</p></article>
+      <article><p class="kicker">Extensión de un servicio</p><h3>Hora adicional</h3><p class="additional-price">{formatCOP(nursingPrices.additionalHourCOP)}</p><p>No se vende como visita independiente. Confirma la extensión con coordinación. <a class="focus-ring" href={getWhatsappUrl(undefined, Astro.url.pathname)} target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a></p></article>
       <article><p class="kicker">Bloque mínimo de 4 horas</p><h3>Acompañamiento a citas</h3><p class="additional-price">{formatCOP(nursingPrices.appointmentSupportCOP)}</p><p>El traslado del paciente se acuerda aparte. <a class="focus-ring" href="/servicios-de-enfermeria/acompanamiento-a-citas-medicas/">Ver acompañamiento a citas →</a></p></article>
-      <article><p class="kicker">Según plan y necesidades</p><h3>Cuidado de adulto mayor</h3><p class="additional-price">Cotización por plan</p><p>Se revisan tareas, duración y nivel de dependencia antes de definir el alcance y el valor.</p></article>
+      <article><p class="kicker">Según plan y necesidades</p><h3>Cuidado de adulto mayor</h3><p class="additional-price">Cotización por plan</p><p>Se revisan tareas, duración y nivel de dependencia antes de definir el alcance y el valor. <a class="focus-ring" href={getWhatsappUrl(undefined, Astro.url.pathname)} target="_blank" rel="noopener noreferrer">Cotizar plan por WhatsApp →</a></p></article>
     </div>
     <div class="care-notes grid gap-8 lg:grid-cols-[0.7fr_1fr] lg:items-start">
       <ServicePhoto name="cuidado-nocturno" />

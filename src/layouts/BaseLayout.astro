@@ -4,11 +4,14 @@ import Footer from '../components/Footer.astro';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 import '../styles/global.css';
 import { absoluteUrl, siteConfig } from '../data/services';
+import { BOGOTA_LOCALITIES_AREA_SERVED, buildMedicExpressCatalogOffers, buildMedicExpressOffersSchema } from '../utils/schema';
 
 type Props = {
   title: string;
   description: string;
   canonicalPath?: string;
+  ogImage?: string;
+  preloadPhoto?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 };
 
@@ -16,11 +19,81 @@ const {
   title,
   description,
   canonicalPath = '/',
+  ogImage,
+  preloadPhoto,
   jsonLd = []
 } = Astro.props;
 
+const DEFAULT_PHOTO_BY_PATH: Record<string, string> = {
+  '/': 'visita-medica',
+  '/servicios-medicos/': 'material-visita-medica',
+  '/servicios-de-enfermeria/': 'auxiliar-cuidado',
+  '/colombia/': 'coordinacion-familiar',
+  '/medico-a-domicilio-colombia/': 'material-visita-medica',
+  '/enfermeria-a-domicilio-colombia/': 'auxiliar-cuidado',
+  '/teleconsulta-medica-colombia/': 'teleconsulta-hogar',
+  '/servicios-medicos/servicio-medico-a-domicilio/': 'visita-medica',
+  '/servicios-medicos/valoracion-medica-a-domicilio/': 'visita-medica',
+  '/servicios-medicos/teleconsulta-medica/': 'teleconsulta-hogar',
+  '/servicios-medicos/cura-de-heridas-simples-y-complejas/': 'preparacion-curaciones',
+  '/servicios-medicos/sutura-y-retiro-de-puntos/': 'preparacion-curaciones',
+  '/servicios-medicos/lavado-de-oido/': 'valoracion-oidos',
+  '/servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario/': 'auxiliar-cuidado',
+  '/servicios-de-enfermeria/toma-de-signos-vitales/': 'signos-vitales',
+  '/servicios-de-enfermeria/acompanamiento-a-citas-medicas/': 'acompanamiento-citas',
+};
+
 const canonical = absoluteUrl(canonicalPath);
-const schemas = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+const slug = canonicalPath.replace(/^\/|\/$/g, '');
+const activePreloadPhoto = preloadPhoto ?? DEFAULT_PHOTO_BY_PATH[canonicalPath];
+const pageOffers = slug ? buildMedicExpressOffersSchema(slug, canonical) : undefined;
+const resolvedOgImage = ogImage ? absoluteUrl(ogImage) : activePreloadPhoto ? absoluteUrl(`/img/photos/${activePreloadPhoto}-1200.webp`) : absoluteUrl('/img/medicexpress-og.jpg');
+const rawSchemas = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+const schemas = rawSchemas
+  .filter((s) => s['@type'] !== 'FAQPage')
+  .map((s) => {
+    if (pageOffers && (s['@type'] === 'MedicalProcedure' || s['@type'] === 'MedicalWebPage') && !s.offers) {
+      return { ...s, offers: pageOffers };
+    }
+    return s;
+  });
+
+const medicalBusinessNode: Record<string, unknown> = {
+  '@type': 'MedicalBusiness',
+  '@id': absoluteUrl('/#medicalbusiness'),
+  name: `${siteConfig.name} — Coordinación con SMD Vital Bogotá`,
+  url: absoluteUrl('/'),
+  logo: absoluteUrl(siteConfig.logoPath),
+  image: resolvedOgImage,
+  description: siteConfig.defaultDescription,
+  telephone: siteConfig.phone,
+  priceRange: '$90.000 - $310.000 COP',
+  currenciesAccepted: 'COP',
+  areaServed: BOGOTA_LOCALITIES_AREA_SERVED,
+   ...(canonicalPath === '/'
+    ? {
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Catálogo de Servicios Médicos y Enfermería a Domicilio en Bogotá',
+          itemListElement: buildMedicExpressCatalogOffers(siteConfig.url),
+        },
+      }
+    : {}),
+};
+
+const serviceGraphNode: Record<string, unknown> | null = pageOffers
+  ? {
+      '@type': 'Service',
+      '@id': `${canonical}#service`,
+      name: title.replace(/\s*\|\s*MedicExpress.*$/i, ''),
+      description,
+      url: canonical,
+      provider: { '@id': absoluteUrl('/#medicalbusiness') },
+      areaServed: BOGOTA_LOCALITIES_AREA_SERVED,
+      offers: pageOffers,
+    }
+  : null;
+
 const identity = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -37,6 +110,8 @@ const identity = {
       name: siteConfig.name, url: absoluteUrl('/'), inLanguage: 'es-CO',
       publisher: { '@id': absoluteUrl('/#organization') },
     },
+    medicalBusinessNode,
+    ...(serviceGraphNode ? [serviceGraphNode] : []),
   ],
 };
 ---
@@ -59,7 +134,7 @@ const identity = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={absoluteUrl('/img/medicexpress-og.jpg')} />
+    <meta property="og:image" content={resolvedOgImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="MedicExpress: servicios de salud coordinados con SMD Vital Bogotá" />
@@ -67,8 +142,21 @@ const identity = {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={absoluteUrl('/img/medicexpress-og.jpg')} />
+    <meta name="twitter:image" content={resolvedOgImage} />
     <meta name="twitter:image:alt" content="MedicExpress: servicios de salud coordinados con SMD Vital Bogotá" />
+
+    {
+      activePreloadPhoto && (
+        <link
+          rel="preload"
+          as="image"
+          href={`/img/photos/${activePreloadPhoto}-768.webp`}
+          imagesrcset={[480, 768, 1200].map((w) => `/img/photos/${activePreloadPhoto}-${w}.webp ${w}w`).join(', ')}
+          imagesizes="(min-width: 1024px) 480px, (min-width: 640px) 700px, calc(100vw - 64px)"
+          fetchpriority="high"
+        />
+      )
+    }
 
     {
       [identity, ...schemas].map((schema) => (

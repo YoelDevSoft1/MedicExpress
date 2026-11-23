@@ -59,13 +59,15 @@ test('the local coverage schemas name Bogotá and approved fixed prices are not 
     ['servicios-medicos/lavado-de-oido', '140.000'],
     ['servicios-de-enfermeria/inyectologia-a-domicilio', '95.000'],
     ['servicios-de-enfermeria/toma-de-signos-vitales', '100.000'],
-    ['servicios-medicos/terapias-respiratorias', '115.000'],
+    ['servicios-medicos/teleconsulta-medica', '90.000'],
   ]) {
     const html = read(`dist/${route}/index.html`);
     assert.ok(html.includes(`$${price} COP`));
     assert.ok(!html.includes(`Desde $${price}`), route);
     assert.ok(!html.includes(`desde $${price}`), route);
   }
+  const respHtml = read('dist/servicios-medicos/terapias-respiratorias/index.html');
+  assert.ok(/valoraci[oó]n cl[ií]nica/i.test(respHtml), 'servicios-medicos/terapias-respiratorias');
   const changes = JSON.parse(read('seo-changes-2026-11-11.json')).changes;
   for (const change of changes) assert.ok(!/[?\uFFFD]/.test(change.after), change.slug);
 });

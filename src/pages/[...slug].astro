@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ConversionPanel from '../components/ConversionPanel.astro';
 import FAQSection from '../components/FAQSection.astro';
+import LocalCoverageHub from '../components/LocalCoverageHub.astro';
 import NursingPrices from '../components/NursingPrices.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import ServicePhoto from '../components/ServicePhoto.astro';
@@ -28,6 +29,9 @@ const description = review ? `${service.shortTitle}: consulta tu solicitud por W
 const relatedServices = getRelatedServices(service);
 const isNationalPage = service.category === 'Cobertura nacional';
 const isNursingPage = service.slug === 'servicios-de-enfermeria/enfermeria-a-nivel-domiciliario-y-hospitalario';
+const isSuturaPage = service.slug === 'servicios-medicos/sutura-y-retiro-de-puntos';
+const isSondaPage = service.slug === 'servicios-medicos/retiro-y-colocacion-de-sonda-vesical';
+const isValoracionPage = service.slug === 'servicios-medicos/valoracion-medica-a-domicilio' || service.slug === 'servicios-medicos/servicio-medico-a-domicilio';
 const servicePhotos: Record<string, ComponentProps<typeof ServicePhoto>['name']> = {
   'colombia': 'coordinacion-familiar',
   'medico-a-domicilio-colombia': 'material-visita-medica',
@@ -116,6 +120,20 @@ const faqSchema = {
         <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <WhatsAppButton label="Consultar con SMD Vital" serviceName={service.title} /><a class="btn-secondary" href={isNursingPage ? '#precios-enfermeria' : '#detalles'}>{isNursingPage ? 'Ver precios y turnos' : 'Ver detalles'}</a>
         </div>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-slate-700">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">
+            <Icon name="shield-check" class="text-indigo-700" size={16} stroke-width={1.75} aria-hidden="true" />
+            Profesionales verificados en ReTHUS
+          </span>
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">
+            <Icon name="clock" class="text-indigo-700" size={16} stroke-width={1.75} aria-hidden="true" />
+            Atención hoy mismo en Bogotá
+          </span>
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">
+            <Icon name="circle-check" class="text-indigo-700" size={16} stroke-width={1.75} aria-hidden="true" />
+            Insumos estériles incluidos
+          </span>
+        </div>
       </div>
 
       <aside class="service-visual" aria-label={`Información de ${service.shortTitle}`}>
@@ -186,6 +204,123 @@ const faqSchema = {
         </ol>
       </div>
     </div>
+
+    <div class="container mt-10 grid gap-8 lg:grid-cols-3">
+      <article class="rounded-[28px] border border-slate-200 bg-slate-50/70 p-6">
+        <p class="kicker">Alcance clínico</p>
+        <h2 class="mt-2 text-2xl font-black text-slate-950">Qué incluye el procedimiento</h2>
+        <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-700">
+          {service.includes.map((item) => (
+            <li class="flex gap-3">
+              <Icon name="circle-check" class="mt-0.5 shrink-0 text-indigo-700" size={20} stroke-width={1.75} aria-hidden="true" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </article>
+
+      <article class="rounded-[28px] border border-slate-200 bg-white p-6">
+        <p class="kicker">Guía para el hogar</p>
+        <h2 class="mt-2 text-2xl font-black text-slate-950">Preparación del paciente</h2>
+        <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-700">
+          {service.preparation.map((item) => (
+            <li class="flex gap-3">
+              <Icon name="clipboard-check" class="mt-0.5 shrink-0 text-indigo-700" size={20} stroke-width={1.75} aria-hidden="true" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </article>
+
+      <article class="rounded-[28px] border border-rose-200 bg-rose-50/70 p-6">
+        <p class="text-xs font-black uppercase tracking-wider text-rose-800">Seguridad del paciente · YMYL</p>
+        <h2 class="mt-2 text-2xl font-black text-rose-950">Signos de alarma (Cuándo acudir a urgencias)</h2>
+        <ul class="mt-5 space-y-3 text-sm leading-6 text-rose-950">
+          {service.redFlags.map((item) => (
+            <li class="flex gap-3">
+              <Icon name="shield-plus" class="mt-0.5 shrink-0 text-rose-700" size={20} stroke-width={1.75} aria-hidden="true" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="mt-4 text-xs font-bold leading-5 text-rose-900">
+          Este servicio domiciliario no reemplaza una sala de urgencias. Ante urgencia vital llame a la línea 123.
+        </p>
+      </article>
+    </div>
+
+    {isSuturaPage && (
+      <div class="container mt-10 grid gap-6 md:grid-cols-2">
+        <section id="sutura-de-heridas" class="rounded-[28px] border border-slate-200 bg-white p-6">
+          <p class="kicker">Procedimiento con anestesia local</p>
+          <h2 class="mt-2 text-2xl font-black text-slate-950">Sutura de heridas a domicilio en Bogotá (Desde $150.000 COP)</h2>
+          <p class="mt-3 text-sm leading-6 text-slate-600">
+            Cierre quirúrgico de heridas cutáneas limpias y no complicadas con infiltración de anestesia local, lavado antiséptico, sutura estéril y apósito protector. Requiere valoración previa por foto clínica en WhatsApp.
+          </p>
+          <h3 class="mt-4 text-base font-bold text-slate-900">Requisitos para sutura en casa</h3>
+          <p class="mt-1 text-sm leading-6 text-slate-600">
+            Envía foto clínica de la herida, tiempo transcurrido desde la lesión y zona del cuerpo para confirmar aptitud domiciliaria y cotización exacta desde $150.000 COP.
+          </p>
+        </section>
+        <section id="retiro-de-puntos" class="rounded-[28px] border border-slate-200 bg-white p-6">
+          <p class="kicker">Control postquirúrgico</p>
+          <h2 class="mt-2 text-2xl font-black text-slate-950">Retiro de puntos a domicilio en Bogotá ($120.000 COP)</h2>
+          <p class="mt-3 text-sm leading-6 text-slate-600">
+            Extracción segura y aséptica de puntos de sutura en heridas ya cicatrizadas por tarifa oficial de $120.000 COP. Incluye evaluación de los bordes de la herida, retiro con instrumental estéril y limpieza final.
+          </p>
+          <h3 class="mt-4 text-base font-bold text-slate-900">Cuándo programar el retiro</h3>
+          <p class="mt-1 text-sm leading-6 text-slate-600">
+            Indica cuántos días llevas con los puntos, zona anatómica e indicación de tu médico tratante para agendar tu visita hoy mismo.
+          </p>
+        </section>
+      </div>
+    )}
+
+    {isSondaPage && (
+      <div class="container mt-10 grid gap-6 md:grid-cols-2">
+        <section id="cambio-colocacion-sonda" class="rounded-[28px] border border-slate-200 bg-white p-6">
+          <p class="kicker">Sonda Foley o Nelaton</p>
+          <h2 class="mt-2 text-2xl font-black text-slate-950">Cambio y colocación de sonda vesical en Bogotá ($170.000 COP)</h2>
+          <p class="mt-3 text-sm leading-6 text-slate-600">
+            Cateterismo vesical a domicilio con técnica estéril para instalación o recambio de sonda Foley (permanente con balón y bolsa recolectora) o sonda Nelaton (intermitente) por tarifa oficial de $170.000 COP.
+          </p>
+          <h3 class="mt-4 text-base font-bold text-slate-900">Calibre y validación urológica</h3>
+          <p class="mt-1 text-sm leading-6 text-slate-600">
+            Confirmamos por WhatsApp el calibre en French (Fr), tipo de sonda, lubricación anestésica e insumos estériles antes de la visita.
+          </p>
+        </section>
+        <section id="retiro-sonda-vesical" class="rounded-[28px] border border-slate-200 bg-white p-6">
+          <p class="kicker">Procedimiento seguro en casa</p>
+          <h2 class="mt-2 text-2xl font-black text-slate-950">Retiro de sonda vesical a domicilio en Bogotá ($110.000 COP)</h2>
+          <p class="mt-3 text-sm leading-6 text-slate-600">
+            Retiro atraumático de sonda vesical a domicilio por tarifa oficial de $110.000 COP. Incluye higiene perineal, vaciado completo del balón de fijación, extracción cuidadosa y pautas de vigilancia de micción espontánea.
+          </p>
+          <h3 class="mt-4 text-base font-bold text-slate-900">Seguimiento post-retiro</h3>
+          <p class="mt-1 text-sm leading-6 text-slate-600">
+            Orientamos a la familia sobre hidratación y control de la primera micción en las horas posteriores al retiro.
+          </p>
+        </section>
+      </div>
+    )}
+
+    {isValoracionPage && (
+      <div class="container mt-10 grid gap-6 md:grid-cols-2">
+        <section id="consulta-medica-domiciliaria" class="rounded-[28px] border border-slate-200 bg-white p-6">
+          <p class="kicker">Atención médica en casa</p>
+          <h2 class="mt-2 text-2xl font-black text-slate-950">Consulta médica domiciliaria en Bogotá ($170.000 COP)</h2>
+          <p class="mt-3 text-sm leading-6 text-slate-600">
+            Evaluación presencial integral por médico general en tu domicilio ($170.000 COP): historia clínica, toma de signos vitales, auscultación, examen físico completo, diagnóstico y formulación médica.
+          </p>
+        </section>
+        <section id="valoracion-medica-prioritaria" class="rounded-[28px] border border-slate-200 bg-white p-6">
+          <p class="kicker">Agendamiento mismo día</p>
+          <h2 class="mt-2 text-2xl font-black text-slate-950">Valoración médica prioritaria en Bogotá ($170.000 COP)</h2>
+          <p class="mt-3 text-sm leading-6 text-slate-600">
+            Priorización de visita médica domiciliaria el mismo día en Bogotá ($170.000 COP) según disponibilidad en tu localidad para síntomas agudos no vitales que requieren evaluación presencial oportuna.
+          </p>
+        </section>
+      </div>
+    )}
   </section>
 
   {
@@ -209,6 +344,7 @@ const faqSchema = {
   }
 
   <FAQSection faqs={service.faqs} />
+  <LocalCoverageHub service={service} />
   <ConversionPanel service={service} title={`Consulta ${service.shortTitle.toLowerCase()} por WhatsApp`} />
 </BaseLayout>
 

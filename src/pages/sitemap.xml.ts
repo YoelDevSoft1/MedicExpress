@@ -1,7 +1,9 @@
-﻿import { services, siteConfig } from '../data/services';
+﻿import { categoryPaths, services, siteConfig } from '../data/services';
 
-const categoryUrls = ['/servicios-medicos/', '/servicios-de-enfermeria/', '/laboratorio-clinico/'];
-const urls = ['/', ...categoryUrls, '/guias/coordinar-cuidado-domiciliario/', ...services.map((service) => `/${service.slug}/`)];
+const categoryUrls = Object.values(categoryPaths);
+const urls = Array.from(
+  new Set(['/', ...categoryUrls, '/guias/coordinar-cuidado-domiciliario/', ...services.map((service) => `/${service.slug}/`)])
+);
 
 export async function GET() {
   const body = `<?xml version="1.0" encoding="UTF-8"?>
